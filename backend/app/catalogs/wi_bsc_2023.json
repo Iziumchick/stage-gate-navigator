@@ -1,0 +1,351 @@
+{
+  "program_id": "wi_bsc_2023",
+  "status": "draft",
+  "handbook": {
+    "url": null,
+    "label": "Modulhandbuch Wirtschaftsinformatik"
+  },
+  "admission_rules": {
+    "abschnitt_1": {
+      "verified": false,
+      "minimum_ects": 0,
+      "required_modules": [],
+      "source": null
+    },
+    "abschnitt_2": {
+      "verified": false,
+      "minimum_ects": 30,
+      "required_modules": [],
+      "source": null
+    },
+    "praxissemester": {
+      "verified": false,
+      "minimum_ects": 90,
+      "required_modules": [],
+      "source": null
+    },
+    "abschnitt_3": {
+      "verified": false,
+      "minimum_ects": 100,
+      "required_modules": [],
+      "source": null
+    }
+  },
+  "modules": {
+    "wi.req.hardware": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.gwi": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.bwl1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.bwl2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.pg1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.pg2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.ma1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.ma2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.angewandte_gwi": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.aw1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.it_architektur": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.datenbanken": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.statistik": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.gpad": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.ppst": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.algorithmen": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.projektmanagement": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.betriebssysteme": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.software_engineering": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.fwpm1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.seminar_wi": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.aw2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.praktikum": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.praxisseminar": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_in1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_in2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_iw1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_iw2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_iw3": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_bwl1": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.vertiefung_bwl2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.fwpm2": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.fwpm3": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.bachelorarbeit": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    },
+    "wi.req.bachelorseminar": {
+      "description": null,
+      "offered_in": null,
+      "grade_weight": null,
+      "handbook_pages": null,
+      "admission": null,
+      "offerings": {},
+      "title": null
+    }
+  }
+}

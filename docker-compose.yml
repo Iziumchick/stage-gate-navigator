@@ -1,10 +1,37 @@
 services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:5173:80"
+    depends_on:
+      - backend
   backend:
     build: ./backend
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     environment:
       - DATABASE_URL=sqlite:////data/app.db
+      - ADMIN_EMAIL=${ADMIN_EMAIL:-}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-}
+      - COOKIE_SECURE=${COOKIE_SECURE:-false}
+      - APP_ENV=${APP_ENV:-development}
+      - APP_ORIGINS=${APP_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      - PRIVACY_CONTROLLER=${PRIVACY_CONTROLLER:-}
+      - PRIVACY_CONTACT=${PRIVACY_CONTACT:-}
+      - PRIVACY_ADDRESS=${PRIVACY_ADDRESS:-}
+      - PRIVACY_HOSTING_PROVIDER=${PRIVACY_HOSTING_PROVIDER:-}
+      - PRIVACY_HOSTING_COUNTRY=${PRIVACY_HOSTING_COUNTRY:-}
+      - PRIVACY_AUTHORITY=${PRIVACY_AUTHORITY:-}
+      - PRIVACY_BACKUP_POLICY=${PRIVACY_BACKUP_POLICY:-}
+      - PRIVACY_REVIEWED=${PRIVACY_REVIEWED:-false}
+      - DATA_RETENTION_DAYS=${DATA_RETENTION_DAYS:-90}
+    read_only: true
+    tmpfs:
+      - /tmp:size=67108864,mode=1777,noexec,nosuid
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 128
+    mem_limit: 1g
     volumes:
       - app_data:/data
 

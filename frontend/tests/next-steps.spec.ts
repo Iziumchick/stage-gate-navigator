@@ -1,0 +1,26 @@
+import {test,expect} from './fixtures';
+const course=(id:string,ects:number,details:any={})=>({id,title:id,short_title:id,required_ects:ects,actual_ects:null,grade:null,status:'unknown',source:null,completion_rule:'single',admission:{status:'available',reason:'OK'},semester_offered:true,details});
+test('next steps recalculate load, retake priority and practice forecast when a flexible module is removed',async({page})=>{
+ await page.clock.setFixedTime(new Date('2026-11-12T10:00:00Z'));
+ const repeat={...course('ST',5),status:'failed',open_exam_count:1,exam_history:[{code:'ST',attempt:1,status:'NB',title:'Statistik',grade:5,ects:0,released_on:'01.08.2026'}]};
+ const both={offered_in:'Winter- und Sommersemester'};
+ const modules=[repeat,course('SE',8,both),course('DB',7,both),course('GPAD',7,both),course('AD',8,both)];
+ await page.route('**/api/imports',r=>r.fulfill({json:[]}));
+ await page.route('**/api/programs/wi/examples/*',r=>r.fulfill({json:{import_id:null,program:'WI',supported:true,official_credits:55,official_grade:2.7,example_scenario:'open',unmatched_groups:[],progress:{confirmed_ects:55,milestones:[],gates:[{id:'practice',minimum_ects:90,scope:'total',all_first:false}]},stages:[{id:'abschnitt_1',title:'Abschnitt 1',modules:[{...course('Completed',55),status:'passed'}]},{id:'abschnitt_2',title:'Abschnitt 2',modules}]}}));
+ await page.goto('/?example=open');
+ const target=page.getByLabel('Module in aktuelles Semester ziehen');
+ for(const id of ['SE','DB','GPAD','AD'])await page.getByRole('button',{name:`${id}: Offen`,exact:true}).dragTo(target);
+ await expect(page.getByTestId('semester-ects')).toHaveText('35 ECTS');
+ await expect(page.getByText('Mögliche Entlastung bei Wiederholungen',{exact:true})).toBeVisible();
+ await expect(page.getByText('Praxis rückt in Reichweite',{exact:true})).toBeVisible();
+ await expect(page.getByText(/Wenn du die ausgewählten Module erfolgreich und vollständig abschließt, wäre diese Voraussetzung/)).toBeVisible();
+ await page.screenshot({path:'test-results/next-steps-heavy-practice.png',fullPage:true});
+ await page.getByText('Mögliche Entlastung bei Wiederholungen',{exact:true}).locator('..').getByRole('button',{name:'Modul ansehen'}).click();
+ await expect(page.getByRole('dialog').getByRole('heading',{name:'SE',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Aus aktuellem Semester entfernen',exact:true}).click();
+ await expect(page.getByTestId('semester-ects')).toHaveText('27 ECTS');
+ await expect(page.getByText('Mögliche Entlastung bei Wiederholungen',{exact:true})).toHaveCount(0);
+ await expect(page.getByText(/fehlen danach noch 8 ECTS/)).toBeVisible();
+ await expect(target.getByRole('button',{name:'ST aus Semester entfernen',exact:true})).toBeDisabled();
+ await expect(page.getByTestId('official-credits')).toHaveText('55 / 210');
+});

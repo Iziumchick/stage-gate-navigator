@@ -1,0 +1,539 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+X-WR-CALNAME:SoSe 2026 Studierende
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:3193944693HSRCAL
+SUMMARY:Semesteranfangsgebet/Meditation
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261001T082000
+DTEND;TZID=Europe/Berlin:20261001T082000
+CLASS:PUBLIC
+DESCRIPTION:Ökumenisches Semesteranfangsgebet/Meditation\; organisiert und angeboten durch die katholische Hochschulgemeinde (KHG) und die evangelische Studentengemeinde (ESG)\; lt. gesonderter Ankündigung.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Ökumenisches Semesteranfangsgebet/Meditation\; organisiert und angeboten durch die katholische Hochschulgemeinde (KHG) und die evangelische Studentengemeinde (ESG)\; lt. gesonderter Ankündigung.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:11943376064HSRCAL
+SUMMARY:Erstsemesterbegrüßung durch Hochschulleitung und Fakultäten
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261001T090000
+DTEND;TZID=Europe/Berlin:20261001T090000
+CLASS:PUBLIC
+DESCRIPTION:Begrüßung und Information der Erstsemester durch die Hochschulleitung und Vertreter der Stadt Regensburg.\nAnschließend: Begrüßung und Information der Erstsemester durch die Fakultätsleitungen (fakultätsinterne Organisation und Bekanntmachung).\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Begrüßung und Information der Erstsemester durch die Hochschulleitung und Vertreter der Stadt Regensburg.<br />Anschließend: Begrüßung und Information der Erstsemester durch die Fakultätsleitungen (fakultätsinterne Organisation und Bekanntmachung).<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:87593275309HSRCAL
+SUMMARY:↑ Beginn Lehrveranstaltungen (Bachelor- und Masterstudiengänge)
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261001T100000
+DTEND;TZID=Europe/Berlin:20261001T100000
+CLASS:PUBLIC
+DESCRIPTION:Beginn der Lehrveranstaltungen für Nicht-Erstsemester\, für Erstsemester am nächsten Vorlesungstag gemäß Stundenplan.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Beginn der Lehrveranstaltungen für Nicht-Erstsemester\, für Erstsemester am nächsten Vorlesungstag gemäß Stundenplan.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:98698997498HSRCAL
+SUMMARY:↓ Praktikumszeiten\; Anrechnung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261014T000000
+DTEND;TZID=Europe/Berlin:20261014T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Antragsfrist für Studienanfängerinnen und Studienanfänger bzgl. evtl. Abgabe der Anträge auf Anrechnung praktischer Tätigkeiten auf ein praktisches Studiensemester\;  Anträge auf der Homepage der OTH Regensburg.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Antragsfrist für Studienanfängerinnen und Studienanfänger bzgl. evtl. Abgabe der Anträge auf Anrechnung praktischer Tätigkeiten auf ein praktisches Studiensemester\;  Anträge auf der Homepage der OTH Regensburg.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:19965571165HSRCAL
+SUMMARY:↓ Abgabefrist für Anträge auf Urlaubssemester
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261031T000000
+DTEND;TZID=Europe/Berlin:20261031T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Die Anträge auf Urlaubssemester sind im Referat III/1 abzugeben.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Die Anträge auf Urlaubssemester sind im Referat III/1 abzugeben.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:86164629459HSRCAL
+SUMMARY:Ferienbetreuung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261102T000000
+DTEND;TZID=Europe/Berlin:20261106T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Ferienbetreuung für Kinder von Studierenden und Bediensteten\, Mo-Do von 08:00 bis 17:00 Uhr und am Fr von 08:00 bis 13:30 Uhr\, bitte Informationen auf der Homepage der OTH Regensburg beachten.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Ferienbetreuung für Kinder von Studierenden und Bediensteten\, Mo-Do von 08:00 bis 17:00 Uhr und am Fr von 08:00 bis 13:30 Uhr\, bitte Informationen auf der Homepage der OTH Regensburg beachten.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:16321116686HSRCAL
+SUMMARY:Verbindliche Prüfungsanmeldung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261110T000000
+DTEND;TZID=Europe/Berlin:20261117T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Verbindliche Anmeldung der Studierenden zu Prüfungsleistungen (§ 25 APO) über den Studienplaner im Studierenden-Serviceportal (SSP). Dies gilt auch für Wiederholungsprüfungen.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Verbindliche Anmeldung der Studierenden zu Prüfungsleistungen (§ 25 APO) über den Studienplaner im Studierenden-Serviceportal (SSP). Dies gilt auch für Wiederholungsprüfungen.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:83340668678HSRCAL
+SUMMARY:↑ Bewerbungszeitraum
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261115T000000
+DTEND;TZID=Europe/Berlin:20261115T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Anmeldung der neuen Studienbewerberinnen und Studienbewerber für das nächste Semester.\nZulassung für nicht NC-Studiengänge. Abweichendes Fristende für verschiedene Studiengänge\, insbesondere Master und höhere Fachsemester möglich. Gesonderte Informationen auf Homepage beachten!
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Anmeldung der neuen Studienbewerberinnen und Studienbewerber für das nächste Semester.<br />Zulassung für nicht NC-Studiengänge. Abweichendes Fristende für verschiedene Studiengänge\, insbesondere Master und höhere Fachsemester möglich. Gesonderte Informationen auf Homepage beachten!</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:78564971685HSRCAL
+SUMMARY:Ferienbetreuung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261118T000000
+DTEND;TZID=Europe/Berlin:20261118T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Ferienbetreuung (Buß- und Bettag) für Kinder von Studierenden und Bediensteten\, jeweils von 08:00 bis 17:00 Uhr\, bitte Informationen auf der Homepage der OTH Regensburg beachten.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Ferienbetreuung (Buß- und Bettag) für Kinder von Studierenden und Bediensteten\, jeweils von 08:00 bis 17:00 Uhr\, bitte Informationen auf der Homepage der OTH Regensburg beachten.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:97793185711HSRCAL
+SUMMARY:↑ Prüfungsterminplanentwürfe\; Bekanntgabe
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261221T000000
+DTEND;TZID=Europe/Berlin:20261221T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Hochschulöffentliche Bekanntgabe der Prüfungsterminplanentwürfe (diese deutlich als noch unverbindlich kennzeichnen).\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Hochschulöffentliche Bekanntgabe der Prüfungsterminplanentwürfe (diese deutlich als noch unverbindlich kennzeichnen).<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:44155174494HSRCAL
+SUMMARY:Abmeldemöglichkeit von Prüfungen
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261221T000000
+DTEND;TZID=Europe/Berlin:20261231T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Abmeldemöglichkeit der Studierenden von den Prüfungsleistungen über den Studienplaner im Studierenden-Serviceportal (SSP).
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Abmeldemöglichkeit der Studierenden von den Prüfungsleistungen über den Studienplaner im Studierenden-Serviceportal (SSP).</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:36679315567HSRCAL
+SUMMARY:Keine Lehrveranstaltung\; Weihnachten
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20261223T000000
+DTEND;TZID=Europe/Berlin:20270110T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Keine Lehrveranstaltung\, Weihnachten gem. § 1 Abs. 4\; am 23.12.26\, 07.01.2027 und 08.01.2027 vorlesungsfrei gemäß § 1 Abs. 5 der Satzung über die Vorlesungszeit an der OTH Regensburg.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Keine Lehrveranstaltung\, Weihnachten gem. § 1 Abs. 4\; am 23.12.26\, 07.01.2027 und 08.01.2027 vorlesungsfrei gemäß § 1 Abs. 5 der Satzung über die Vorlesungszeit an der OTH Regensburg.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:33026570082HSRCAL
+SUMMARY:Anmeldezeitraum für ZiL-Ferienkurse
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270101T000000
+DTEND;TZID=Europe/Berlin:20270131T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Anmeldezeitraum für Ferienkurse des Zentrums für interdisziplinäre Lehre über WebUntis.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Anmeldezeitraum für Ferienkurse des Zentrums für interdisziplinäre Lehre über WebUntis.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:15975773335HSRCAL
+SUMMARY:↑ Rückmeldung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270107T000000
+DTEND;TZID=Europe/Berlin:20270107T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Voraussichtlicher Beginn des Rückmeldezeitraums für die Studierenden zum nächsten Semester über das Studierenden-Serviceportal (SSP). Bitte weitere Informationen auf der Homepage der OTH Regensburg beachten.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Voraussichtlicher Beginn des Rückmeldezeitraums für die Studierenden zum nächsten Semester über das Studierenden-Serviceportal (SSP). Bitte weitere Informationen auf der Homepage der OTH Regensburg beachten.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:69905263186HSRCAL
+SUMMARY:↓ Prüfungsterminpläne\; Bekanntgabe
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270108T000000
+DTEND;TZID=Europe/Berlin:20270108T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Verbindliche Bekanntgabe der Prüfungsterminpläne.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Verbindliche Bekanntgabe der Prüfungsterminpläne.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:43535494804HSRCAL
+SUMMARY:↓ Abschlussarbeiten\; Abgabefrist für Studierende
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270114T000000
+DTEND;TZID=Europe/Berlin:20270114T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Abgabefrist für Abschlussarbeiten mit Korrektur im aktuellen Semester. Bei späterer Abgabe kann eine Rückmeldung für das Folgesemester erforderlich werden.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Abgabefrist für Abschlussarbeiten mit Korrektur im aktuellen Semester. Bei späterer Abgabe kann eine Rückmeldung für das Folgesemester erforderlich werden.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:85138696432HSRCAL
+SUMMARY:Semesterprüfungszeitraum
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270120T000000
+DTEND;TZID=Europe/Berlin:20270211T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Die ersten drei Prüfungstage sind reserviert (§ 24 Abs. 6 APO) für zentral geplante Prüfungsleistungen. ZiL-Tag 1 (Sprachprüfungstag\, ehemals AW\, studienbegleitende allgemein-wissenschaftliche Prüfungsleistungen)\, ZiL-Tag 2 (Prüfungsleistungen der Regensburg School of Digital Sciences - RSDS und Deutsch als Fremdsprache -DaF)\, Tag 3 für studienbegleitende Prüfungsleistungen (SLNZ). Im Übrigen finden Vorlesungen weiterhin bis einschließlich 22.01.2027 statt.\nSoweit ein Teilnahmenachweis Voraussetzung für die Zulassung zu einer Prüfungsleistung ist\, erfolgt spätestens eine Woche vor der jeweiligen Prüfung die Bekanntgabe der Nichtzulassung.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Die ersten drei Prüfungstage sind reserviert (§ 24 Abs. 6 APO) für zentral geplante Prüfungsleistungen. ZiL-Tag 1 (Sprachprüfungstag\, ehemals AW\, studienbegleitende allgemein-wissenschaftliche Prüfungsleistungen)\, ZiL-Tag 2 (Prüfungsleistungen der Regensburg School of Digital Sciences - RSDS und Deutsch als Fremdsprache -DaF)\, Tag 3 für studienbegleitende Prüfungsleistungen (SLNZ). Im Übrigen finden Vorlesungen weiterhin bis einschließlich 22.01.2027 statt.<br />Soweit ein Teilnahmenachweis Voraussetzung für die Zulassung zu einer Prüfungsleistung ist\, erfolgt spätestens eine Woche vor der jeweiligen Prüfung die Bekanntgabe der Nichtzulassung.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:66597402096HSRCAL
+SUMMARY:ZiL-Tag1: Prüfungsleistungen Sprachen (ehemals AW-Tag\, zentral geplant)
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270120T000000
+DTEND;TZID=Europe/Berlin:20270120T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Studienbegleitende Prüfungsleistungen in allgemeinwissenschaftlichen Wahlpflichtmodulen\, soweit zentral geplant.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Studienbegleitende Prüfungsleistungen in allgemeinwissenschaftlichen Wahlpflichtmodulen\, soweit zentral geplant.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:22166353464HSRCAL
+SUMMARY:ZiL-Tag2: Prüfungsleistungen der Regensburg School of Digital Sciences und für Deutsch als Fremdsprache (zentral geplant)
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270121T000000
+DTEND;TZID=Europe/Berlin:20270121T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Zentral geplante Prüfungsleistungen der Regensburg School of Digital Sciences (RSDS) und für Deutsch als Fremdsprache (DaF).
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Zentral geplante Prüfungsleistungen der Regensburg School of Digital Sciences (RSDS) und für Deutsch als Fremdsprache (DaF).</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:99374294281HSRCAL
+SUMMARY:Studienbegleitende Prüfungsleistungen (zentral geplant)
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270122T000000
+DTEND;TZID=Europe/Berlin:20270122T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Studienbegleitende Prüfungsleistungen (SLNZ)\, soweit zentral geplant.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Studienbegleitende Prüfungsleistungen (SLNZ)\, soweit zentral geplant.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:4756087065HSRCAL
+SUMMARY:Ende aller Lehrveranstaltungen
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270122T200000
+DTEND;TZID=Europe/Berlin:20270122T200000
+CLASS:PUBLIC
+DESCRIPTION:Ende aller Lehrveranstaltungen\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Ende aller Lehrveranstaltungen<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:71343863010HSRCAL
+SUMMARY:Prüfungsleistungen
+
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270123T000000
+DTEND;TZID=Europe/Berlin:20270211T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Prüfungsleistungen im Sinne von § 11 Abs. 2 APO.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Prüfungsleistungen im Sinne von § 11 Abs. 2 APO.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:42131072283HSRCAL
+SUMMARY:ZiL-Ferienkurse
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270212T000000
+DTEND;TZID=Europe/Berlin:20270313T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Zeitraum für Ferienkurse des Zentrums für interdisziplinäre Lehre (ZiL)
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Zeitraum für Ferienkurse des Zentrums für interdisziplinäre Lehre (ZiL)</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:61867833138HSRCAL
+SUMMARY:Anmeldezeitraum für ZiL-Kurse
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270222T000000
+DTEND;TZID=Europe/Berlin:20270308T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Anmeldung zu den ZiL-Kursen für das kommende Semester über WebUntis.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Anmeldung zu den ZiL-Kursen für das kommende Semester über WebUntis.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:75112384558HSRCAL
+SUMMARY:↓ Prüfungsergebnisse und Zulassung zum Pflichtpraktikum\; Veröffentlichung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270223T000000
+DTEND;TZID=Europe/Berlin:20270223T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Veröffentlichung der Prüfungsergebnisse und der im Folgesemester zum Pflichtpraktikum zugelassenen Studierenden durch das Referat III/2 über das Studierenden-Serviceportal (SSP).\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Veröffentlichung der Prüfungsergebnisse und der im Folgesemester zum Pflichtpraktikum zugelassenen Studierenden durch das Referat III/2 über das Studierenden-Serviceportal (SSP).<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:11764228344HSRCAL
+SUMMARY:↓ Nicht bestandene Prüfungsergebnisse\; Bekanntgabe
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270226T000000
+DTEND;TZID=Europe/Berlin:20270226T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Alle Studierenden\, die Prüfungen nicht bestanden haben\, werden mittels elektronischer Bereitstellung des entsprechenden Bescheides im Studierenden-Serviceportal (SSP) benachrichtigt. Bei bestandenen Prüfungen gilt § 30 Abs. 7 APO.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Alle Studierenden\, die Prüfungen nicht bestanden haben\, werden mittels elektronischer Bereitstellung des entsprechenden Bescheides im Studierenden-Serviceportal (SSP) benachrichtigt. Bei bestandenen Prüfungen gilt § 30 Abs. 7 APO.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:91402202845HSRCAL
+SUMMARY:↓ Stundenplan\; Bekanntgabe
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270226T000000
+DTEND;TZID=Europe/Berlin:20270226T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Bekanntgabe des Stundenplans mit den Lehrveranstaltungen für das nächste Semester online auf den Fakultätsseiten.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Bekanntgabe des Stundenplans mit den Lehrveranstaltungen für das nächste Semester online auf den Fakultätsseiten.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:27457761765HSRCAL
+SUMMARY:Ergänzungsprüfungszeitraum
+
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270301T000000
+DTEND;TZID=Europe/Berlin:20270312T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Die Anmeldung für den Ergänzungsprüfungszeitraum nach § 24 Abs. 3 APO erfolgt bei der jeweiligen Prüferin oder dem Prüfer. Die Notenmeldungen hierfür erfolgen bis spätestens 15.03.2027 per Blanko-Notenliste an das Referat III/2.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Die Anmeldung für den Ergänzungsprüfungszeitraum nach § 24 Abs. 3 APO erfolgt bei der jeweiligen Prüferin oder dem Prüfer. Die Notenmeldungen hierfür erfolgen bis spätestens 15.03.2027 per Blanko-Notenliste an das Referat III/2.</FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:63132637739HSRCAL
+SUMMARY:↑ Abschlussprüfungszeugnisse\; Aushändigung
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270302T000000
+DTEND;TZID=Europe/Berlin:20270302T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Gegen Ausweis Abholung der Abschlussprüfungszeugnisse durch die Studierenden im Sekretariat der Fakultät.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Gegen Ausweis Abholung der Abschlussprüfungszeugnisse durch die Studierenden im Sekretariat der Fakultät.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:18333351612HSRCAL
+SUMMARY:Semesteranfang Sommersemester 2027
+
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270315T000000
+DTEND;TZID=Europe/Berlin:20270315T235959
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+CLASS:PUBLIC
+DESCRIPTION:Semesteranfang Sommersemester 2027\; vorläufige Terminplanung!\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Semesteranfang Sommersemester 2027\; vorläufige Terminplanung!<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:84805184603HSRCAL
+SUMMARY:Semesteranfangsgebet/Meditation
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270315T082000
+DTEND;TZID=Europe/Berlin:20270315T082000
+CLASS:PUBLIC
+DESCRIPTION:Ökumenisches Semesteranfangsgebet/Meditation\; Art und Ort organisiert und angeboten durch die katholische Hochschulgemeinde (KHG) und die evangelische Studentengemeinde (ESG)\; lt. gesonderter Ankündigung.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Ökumenisches Semesteranfangsgebet/Meditation\; Art und Ort organisiert und angeboten durch die katholische Hochschulgemeinde (KHG) und die evangelische Studentengemeinde (ESG)\; lt. gesonderter Ankündigung.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:32917761803HSRCAL
+SUMMARY:Erstsemesterbegrüßung durch Hochschulleitung und Fakultäten
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270315T090000
+DTEND;TZID=Europe/Berlin:20270315T090000
+CLASS:PUBLIC
+DESCRIPTION:Begrüßung und Information der Erstsemester durch die Hochschulleitung und Vertreter der Stadt Regensburg.\nAnschließend: Begrüßung und Information der Erstsemester durch die Fakultätsleitungen (fakultätsinterne Organisation und Bekanntmachung).\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Begrüßung und Information der Erstsemester durch die Hochschulleitung und Vertreter der Stadt Regensburg.<br />Anschließend: Begrüßung und Information der Erstsemester durch die Fakultätsleitungen (fakultätsinterne Organisation und Bekanntmachung).<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;TZID=Europe/Berlin:20260713T144113
+UID:14745801687HSRCAL
+SUMMARY:↑ Beginn Lehrveranstaltungen (Bachelor- und Masterstudiengänge)
+PRIORITY:5
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+DTSTART;TZID=Europe/Berlin:20270315T100000
+DTEND;TZID=Europe/Berlin:20270315T100000
+CLASS:PUBLIC
+DESCRIPTION:Beginn der Lehrveranstaltungen für Nicht-Erstsemester\, für Erstsemester am nächsten Vorlesungstag gemäß Stundenplan.\n
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY><P DIR=LTR><SPAN LANG="de"><FONT FACE="Calibri">Beginn der Lehrveranstaltungen für Nicht-Erstsemester\, für Erstsemester am nächsten Vorlesungstag gemäß Stundenplan.<br /></FONT></SPAN></P></BODY>\n</HTML>
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

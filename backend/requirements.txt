@@ -1,5 +1,8 @@
-fastapi==0.115.0
+fastapi==0.163.1
+starlette==1.10.0
 uvicorn[standard]==0.30.6
-sqlalchemy>=2.0
-python-multipart
-pymupdf
+sqlalchemy>=2.0,<2.1
+python-multipart==0.0.34
+pymupdf>=1.26,<2
+beautifulsoup4>=4.12,<5
+icalendar>=6,<7

@@ -1,6 +1,6 @@
 # backend/app/db.py
 import os
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event, inspect, text
 from sqlalchemy.orm import sessionmaker
 from app.models import Base
 
@@ -12,8 +12,19 @@ connect_args = {}
 if DATABASE_URL.startswith("sqlite"):
     connect_args = {"check_same_thread": False}
 
-engine = create_engine(DATABASE_URL, connect_args=connect_args)
+engine = create_engine(DATABASE_URL, connect_args=connect_args,hide_parameters=True)
+if DATABASE_URL.startswith('sqlite'):
+    @event.listens_for(engine,'connect')
+    def sqlite_protection(connection,_):
+        connection.execute('PRAGMA foreign_keys=ON')
+        connection.execute('PRAGMA secure_delete=ON')
 Base.metadata.create_all(bind=engine)
+# Additive migration for the existing prototype database; no account reset.
+columns={c['name'] for c in inspect(engine).get_columns('users')}
+with engine.begin() as connection:
+    for name,kind in [('privacy_version','VARCHAR(40)'),('privacy_accepted_at','DATETIME'),('last_active_at','DATETIME')]:
+        if name not in columns:connection.execute(text(f'ALTER TABLE users ADD COLUMN {name} {kind}'))
+    connection.execute(text('UPDATE users SET last_active_at=CURRENT_TIMESTAMP WHERE last_active_at IS NULL'))
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

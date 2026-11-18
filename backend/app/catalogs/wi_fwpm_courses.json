@@ -1,0 +1,1550 @@
+{
+  "program_id": "wi_bsc_2023",
+  "retrieved_on": "2026-10-12",
+  "status": "source_catalog_not_admission_rules",
+  "notes": [
+    "Both PDF X and (X) include IW, per user clarification.",
+    "Website Regular and Opened for both include IW; Opened for may conflict with the regular timetable.",
+    "Absence from one source is not a universal exclusion. Source disagreements are preserved.",
+    "Web lists do not identify study sections; section unknown unless supported by PDF TOC.",
+    "Published/future lists are observations, not confirmation of seats or recurring availability.",
+    "KSAP is a reviewed BOSS alias of KSAP1 (user confirmation 2026-10-26); KNHI and KHNI remain separate pending confirmation.",
+    "ECTS and detailed descriptions are unavailable from these source excerpts."
+  ],
+  "courses": [
+    {
+      "id": "wi.fwpm.dase",
+      "short_title": "DASE",
+      "title": "Applied Security",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Applied Security",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Applied Security",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.date",
+      "short_title": "DATE",
+      "title": "Data Engineering",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "Data Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Data Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "Data Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Data Engineering",
+          "iw_mark": "X",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 28,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 77,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2027",
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dbch",
+      "short_title": "DBCH",
+      "title": "Blockchain",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Blockchain",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dcds",
+      "short_title": "DCDS",
+      "title": "Causal Data Science and AI",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Causal Data Science and AI",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dcmc",
+      "short_title": "DCMC",
+      "title": "Compiler Construction",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "Compiler Construction",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Compiler Construction",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "Compiler Construction",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Compilerbau",
+          "iw_mark": null,
+          "iw_membership": "not_marked",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 33,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 82,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "SoSe 2027",
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ddlm",
+      "short_title": "DDLM",
+      "title": "Deep Learning - Methods and applications",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Deep Learning - Methods and applications",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ddtw",
+      "short_title": "DDTW",
+      "title": "Digital Twins for Business Applications",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Digital Twins for Business Applications",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.deps",
+      "short_title": "DEPS",
+      "title": "Entrepreneurship in ITC",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Entrepreneurship in ITC",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Entrepreneurship in ITC",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dgai",
+      "short_title": "DGAI",
+      "title": "Leveraging Generative AI for Small and Medium Business Growth",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Leveraging Generative AI for Small and Medium Business Growth",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.diot",
+      "short_title": "DIOT",
+      "title": "Applied Internet of Things",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Applied Internet of Things",
+          "iw_mark": "(X)",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 38,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 87,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dmse",
+      "short_title": "DMSE",
+      "title": "Model-Driven Software Engineering",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "Model-driven Software Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "Model-driven Software Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Model-Driven Software Engineering",
+          "iw_mark": "(X)",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 43,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 92,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2027",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dpbr",
+      "short_title": "DPBR",
+      "title": "Planung und Betrieb von Rechenzentren",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Planung und Betrieb von Rechenzentren",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dsds",
+      "short_title": "DSDS",
+      "title": "Sprachdialogsysteme, Spoken Dialogue Systems",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Sprachdialogsysteme, Spoken Dialogue Systems",
+          "iw_mark": "(X)",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 47,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 96,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dspm",
+      "short_title": "DSPM",
+      "title": "Information Security and Privacy in Medicine",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "Information Security and Privacy in Medicine",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Information Security and Privacy in Medicine",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "Information Security and Privacy in Medicine",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Information Security and Privacy in Medicine",
+          "iw_mark": "X",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 50,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 99,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2027",
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dsql",
+      "short_title": "DSQL",
+      "title": "NoSQL Datenbanken",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "NoSQL Datenbanken",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dtsm",
+      "short_title": "DTSM",
+      "title": "Time Series Modeling and Prediction",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Time Series Modeling and Prediction",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.duxd",
+      "short_title": "DUXD",
+      "title": "User Experience Design - Benutzerorientierte Gestaltung",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "User Experience Design: Designing with the User in Mind",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "User Experience Design: Designing with the User in Mind",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "User Experience Design: Designing with the User in Mind",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "User Experience Design: Designing with the User in Mind",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "User Experience Design: Designing with the User in Mind",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "User Experience Design - Benutzerorientierte Gestaltung",
+          "iw_mark": "(X)",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm2": {
+              "toc_page_start": 52,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 101,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026",
+        "SoSe 2027",
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dxai",
+      "short_title": "DXAI",
+      "title": "Erklärbare Künstliche Intelligenz",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Erklärbare Künstliche Intelligenz",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.dzpl",
+      "short_title": "DZPL",
+      "title": "Digitale Zwillinge in Produktion und Logistik",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Digitale Zwillinge in Produktion und Logistik",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kagp",
+      "short_title": "KAGP",
+      "title": "Applied GPU Computing",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Applied GPU Computing",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kaps",
+      "short_title": "KAPS",
+      "title": "Fortgeschrittene Materialplanung und Disposition",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Fortgeschrittene Materialplanung und Disposition",
+          "iw_mark": "X",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 5,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 54,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 103,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kapt",
+      "short_title": "KAPT",
+      "title": "Applied Optimization",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Applied Optimization",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kasd",
+      "short_title": "KASD",
+      "title": "Advanced Full Stack Development",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Advanced Full Stack Development",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kbar",
+      "short_title": "KBAR",
+      "title": "Business Application Re-Engineering",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Business Application Re-Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Business Application Re-Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "Business Application Re-Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Business Application Re-Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "Business Application Re-Engineering",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Business Application Re-Engineering",
+          "iw_mark": null,
+          "iw_membership": "not_marked",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 8,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 57,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 106,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026",
+        "SoSe 2027",
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kdsp",
+      "short_title": "KDSP",
+      "title": "Applied Data Science with Python",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Applied Data Science with Python",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Applied Data Science with Python",
+          "iw_mark": "X",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 15,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 64,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 113,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kees",
+      "short_title": "KEES",
+      "title": "Einfache Einführung Eingebettete Systeme",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Einfache Einführung Eingebettete Systeme",
+          "iw_mark": "(X)",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 17,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 66,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 115,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.khni",
+      "short_title": "KHNI",
+      "title": "Nachhaltigkeit in der Informatik",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Nachhaltigkeit in der Informatik",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kicc",
+      "short_title": "KICC",
+      "title": "Introduction to Cloud Computing",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Introduction to Cloud Computing",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.kisc",
+      "short_title": "KISC",
+      "title": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung",
+          "iw_mark": "X",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 19,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 68,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 117,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.knhi",
+      "short_title": "KNHI",
+      "title": "Nachhaltigkeit in der Informatik",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Nachhaltigkeit in der Informatik",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Nachhaltigkeit in der Informatik",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "WiSe 2025/26"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ksap",
+      "short_title": "KSAP",
+      "title": "Einführung in die SAP-Entwicklungsumgebung",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Einführung in die SAP-Entwicklungsumgebung",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Einführung in die SAP-Entwicklungsumgebung",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2027",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2027",
+          "snapshot": "docs/sources/fwpm_2027.html",
+          "sha256": "dfcef168a876594e4d71a2940c1dd2c258f78f2410e44655827a4e0d551ba65a",
+          "title": "Einführung in die SAP-Entwicklungsumgebung",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2025/26",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20252026",
+          "snapshot": "docs/sources/fwpm_20252026.html",
+          "sha256": "4c12fca3a6c0cdf7e2946e8ffe4ca55cb275a05c374ae9e1a75c30e4c5ad4ae4",
+          "title": "Einführung in die SAP-Entwicklungsumgebung",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "WiSe 2026/27",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/20262027",
+          "snapshot": "docs/sources/fwpm_20262027.html",
+          "sha256": "c570171e4a9a17961c0bae234c14bc41419328d520e47547024d7b45c6a1b428",
+          "title": "Einführung in die SAP-Entwicklungsumgebung",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026",
+        "SoSe 2027",
+        "WiSe 2025/26",
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ksap1",
+      "short_title": "KSAP1",
+      "title": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)",
+          "iw_mark": "x",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 21,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 70,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 119,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ktai",
+      "short_title": "KTAI",
+      "title": "Responsible and Trustworthy Artificial Intelligence Systems",
+      "ects": null,
+      "slots": [
+        "wi.req.fwpm1",
+        "wi.req.fwpm2",
+        "wi.req.fwpm3"
+      ],
+      "sources": [
+        {
+          "type": "pdf_excerpt",
+          "term": "WiSe 2026/27",
+          "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+          "title": "Responsible and Trustworthy Artificial Intelligence Systems",
+          "iw_mark": "X",
+          "iw_membership": "included",
+          "toc_references": {
+            "wi.req.fwpm1": {
+              "toc_page_start": 23,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm2": {
+              "toc_page_start": 72,
+              "page_present_in_excerpt": false
+            },
+            "wi.req.fwpm3": {
+              "toc_page_start": 121,
+              "page_present_in_excerpt": false
+            }
+          }
+        }
+      ],
+      "winter_source_conflict": true,
+      "terms": [
+        "WiSe 2026/27"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zada",
+      "short_title": "ZADA",
+      "title": "Solving Business Cases Using Applied Data Analytics",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Solving Business Cases Using Applied Data Analytics",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Solving Business Cases Using Applied Data Analytics",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zajp",
+      "short_title": "ZAJP",
+      "title": "Advanced Java Programming",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Advanced Java Programming",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zapp",
+      "short_title": "ZAPP",
+      "title": "App-Programmierung",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "App-Programmierung",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "App-Programmierung",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ziim",
+      "short_title": "ZIIM",
+      "title": "Introduction to Innnovation Management",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Introduction to Innnovation Management",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Introduction to Innnovation Management",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.ziot",
+      "short_title": "ZIOT",
+      "title": "Internet of Things",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Internet of Things",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zmal",
+      "short_title": "ZMAL",
+      "title": "Machine Learning",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Machine Learning",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Machine Learning",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zncf",
+      "short_title": "ZNCF",
+      "title": "Introduction to Native and Cross-Platform Framework in Mobile Application Development",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Introduction to Native and Cross-Platform Framework in Mobile Application Development",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zock",
+      "short_title": "ZOCK",
+      "title": "Client-K.I.s für Brettspiele",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Client-K.I.s für Brettspiele",
+          "iw_membership": "opened_for"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Client-K.I.s für Brettspiele",
+          "iw_membership": "opened_for"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    },
+    {
+      "id": "wi.fwpm.zvit",
+      "short_title": "ZVIT",
+      "title": "Virtual Reality: Konzeption und Anwendung immersiver Technologien",
+      "ects": null,
+      "slots": [],
+      "sources": [
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2025",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2025",
+          "snapshot": "docs/sources/fwpm_2025.html",
+          "sha256": "754b52066fd332336d07cfbffae15ed70b0b06952ea485e04fea5ccd4749268a",
+          "title": "Virtual Reality: Konzeption und Anwendung immersiver Technologien",
+          "iw_membership": "regular"
+        },
+        {
+          "type": "oth_public_list",
+          "term": "SoSe 2026",
+          "url": "https://stpim.oth-regensburg.de/public/fwpm",
+          "switch_url": "https://stpim.oth-regensburg.de/switchterm/2026",
+          "snapshot": "docs/sources/fwpm_2026.html",
+          "sha256": "fab35585146492f3bf073b7ca9a500098009f0965ff44912899f1309e7cdfa46",
+          "title": "Virtual Reality: Konzeption und Anwendung immersiver Technologien",
+          "iw_membership": "regular"
+        }
+      ],
+      "winter_source_conflict": false,
+      "terms": [
+        "SoSe 2025",
+        "SoSe 2026"
+      ]
+    }
+  ]
+}

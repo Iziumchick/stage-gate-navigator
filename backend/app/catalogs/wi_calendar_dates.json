@@ -1,0 +1,51 @@
+{
+  "source_url": "https://stpim.oth-regensburg.de/public/lecturesbyterm",
+  "retrieved_on": "2026-11-16",
+  "semesters": {
+    "WiSe 2026/27": [
+      {
+        "code": "BW2",
+        "groups": [
+          "IW2"
+        ],
+        "source_group": "",
+        "teacher_codes": [
+          "Fedo",
+          "Wem",
+          "Woli"
+        ],
+        "teachers": [
+          "Dominik Feuerer",
+          "Markus Westner",
+          "Linda Worzfeld"
+        ],
+        "date": "2026-10-01",
+        "start": "10:00",
+        "end": "11:30",
+        "room": "Zoom"
+      },
+      {
+        "code": "PM",
+        "groups": [
+          "IW3",
+          "IW4"
+        ],
+        "source_group": "",
+        "teacher_codes": [
+          "Kemm",
+          "Wem",
+          "Winm"
+        ],
+        "teachers": [
+          "Martin Kemeter",
+          "Markus Westner",
+          "Martin Winkler"
+        ],
+        "date": "2026-10-01",
+        "start": "17:30",
+        "end": "19:00",
+        "room": "Zoom"
+      }
+    ]
+  }
+}

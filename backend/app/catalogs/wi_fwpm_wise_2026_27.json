@@ -1,0 +1,521 @@
+{
+  "program_id": "wi_bsc_2023",
+  "term": "WiSe 2026/27",
+  "status": "extracted_reference_not_activated",
+  "source": {
+    "path": "docs/sources/fwpm_wise_2026_27_excerpt.pdf",
+    "sha256": "44a87f727822f9b4b7843dff20e22ebf399955e3e7168492ace528bb2a4cd6f6",
+    "available_pdf_pages": 3,
+    "table_pdf_page": 2,
+    "toc_pdf_page": 3,
+    "cover_date": "2026-09-14",
+    "table_footer_date": "2026-07-02"
+  },
+  "notes": [
+    "TOC covers several degree programs; filter using IW column before offering choices.",
+    "TOC numbers refer to the full handbook; they cannot be used as PDF links into this three-page excerpt.",
+    "ECTS, prerequisites, detailed descriptions and meanings of VL1/VL2/VL3 cannot be established from this excerpt.",
+    "Do not infer recurring summer/winter availability from a single Wintersemester catalog.",
+    "Same course appears under several slots; this does not authorize counting one achievement more than once.",
+    "DATE is spelled Date Engineering in the table; Data Engineering in the TOC. TOC title retained.",
+    "User clarified on 2026-10-12 that both X and (X) include IW. Raw marks retained; this is not a student admission check."
+  ],
+  "courses": [
+    {
+      "id": "wi.fwpm.kaps",
+      "short_title": "KAPS",
+      "title": "Fortgeschrittene Materialplanung und Disposition",
+      "iw_mark": "X",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 5,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 54,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 103,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.kbar",
+      "short_title": "KBAR",
+      "title": "Business Application Re-Engineering",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 8,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 57,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 106,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.kbis",
+      "short_title": "KBIS",
+      "title": "Digital Business & Information Systems",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 11,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 60,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 109,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.kdsp",
+      "short_title": "KDSP",
+      "title": "Applied Data Science with Python",
+      "iw_mark": "X",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 15,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 64,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 113,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.kees",
+      "short_title": "KEES",
+      "title": "Einfache Einführung Eingebettete Systeme",
+      "iw_mark": "(X)",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 17,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 66,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 115,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.kisc",
+      "short_title": "KISC",
+      "title": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung",
+      "iw_mark": "X",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 19,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 68,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 117,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.ksap1",
+      "short_title": "KSAP1",
+      "title": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)",
+      "iw_mark": "x",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 21,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 70,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 119,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.ktai",
+      "short_title": "KTAI",
+      "title": "Responsible and Trustworthy Artificial Intelligence Systems",
+      "iw_mark": "X",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_2",
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm1": {
+          "toc_page_start": 23,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm2": {
+          "toc_page_start": 72,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 121,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.date",
+      "short_title": "DATE",
+      "title": "Data Engineering",
+      "iw_mark": "X",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 28,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 77,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.dbpm",
+      "short_title": "DBPM",
+      "title": "Business Process Management",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 30,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 79,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.dcmc",
+      "short_title": "DCMC",
+      "title": "Compilerbau",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 33,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 82,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.dcsi",
+      "short_title": "DCSI",
+      "title": "Crowd Simulation",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 35,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 84,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.diot",
+      "short_title": "DIOT",
+      "title": "Applied Internet of Things",
+      "iw_mark": "(X)",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 38,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 87,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.dits",
+      "short_title": "DITS",
+      "title": "Internet of Things Security",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 41,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 90,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.dmse",
+      "short_title": "DMSE",
+      "title": "Model-Driven Software Engineering",
+      "iw_mark": "(X)",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 43,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 92,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.dqcp",
+      "short_title": "DQCP",
+      "title": "Quantum Computing with Python",
+      "iw_mark": null,
+      "iw_assignment": "not_marked",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 45,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 94,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": false
+    },
+    {
+      "id": "wi.fwpm.dsds",
+      "short_title": "DSDS",
+      "title": "Sprachdialogsysteme, Spoken Dialogue Systems",
+      "iw_mark": "(X)",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 47,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 96,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.dspm",
+      "short_title": "DSPM",
+      "title": "Information Security and Privacy in Medicine",
+      "iw_mark": "X",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 50,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 99,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    },
+    {
+      "id": "wi.fwpm.duxd",
+      "short_title": "DUXD",
+      "title": "User Experience Design - Benutzerorientierte Gestaltung",
+      "iw_mark": "(X)",
+      "iw_assignment": "included",
+      "stages_in_table": [
+        "abschnitt_3"
+      ],
+      "slot_references": {
+        "wi.req.fwpm2": {
+          "toc_page_start": 52,
+          "page_present_in_excerpt": false
+        },
+        "wi.req.fwpm3": {
+          "toc_page_start": 101,
+          "page_present_in_excerpt": false
+        }
+      },
+      "ects": null,
+      "description": null,
+      "admission_verified": false,
+      "iw_membership_confirmed_by_user": true
+    }
+  ]
+}

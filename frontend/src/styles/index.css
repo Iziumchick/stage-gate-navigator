@@ -1,0 +1,27 @@
+@import 'tailwindcss' source(none);
+@source '../../**/*.{js,ts,jsx,tsx}';
+@import 'tw-animate-css';
+@import './default_theme.css';
+@import './globals.css';
+
+@layer base {
+  button, select, summary { cursor: pointer; }
+  button:disabled, select:disabled { cursor: wait; opacity: 0.6; }
+  button:focus-visible, select:focus-visible, summary:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+  }
+}
+@layer components {
+  .action-button { @apply inline-flex items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm hover:brightness-95; }
+}
+
+progress { appearance: none; border: 0; border-radius: 9999px; overflow: hidden; background: #e5e7eb; }
+progress::-webkit-progress-bar { background: #e5e7eb; border-radius: 9999px; }
+progress::-webkit-progress-value { background: #22c55e; border-radius: 9999px; }
+progress::-moz-progress-bar { background: #22c55e; border-radius: 9999px; }
+
+@layer components {
+  .form-input { @apply block w-full rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-sm focus:border-blue-500 focus:outline-blue-500; }
+  .primary-button { @apply inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-3 text-sm text-white hover:bg-blue-700; }
+}

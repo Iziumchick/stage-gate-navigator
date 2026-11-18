@@ -1,0 +1,3931 @@
+{
+  "reviewed_on": "2026-10-15",
+  "schema_version": 1,
+  "sources": {
+    "doc1": {
+      "title": "WI_konsolidiert.pdf",
+      "path": "docs/sources/wi_editions/01_WI_konsolidiert.pdf",
+      "sha256": "f29819aae402344ac849ac1307ec2f578468d4216049e2c7c6b0e9839b9e5c40"
+    },
+    "doc2": {
+      "title": "SPO_WI_2023-04-17_konsolidiert_2024.pdf",
+      "path": "docs/sources/wi_editions/02_SPO_WI_2023-04-17_konsolidiert_2024.pdf",
+      "sha256": "3832fcfa4ec792b00ed2a094b1a37f45c53c105c82128002f568f8e134d0a96f"
+    },
+    "doc3": {
+      "title": "IWBSc_NF_2012-08-29__2_.pdf",
+      "path": "docs/sources/wi_editions/03_IWBSc_NF_2012-08-29__2_.pdf",
+      "sha256": "8cd7b52fceb61816c6a87bad0c837c9aebe5747794ed14f745b73f67996bca07"
+    },
+    "doc4": {
+      "title": "AES_WI_2026-01_31.pdf",
+      "path": "docs/sources/wi_editions/04_AES_WI_2026-01_31.pdf",
+      "sha256": "bbd84439f6902f8816021fd85d5bf9665402f9ba6cb553f052cf3c1e0db9337a"
+    },
+    "doc5": {
+      "title": "AES_SPO_WI_2024_06_24.pdf",
+      "path": "docs/sources/wi_editions/05_AES_SPO_WI_2024_06_24.pdf",
+      "sha256": "58c10c6696c8dc4cfbbad1fd37c7aba94d45b82c0f74450eadde35e3cd788a6a"
+    },
+    "doc6": {
+      "title": "AendS_WI_2021-02-25.pdf",
+      "path": "docs/sources/wi_editions/06_AendS_WI_2021-02-25.pdf",
+      "sha256": "1c3f9a8141d1985575c7a567834f2eebde732324f3e139115204af4947108f35"
+    },
+    "doc7": {
+      "title": "Studeinverlaufsplan_IW ab 04.23.pdf",
+      "path": "docs/sources/wi_editions/07_Studeinverlaufsplan_IW ab 04.23.pdf",
+      "sha256": "9aa6d4d0c6f826a2ae849db58b537a1033c7b351c5b31a256a3717b6bf7760c3"
+    },
+    "doc8": {
+      "title": "Studienverlaufsplan_IW bis 04.23.pdf",
+      "path": "docs/sources/wi_editions/08_Studienverlaufsplan_IW bis 04.23.pdf",
+      "sha256": "8a17316cd7183e098f70c25ea8844836692b3c65a15558df6815097b32b554d0"
+    },
+    "doc9": {
+      "title": "Studienverlaufsplan_IW ab 03.26.pdf",
+      "path": "docs/sources/wi_editions/09_Studienverlaufsplan_IW ab 03.26.pdf",
+      "sha256": "722d7dd7db947ffd7f7d42d274b885324fb216c567fc3dbc859d6f08c035ed3a"
+    },
+    "mhb2012_wise2026_27": {
+      "title": "Modulhandbuch SPO 2012, WiSe 2026/27, vorläufig",
+      "path": "docs/sources/wi_editions/mhb2012_wise2026_27.pdf",
+      "sha256": "7c528cfea1e6f9fff19a12a4d6de78556a8cadb65e9605e9e0861476c1b5e11a",
+      "url": "https://informatik-mathematik.oth-regensburg.de/fileadmin/Bereiche/Fakultaet_IM/studium/wirtschaftsinformatik_bachelor/Modulhandbuch_IW_alteSPO.pdf",
+      "retrieved_on": "2026-10-15",
+      "used_for": "cover/version verification; content not yet fully mapped"
+    },
+    "mhb2023_wise2026_27": {
+      "title": "Modulhandbuch SPO 2023, WiSe 2026/27, vorläufig",
+      "path": "docs/sources/wi_editions/mhb2023_wise2026_27.pdf",
+      "sha256": "008bd54fd934d65e6563356692225a590f362731fabf32f2e1f989f78d8964e5",
+      "url": "https://informatik-mathematik.oth-regensburg.de/fileadmin/Bereiche/Fakultaet_IM/studium/wirtschaftsinformatik_bachelor/Modulhandbuch_IW_SPO23.pdf",
+      "retrieved_on": "2026-10-15",
+      "used_for": "cover/version verification; content not yet fully mapped"
+    }
+  },
+  "editions": [
+    {
+      "id": "wi_bsc_2012",
+      "label": "SPO 2012 / Änderung 2021",
+      "program_key": "wi",
+      "regular_start_from": "WiSe 2012/13",
+      "regular_start_through": "SoSe 2023",
+      "total_ects": 210,
+      "stage_ects": {
+        "abschnitt_1": 60,
+        "abschnitt_2_including_practical": 90,
+        "abschnitt_3": 60
+      },
+      "sources": [
+        "doc1",
+        "doc3",
+        "doc6",
+        "doc8"
+      ],
+      "requirements": [
+        {
+          "id": "wi.req.hardware",
+          "title": "Hardware-Grundlagen",
+          "short_title": "HW",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "1",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.gwi",
+          "title": "Grundlagen der Wirtschaftsinformatik",
+          "short_title": "GWI",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "2",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.bwl1",
+          "title": "Betriebswirtschaftslehre 1",
+          "short_title": "BWL 1",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "3",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.bwl2",
+          "title": "Betriebswirtschaftslehre 2",
+          "short_title": "BWL 2",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "4",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.pg1",
+          "title": "Programmieren 1",
+          "short_title": "PG1",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "5",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.pg2",
+          "title": "Programmieren 2",
+          "short_title": "PG2",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "6",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.ma1",
+          "title": "Mathematik 1",
+          "short_title": "MA1",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "7",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.ma2",
+          "title": "Mathematik 2",
+          "short_title": "MA2",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "8",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.aw1",
+          "title": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+          "short_title": "AW 1",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "composite",
+          "grade_weight": 1,
+          "components": [
+            {
+              "spo_number": "9.1",
+              "title": "Fachspezifisches Englisch",
+              "ects": 3,
+              "grade_fraction": "1/2",
+              "kind": "required"
+            },
+            {
+              "spo_number": "9.2",
+              "title": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+              "ects": 2,
+              "grade_fraction": "1/2",
+              "kind": "elective"
+            }
+          ],
+          "spo_number": "9",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              6
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1,
+              2
+            ],
+            "summer_entry": [
+              1,
+              2
+            ]
+          },
+          "notes": [
+            "Der Studienverlaufsplan SoSe 2025 vermerkt, dass Fachspezifisches Englisch nicht mehr angeboten wird. Ersatzregelung im anwendbaren Modulhandbuch prüfen."
+          ],
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": ""
+          }
+        },
+        {
+          "id": "wi.req.it_architektur",
+          "title": "IT-Architektur",
+          "short_title": "ITA",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "10",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.datenbanken",
+          "title": "Datenbanken",
+          "short_title": "DB",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "11",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.statistik",
+          "title": "Statistik",
+          "short_title": "STAT",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "12",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.gpad",
+          "title": "Geschäftsprozessanalyse und -design",
+          "short_title": "GPAD",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "13",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.produktion_logistik",
+          "title": "Produktion und Logistik",
+          "short_title": "PL",
+          "ects": 8,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "14",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.algorithmen",
+          "title": "Algorithmen und Datenstrukturen",
+          "short_title": "AD",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "15",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.projektmanagement",
+          "title": "Projektmanagement",
+          "short_title": "PM",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "16",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "TN"
+          }
+        },
+        {
+          "id": "wi.req.betriebssysteme",
+          "title": "Betriebssysteme",
+          "short_title": "OS",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "17",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.software_engineering",
+          "title": "Software Engineering",
+          "short_title": "SE",
+          "ects": 8,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "18",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes_range": [
+              90,
+              120
+            ],
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.fwpm1",
+          "title": "Fachbezogenes Wahlpflichtmodul 1",
+          "short_title": "FWPM 1",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "19",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.aw2",
+          "title": "Allgemeinwissenschaftliches Wahlpflichtmodul 2",
+          "short_title": "AW 2",
+          "ects": 4,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "composite",
+          "grade_weight": 2,
+          "components": [
+            {
+              "spo_number": "20.1",
+              "title": "AW-Modul 2",
+              "ects": 2,
+              "grade_fraction": "1/2",
+              "kind": "elective"
+            },
+            {
+              "spo_number": "20.2",
+              "title": "AW-Modul 3",
+              "ects": 2,
+              "grade_fraction": "1/2",
+              "kind": "elective"
+            }
+          ],
+          "spo_number": "20",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": ""
+          }
+        },
+        {
+          "id": "wi.req.praktikum",
+          "title": "Praktikum",
+          "short_title": "PRAX",
+          "ects": 24,
+          "stage_id": "praxissemester",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "22",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "Praxisbericht m.E.",
+            "minimum_weeks": 18
+          }
+        },
+        {
+          "id": "wi.req.praxisseminar",
+          "title": "Praxisseminar",
+          "short_title": "PSEM",
+          "ects": 2,
+          "stage_id": "praxissemester",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "21",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "Referat m.E.",
+            "additional_requirement_as_printed": "LN; TN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_in1",
+          "title": "Vertiefungsmodul IN 1",
+          "short_title": "IN 1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "23",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_in2",
+          "title": "Vertiefungsmodul IN 2",
+          "short_title": "IN 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "24",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw1",
+          "title": "Vertiefungsmodul IW 1",
+          "short_title": "IW 1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "25",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw2",
+          "title": "Vertiefungsmodul IW 2",
+          "short_title": "IW 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "26",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw3",
+          "title": "Vertiefungsmodul IW 3",
+          "short_title": "IW 3",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "27",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_bwl1",
+          "title": "Vertiefungsmodul BWL 1",
+          "short_title": "BWL V1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "28",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_bwl2",
+          "title": "Vertiefungsmodul BWL 2",
+          "short_title": "BWL V2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "29",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.fwpm2",
+          "title": "Fachbezogenes Wahlpflichtmodul 2",
+          "short_title": "FWPM 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "30",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.fwpm3",
+          "title": "Fachbezogenes Wahlpflichtmodul 3",
+          "short_title": "FWPM 3",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "31",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "Kl u./o. StA u./o. mdl LN",
+            "details_source": "Studienplan",
+            "additional_requirement_as_printed": "LN"
+          }
+        },
+        {
+          "id": "wi.req.bachelorarbeit",
+          "title": "Bachelorarbeit",
+          "short_title": "BA",
+          "ects": 12,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "single",
+          "grade_weight": 6,
+          "components": [],
+          "spo_number": "32",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Schriftliche Ausarbeitung"
+          }
+        },
+        {
+          "id": "wi.req.bachelorseminar",
+          "title": "Bachelorseminar",
+          "short_title": "BSEM",
+          "ects": 3,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "33",
+          "source": {
+            "document": "doc1",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Referat m.E.",
+            "additional_requirement_as_printed": "TN; Anmeldung BA notwendig"
+          }
+        }
+      ],
+      "rules": {
+        "second_stage": {
+          "minimum_ects": 30,
+          "ects_scope": "abschnitt_1",
+          "source": {
+            "document": "doc1",
+            "section": "§ 8 Abs. 2"
+          }
+        },
+        "practical": {
+          "minimum_ects": 90,
+          "minimum_weeks": 18,
+          "source": {
+            "document": "doc1",
+            "section": "§ 8 Abs. 3; § 5"
+          }
+        },
+        "third_stage": {
+          "minimum_ects": 110,
+          "all_first_stage_passed": true,
+          "source": {
+            "document": "doc1",
+            "section": "§ 8 Abs. 4"
+          }
+        },
+        "gop": {
+          "modules": [
+            "wi.req.pg1",
+            "wi.req.ma1"
+          ],
+          "due_end_fachsemester": 2,
+          "consequence": "deemed_first_failure_if_not_taken; do not infer automatically from an incomplete transcript",
+          "source": {
+            "document": "doc1",
+            "section": "§ 8 Abs. 1"
+          }
+        },
+        "thesis": {
+          "practical_passed": true,
+          "third_stage_admission_required": true,
+          "continuous_work_months": 3,
+          "maximum_months": 5,
+          "source": {
+            "document": "doc1",
+            "section": "§ 11"
+          }
+        },
+        "graduation": {
+          "ects": 210,
+          "comparison": "at_least",
+          "all_required_assessments": true,
+          "source": {
+            "document": "doc1",
+            "section": "§ 12 Abs. 2"
+          }
+        },
+        "study_advice": {
+          "first_stage_credits_below": 30,
+          "at_end_fachsemester": 2,
+          "before_second_repeat": "prior consultation required",
+          "source": {
+            "document": "doc1",
+            "section": "§ 9"
+          }
+        },
+        "bachelorseminar": {
+          "source": {
+            "document": "doc1",
+            "section": "Anlage III; § 11"
+          },
+          "thesis_registration_required": true,
+          "attendance_required": true
+        }
+      },
+      "coverage": {
+        "spo_appendix": "transcribed_and_visually_checked",
+        "semester_offerings": "not_derived_from_spo",
+        "admission_runtime": "not_activated; requires verified achievement allocation",
+        "aw_catalog": "external_ZiL_ANK",
+        "applies_to": "regular initial enrollment; PO switches, late entry and pre-2012 transitions require separate confirmation"
+      },
+      "composite_groups": [],
+      "weight_note": "Grade weights are SPO weights, not ECTS. Component fractions are relative to their parent where printed in parentheses.",
+      "recommended_semester_source": {
+        "document": "doc8",
+        "pdf_pages": [
+          1
+        ],
+        "status": "recommended_progression_not_actual_offering"
+      },
+      "course_mapping_candidates": [
+        {
+          "requirement_id": "wi.req.vertiefung_in1",
+          "title": "Rechnernetze und Datenkommunikation",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_in2",
+          "title": "Verteilte Systeme",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw1",
+          "title": "Standardsoftware Systeme",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw2",
+          "title": "Projektstudium",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw3",
+          "title": "Sicherheit und Compliance / Informationssicherheit",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_bwl1",
+          "title": "Rechnungswesen 1",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_bwl2",
+          "title": "Unternehmenssimulation",
+          "status": "provisional",
+          "source": {
+            "document": "doc8",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wi_bsc_2023",
+      "label": "SPO 2023 / Änderung 2024",
+      "program_key": "wi",
+      "regular_start_from": "WiSe 2023/24",
+      "regular_start_through": "SoSe 2026",
+      "total_ects": 210,
+      "stage_ects": {
+        "abschnitt_1": 60,
+        "abschnitt_2_including_practical": 90,
+        "abschnitt_3": 60
+      },
+      "sources": [
+        "doc2",
+        "doc5",
+        "doc7"
+      ],
+      "requirements": [
+        {
+          "id": "wi.req.hardware",
+          "title": "Hardware-Grundlagen",
+          "short_title": "HW",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "1",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.gwi",
+          "title": "Grundlagen der Wirtschaftsinformatik",
+          "short_title": "GWI",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "2",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung",
+            "details_source": "Studienplan"
+          }
+        },
+        {
+          "id": "wi.req.bwl1",
+          "title": "Betriebswirtschaftslehre 1",
+          "short_title": "BWL 1",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "3",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.bwl2",
+          "title": "Betriebswirtschaftslehre 2",
+          "short_title": "BWL 2",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "composite",
+          "grade_weight": 1,
+          "components": [
+            {
+              "spo_number": "4.1",
+              "title": "Grundlagen der Betriebswirtschaftslehre 2",
+              "ects": 5,
+              "grade_fraction": "3/4"
+            },
+            {
+              "spo_number": "4.2",
+              "title": "Fallstudie in der Betriebswirtschaftslehre",
+              "ects": 2,
+              "grade_fraction": "1/4"
+            }
+          ],
+          "spo_number": "4",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "composite",
+            "parts": [
+              {
+                "spo_number": "4.1",
+                "type": "schriftliche Prüfung",
+                "duration_minutes": 60
+              },
+              {
+                "spo_number": "4.2",
+                "type": "Portfolioprüfung"
+              }
+            ]
+          }
+        },
+        {
+          "id": "wi.req.pg1",
+          "title": "Programmieren 1",
+          "short_title": "PG1",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "5",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.pg2",
+          "title": "Programmieren 2",
+          "short_title": "PG2",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "6",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.ma1",
+          "title": "Mathematik 1",
+          "short_title": "MA1",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "7",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.ma2",
+          "title": "Mathematik 2",
+          "short_title": "MA2",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "8",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.angewandte_gwi",
+          "title": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+          "short_title": "AGWI",
+          "ects": 3,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "9",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "Studienarbeit"
+          }
+        },
+        {
+          "id": "wi.req.aw1",
+          "title": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+          "short_title": "AW 1",
+          "ects": 2,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "elective",
+          "grade_weight": 0.5,
+          "components": [],
+          "spo_number": "10",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "ZiL/ANK-Angebotskatalog"
+          }
+        },
+        {
+          "id": "wi.req.it_architektur",
+          "title": "IT-Architektur",
+          "short_title": "ITA",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "11",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Präsentation m.E."
+          }
+        },
+        {
+          "id": "wi.req.datenbanken",
+          "title": "Datenbanken",
+          "short_title": "DB",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "12",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.statistik",
+          "title": "Statistik",
+          "short_title": "STAT",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "13",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.gpad",
+          "title": "Geschäftsprozessanalyse und -design",
+          "short_title": "GPAD",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "14",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung",
+            "details_source": "Studienplan"
+          }
+        },
+        {
+          "id": "wi.req.ppst",
+          "title": "Produktionsplanung und -steuerung",
+          "short_title": "PPST",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "15",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Referat mit Ausarbeitung m.E."
+          }
+        },
+        {
+          "id": "wi.req.algorithmen",
+          "title": "Algorithmen und Datenstrukturen",
+          "short_title": "AD",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "16",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.projektmanagement",
+          "title": "Projektmanagement",
+          "short_title": "PM",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "17",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung",
+            "details_source": "Studienplan"
+          }
+        },
+        {
+          "id": "wi.req.betriebssysteme",
+          "title": "Betriebssysteme",
+          "short_title": "OS",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "18",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.software_engineering",
+          "title": "Software Engineering",
+          "short_title": "SE",
+          "ects": 8,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "19",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.fwpm1",
+          "title": "Fachbezogenes Wahlpflichtmodul 1",
+          "short_title": "FWPM 1",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "20",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Wahlpflichtmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.seminar_wi",
+          "title": "Seminar Wirtschaftsinformatik",
+          "short_title": "SWI",
+          "ects": 3,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "21",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "Studienarbeit",
+            "language": "Englisch",
+            "additional_requirement_as_printed": "TN"
+          }
+        },
+        {
+          "id": "wi.req.aw2",
+          "title": "Allgemeinwissenschaftliches Wahlpflichtmodul 2",
+          "short_title": "AW 2",
+          "ects": 2,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "elective",
+          "grade_weight": 0.5,
+          "components": [],
+          "spo_number": "22",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "ZiL/ANK-Angebotskatalog"
+          }
+        },
+        {
+          "id": "wi.req.praktikum",
+          "title": "Praktikum",
+          "short_title": "PRAX",
+          "ects": 24,
+          "stage_id": "praxissemester",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "23.1",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "schriftlicher Bericht",
+            "additional_requirement_as_printed": "Bestätigung der Praxisstelle"
+          }
+        },
+        {
+          "id": "wi.req.praxisseminar",
+          "title": "Praxisseminar",
+          "short_title": "PSEM",
+          "ects": 2,
+          "stage_id": "praxissemester",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "23.2",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "Präsentation m.E.",
+            "additional_requirement_as_printed": "TN; Nr. 23.1"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_in1",
+          "title": "Vertiefungsmodul IN 1",
+          "short_title": "IN 1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "24",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6,
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_in2",
+          "title": "Vertiefungsmodul IN 2",
+          "short_title": "IN 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "25",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6,
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw1",
+          "title": "Vertiefungsmodul IW 1",
+          "short_title": "IW 1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "26",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6,
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw2",
+          "title": "Vertiefungsmodul IW 2",
+          "short_title": "IW 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "27",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw3",
+          "title": "Vertiefungsmodul IW 3",
+          "short_title": "IW 3",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "28",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6,
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_bwl1",
+          "title": "Vertiefungsmodul BWL 1",
+          "short_title": "BWL V1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "29",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_bwl2",
+          "title": "Vertiefungsmodul BWL 2",
+          "short_title": "BWL V2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "30",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6,
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.fwpm2",
+          "title": "Fachbezogenes Wahlpflichtmodul 2",
+          "short_title": "FWPM 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "31",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Wahlpflichtmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.fwpm3",
+          "title": "Fachbezogenes Wahlpflichtmodul 3",
+          "short_title": "FWPM 3",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "32",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Wahlpflichtmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.bachelorarbeit",
+          "title": "Bachelorarbeit",
+          "short_title": "BA",
+          "ects": 12,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "single",
+          "grade_weight": 6,
+          "components": [],
+          "spo_number": "33.1",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Schriftliche Ausarbeitung"
+          }
+        },
+        {
+          "id": "wi.req.bachelorseminar",
+          "title": "Bachelorseminar",
+          "short_title": "BSEM",
+          "ects": 3,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "33.2",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Präsentation m.E.",
+            "additional_requirement_as_printed": "TN an neun weiteren Bachelorseminarreferaten"
+          }
+        }
+      ],
+      "rules": {
+        "second_stage": {
+          "minimum_ects": 30,
+          "ects_scope": "abschnitt_1",
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 2"
+          }
+        },
+        "practical": {
+          "minimum_ects": 90,
+          "minimum_weeks": 18,
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 3; § 5"
+          }
+        },
+        "third_stage": {
+          "minimum_ects": 100,
+          "all_first_stage_passed": true,
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 4"
+          }
+        },
+        "gop": {
+          "modules": [
+            "wi.req.pg1",
+            "wi.req.ma1"
+          ],
+          "due_end_fachsemester": 2,
+          "consequence": "deemed_first_failure_if_not_taken; do not infer automatically from an incomplete transcript",
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 1"
+          }
+        },
+        "thesis": {
+          "practical_passed": true,
+          "earliest_studiensemester": 6,
+          "normal_months": 3,
+          "extension_up_to_months": 5,
+          "extension_conditions": "Application; another Pflicht-/Wahlpflicht examination in the same Fachsemester; thesis starts at least five months before Fachsemester end",
+          "source": {
+            "document": "doc2",
+            "section": "§ 11"
+          }
+        },
+        "graduation": {
+          "ects": 210,
+          "comparison": "exact",
+          "all_required_assessments": true,
+          "source": {
+            "document": "doc2",
+            "section": "§ 12 Abs. 2"
+          }
+        },
+        "study_advice": {
+          "first_stage_credits_below": 30,
+          "at_end_fachsemester": 2,
+          "before_second_repeat": "invitation to consultation",
+          "source": {
+            "document": "doc2",
+            "section": "§ 9"
+          }
+        },
+        "bachelorseminar": {
+          "source": {
+            "document": "doc2",
+            "section": "Anlage III; § 11"
+          },
+          "written_thesis_passed_required": true,
+          "additional_presentations_to_attend": 9,
+          "failed_presentation_repeat_count": 1,
+          "failed_presentation_repeat_within_months": 1
+        }
+      },
+      "coverage": {
+        "spo_appendix": "transcribed_and_visually_checked",
+        "semester_offerings": "not_derived_from_spo",
+        "admission_runtime": "not_activated; requires verified achievement allocation",
+        "aw_catalog": "external_ZiL_ANK",
+        "applies_to": "regular initial enrollment; PO switches, late entry and pre-2012 transitions require separate confirmation",
+        "dual_variant": "Separate module descriptions required by § 4 Abs. 5; not configured in this initial regular-program selection."
+      },
+      "composite_groups": [
+        {
+          "spo_number": "23",
+          "title": "Praktisches Studiensemester",
+          "ects": 26,
+          "children": [
+            "wi.req.praktikum",
+            "wi.req.praxisseminar"
+          ]
+        },
+        {
+          "spo_number": "33",
+          "title": "Bachelorarbeit",
+          "ects": 15,
+          "children": [
+            "wi.req.bachelorarbeit",
+            "wi.req.bachelorseminar"
+          ]
+        }
+      ],
+      "weight_note": "Grade weights are SPO weights, not ECTS. Component fractions are relative to their parent where printed in parentheses.",
+      "recommended_semester_source": {
+        "document": "doc7",
+        "pdf_pages": [
+          1
+        ],
+        "status": "recommended_progression_not_actual_offering"
+      },
+      "course_mapping_candidates": [
+        {
+          "requirement_id": "wi.req.vertiefung_in1",
+          "title": "Rechnernetze und Datenkommunikation",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_in2",
+          "title": "Verteilte Systeme",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw1",
+          "title": "Standardsoftware Systeme",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw2",
+          "title": "Projektstudium",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw3",
+          "title": "Sicherheit und Compliance / Informationssicherheit",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_bwl1",
+          "title": "Rechnungswesen 1",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_bwl2",
+          "title": "Unternehmenssimulation",
+          "status": "provisional",
+          "source": {
+            "document": "doc7",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wi_bsc_2026",
+      "label": "SPO 2023 / Änderungen 2024 und 2026",
+      "program_key": "wi",
+      "regular_start_from": "WiSe 2026/27",
+      "regular_start_through": null,
+      "total_ects": 210,
+      "stage_ects": {
+        "abschnitt_1": 60,
+        "abschnitt_2_including_practical": 90,
+        "abschnitt_3": 60
+      },
+      "sources": [
+        "doc2",
+        "doc4",
+        "doc5",
+        "doc9"
+      ],
+      "requirements": [
+        {
+          "id": "wi.req.enterprise_systems",
+          "title": "Enterprise Systems",
+          "short_title": "ES",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "1",
+          "source": {
+            "document": "doc4",
+            "pdf_pages": [
+              2
+            ],
+            "section": "§ 1 Nr. 7a; baseline doc2 Anlage I"
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung",
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.gwi",
+          "title": "Grundlagen der Wirtschaftsinformatik",
+          "short_title": "GWI",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "2",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung",
+            "details_source": "Studienplan"
+          }
+        },
+        {
+          "id": "wi.req.bwl1",
+          "title": "Betriebswirtschaftslehre 1",
+          "short_title": "BWL 1",
+          "ects": 5,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "3",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.bwl2",
+          "title": "Betriebswirtschaftslehre 2",
+          "short_title": "BWL 2",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "composite",
+          "grade_weight": 1,
+          "components": [
+            {
+              "spo_number": "4.1",
+              "title": "Grundlagen der Betriebswirtschaftslehre 2",
+              "ects": 5,
+              "grade_fraction": "3/4"
+            },
+            {
+              "spo_number": "4.2",
+              "title": "Fallstudie in der Betriebswirtschaftslehre",
+              "ects": 2,
+              "grade_fraction": "1/4"
+            }
+          ],
+          "spo_number": "4",
+          "source": {
+            "document": "doc4",
+            "pdf_pages": [
+              2
+            ],
+            "section": "§ 1 Nr. 7c-d; baseline doc2 Anlage I"
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "composite",
+            "parts": [
+              {
+                "spo_number": "4.1",
+                "type": "schriftliche Prüfung",
+                "duration_minutes": 90
+              },
+              {
+                "spo_number": "4.2",
+                "type": "Präsentation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "wi.req.pg1",
+          "title": "Programmieren 1",
+          "short_title": "PG1",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "5",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.pg2",
+          "title": "Programmieren 2",
+          "short_title": "PG2",
+          "ects": 8,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "6",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.ma1",
+          "title": "Mathematik 1",
+          "short_title": "MA1",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "7",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.ma2",
+          "title": "Mathematik 2",
+          "short_title": "MA2",
+          "ects": 7,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "8",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.angewandte_gwi",
+          "title": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+          "short_title": "AGWI",
+          "ects": 3,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "9",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              7
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              2
+            ],
+            "summer_entry": [
+              2
+            ]
+          },
+          "assessment": {
+            "type": "Studienarbeit"
+          }
+        },
+        {
+          "id": "wi.req.nachhaltigkeit",
+          "title": "Nachhaltigkeit in der Informatik",
+          "short_title": "NHI",
+          "ects": 2,
+          "stage_id": "abschnitt_1",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "10",
+          "source": {
+            "document": "doc4",
+            "pdf_pages": [
+              2
+            ],
+            "section": "§ 1 Nr. 7e; baseline doc2 Anlage I"
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              1
+            ],
+            "summer_entry": [
+              1
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung"
+          }
+        },
+        {
+          "id": "wi.req.it_architektur",
+          "title": "IT-Architektur",
+          "short_title": "ITA",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "11",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Präsentation m.E."
+          }
+        },
+        {
+          "id": "wi.req.datenbanken",
+          "title": "Datenbanken",
+          "short_title": "DB",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "12",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.statistik",
+          "title": "Statistik",
+          "short_title": "STAT",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "13",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.gpad",
+          "title": "Geschäftsprozessanalyse und -design",
+          "short_title": "GPAD",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "14",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "Portfolioprüfung",
+            "details_source": "Studienplan"
+          }
+        },
+        {
+          "id": "wi.req.ppst",
+          "title": "Produktionsplanung und -steuerung",
+          "short_title": "PPST",
+          "ects": 7,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "15",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Referat mit Ausarbeitung m.E."
+          }
+        },
+        {
+          "id": "wi.req.algorithmen",
+          "title": "Algorithmen und Datenstrukturen",
+          "short_title": "AD",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "16",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.projektmanagement",
+          "title": "Projektmanagement",
+          "short_title": "PM",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "composite",
+          "grade_weight": 2,
+          "components": [
+            {
+              "spo_number": "17.1",
+              "title": "Grundlagen des Projektmanagement",
+              "ects": 3,
+              "grade_weight_as_printed": "0,5"
+            },
+            {
+              "spo_number": "17.2",
+              "title": "Fallstudie im Projektmanagement",
+              "ects": 2,
+              "grade_weight_as_printed": "0,5"
+            }
+          ],
+          "spo_number": "17",
+          "source": {
+            "document": "doc4",
+            "pdf_pages": [
+              2
+            ],
+            "section": "§ 1 Nr. 8b-d; baseline doc2 Anlage II"
+          },
+          "notes": [
+            "Parent and child grade weights preserved as printed. Do not infer aggregation without clarification."
+          ],
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "composite",
+            "parts": [
+              {
+                "spo_number": "17.1",
+                "type": "schriftliche Prüfung",
+                "duration_minutes": 60
+              },
+              {
+                "spo_number": "17.2",
+                "type": "Präsentation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "wi.req.betriebssysteme",
+          "title": "Betriebssysteme",
+          "short_title": "OS",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "18",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90
+          }
+        },
+        {
+          "id": "wi.req.software_engineering",
+          "title": "Software Engineering",
+          "short_title": "SE",
+          "ects": 8,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "19",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              3
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "schriftliche Prüfung",
+            "duration_minutes": 90,
+            "additional_requirement_as_printed": "Übungsabgabe m.E."
+          }
+        },
+        {
+          "id": "wi.req.fwpm1",
+          "title": "Fachbezogenes Wahlpflichtmodul 1",
+          "short_title": "FWPM 1",
+          "ects": 5,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "20",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              4
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Wahlpflichtmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.seminar_wi",
+          "title": "Seminar Wirtschaftsinformatik",
+          "short_title": "SWI",
+          "ects": 3,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "single",
+          "grade_weight": 1,
+          "components": [],
+          "spo_number": "21",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              8
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              4
+            ],
+            "summer_entry": [
+              3
+            ]
+          },
+          "assessment": {
+            "type": "Studienarbeit",
+            "language": "Englisch",
+            "additional_requirement_as_printed": "TN"
+          }
+        },
+        {
+          "id": "wi.req.aw",
+          "title": "Allgemeinwissenschaftliches Wahlpflichtmodul",
+          "short_title": "AW",
+          "ects": 2,
+          "stage_id": "abschnitt_2",
+          "completion_kind": "elective",
+          "grade_weight": 0.5,
+          "components": [],
+          "spo_number": "22",
+          "source": {
+            "document": "doc4",
+            "pdf_pages": [
+              2
+            ],
+            "section": "§ 1 Nr. 8e; baseline doc2 Anlage II"
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "ZiL/ANK-Angebotskatalog"
+          }
+        },
+        {
+          "id": "wi.req.praktikum",
+          "title": "Praktikum",
+          "short_title": "PRAX",
+          "ects": 24,
+          "stage_id": "praxissemester",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "23.1",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "schriftlicher Bericht",
+            "additional_requirement_as_printed": "Bestätigung der Praxisstelle"
+          }
+        },
+        {
+          "id": "wi.req.praxisseminar",
+          "title": "Praxisseminar",
+          "short_title": "PSEM",
+          "ects": 2,
+          "stage_id": "praxissemester",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "23.2",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              9
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              5
+            ],
+            "summer_entry": [
+              5
+            ]
+          },
+          "assessment": {
+            "type": "Präsentation m.E.",
+            "additional_requirement_as_printed": "TN; Nr. 23.1"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_in1",
+          "title": "Vertiefungsmodul IN 1",
+          "short_title": "IN 1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "24",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_in2",
+          "title": "Vertiefungsmodul IN 2",
+          "short_title": "IN 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "25",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw1",
+          "title": "Vertiefungsmodul IW 1",
+          "short_title": "IW 1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "26",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw2",
+          "title": "Vertiefungsmodul IW 2",
+          "short_title": "IW 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "27",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_iw3",
+          "title": "Vertiefungsmodul IW 3",
+          "short_title": "IW 3",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "28",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_bwl1",
+          "title": "Vertiefungsmodul BWL 1",
+          "short_title": "BWL V1",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "29",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.vertiefung_bwl2",
+          "title": "Vertiefungsmodul BWL 2",
+          "short_title": "BWL V2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "vertiefung",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "30",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Vertiefungsmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.fwpm2",
+          "title": "Fachbezogenes Wahlpflichtmodul 2",
+          "short_title": "FWPM 2",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "31",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              6
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Wahlpflichtmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.fwpm3",
+          "title": "Fachbezogenes Wahlpflichtmodul 3",
+          "short_title": "FWPM 3",
+          "ects": 5,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "elective",
+          "grade_weight": 2,
+          "components": [],
+          "spo_number": "32",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              6
+            ]
+          },
+          "assessment": {
+            "type": "catalog_defined",
+            "details_source": "Wahlpflichtmodulkatalog"
+          }
+        },
+        {
+          "id": "wi.req.bachelorarbeit",
+          "title": "Bachelorarbeit",
+          "short_title": "BA",
+          "ects": 12,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "single",
+          "grade_weight": 6,
+          "components": [],
+          "spo_number": "33.1",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Schriftliche Ausarbeitung"
+          }
+        },
+        {
+          "id": "wi.req.bachelorseminar",
+          "title": "Bachelorseminar",
+          "short_title": "BSEM",
+          "ects": 3,
+          "stage_id": "abschnitt_3",
+          "completion_kind": "single",
+          "grade_weight": 0,
+          "components": [],
+          "spo_number": "33.2",
+          "source": {
+            "document": "doc2",
+            "pdf_pages": [
+              10
+            ]
+          },
+          "recommended_semesters": {
+            "winter_entry": [
+              7
+            ],
+            "summer_entry": [
+              7
+            ]
+          },
+          "assessment": {
+            "type": "Präsentation m.E.",
+            "additional_requirement_as_printed": "TN an neun weiteren Bachelorseminarreferaten"
+          }
+        }
+      ],
+      "rules": {
+        "second_stage": {
+          "minimum_ects": 30,
+          "ects_scope": "abschnitt_1",
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 2"
+          }
+        },
+        "practical": {
+          "minimum_ects": 90,
+          "minimum_weeks": 18,
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 3; § 5"
+          }
+        },
+        "third_stage": {
+          "minimum_ects": 100,
+          "all_first_stage_passed": true,
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 4"
+          }
+        },
+        "gop": {
+          "modules": [
+            "wi.req.pg1",
+            "wi.req.ma1"
+          ],
+          "due_end_fachsemester": 2,
+          "consequence": "deemed_first_failure_if_not_taken; do not infer automatically from an incomplete transcript",
+          "source": {
+            "document": "doc2",
+            "section": "§ 8 Abs. 1"
+          }
+        },
+        "thesis": {
+          "practical_passed": true,
+          "earliest_studiensemester": 6,
+          "normal_months": 3,
+          "extension_up_to_months": 5,
+          "extension_conditions": "Application; another Pflicht-/Wahlpflicht examination in the same Fachsemester; thesis starts at least five months before Fachsemester end",
+          "source": {
+            "document": "doc2",
+            "section": "§ 11"
+          },
+          "additional_sources": [
+            {
+              "document": "doc4",
+              "section": "§ 1 Nr. 5; § 2"
+            }
+          ]
+        },
+        "graduation": {
+          "ects": 210,
+          "comparison": "exact",
+          "all_required_assessments": true,
+          "source": {
+            "document": "doc2",
+            "section": "§ 12 Abs. 2"
+          }
+        },
+        "study_advice": {
+          "first_stage_credits_below": 30,
+          "at_end_fachsemester": 2,
+          "before_second_repeat": "invitation to consultation",
+          "source": {
+            "document": "doc2",
+            "section": "§ 9"
+          }
+        },
+        "bachelorseminar": {
+          "source": {
+            "document": "doc2",
+            "section": "Anlage III; § 11"
+          },
+          "written_thesis_passed_required": true,
+          "additional_presentations_to_attend": 9,
+          "failed_presentation_repeat_count": 1,
+          "failed_presentation_repeat_within_months": 1
+        }
+      },
+      "coverage": {
+        "spo_appendix": "transcribed_and_visually_checked",
+        "semester_offerings": "not_derived_from_spo",
+        "admission_runtime": "not_activated; requires verified achievement allocation",
+        "aw_catalog": "external_ZiL_ANK",
+        "applies_to": "regular initial enrollment; PO switches, late entry and pre-2012 transitions require separate confirmation",
+        "dual_variant": "Separate module descriptions required by § 4 Abs. 5; not configured in this initial regular-program selection."
+      },
+      "composite_groups": [
+        {
+          "spo_number": "23",
+          "title": "Praktisches Studiensemester",
+          "ects": 26,
+          "children": [
+            "wi.req.praktikum",
+            "wi.req.praxisseminar"
+          ]
+        },
+        {
+          "spo_number": "33",
+          "title": "Bachelorarbeit",
+          "ects": 15,
+          "children": [
+            "wi.req.bachelorarbeit",
+            "wi.req.bachelorseminar"
+          ]
+        }
+      ],
+      "weight_note": "Grade weights are SPO weights, not ECTS. Component fractions are relative to their parent where printed in parentheses.",
+      "recommended_semester_source": {
+        "document": "doc9",
+        "pdf_pages": [
+          1
+        ],
+        "status": "recommended_progression_not_actual_offering"
+      },
+      "course_mapping_candidates": [
+        {
+          "requirement_id": "wi.req.vertiefung_in1",
+          "title": "Rechnernetze und Datenkommunikation",
+          "status": "provisional",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_in2",
+          "title": "Verteilte Systeme",
+          "status": "provisional",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw1",
+          "title": null,
+          "status": "not_announced",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw2",
+          "title": "Projektstudium",
+          "status": "provisional",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_iw3",
+          "title": "Informationssicherheit und Compliance",
+          "status": "provisional",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_bwl1",
+          "title": "Rechnungswesen",
+          "status": "provisional",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        },
+        {
+          "requirement_id": "wi.req.vertiefung_bwl2",
+          "title": "Unternehmenssimulation",
+          "status": "provisional",
+          "source": {
+            "document": "doc9",
+            "pdf_pages": [
+              1
+            ],
+            "status": "recommended_progression_not_actual_offering"
+          }
+        }
+      ]
+    }
+  ],
+  "amendments": [
+    {
+      "id": "2021",
+      "effective_on": "2021-02-26",
+      "scope": "all enrolled under SPO 2012",
+      "change": "30 hours of workload per credit; no module or ECTS changes",
+      "source": "doc6"
+    },
+    {
+      "id": "2024",
+      "effective_on": "2024-06-25",
+      "scope": "students enrolled since WiSe 2023/24",
+      "change": "Conditional thesis duration up to five months; no module or ECTS changes",
+      "source": "doc5"
+    },
+    {
+      "id": "2026",
+      "effective_on": "2026-04-01",
+      "scope": "beginners after effective date; regular cohort starts WiSe 2026/27, confirmed by doc9",
+      "exception": "§ 1 Nr. 4 (Prüfungskommission) also applies to enrolled students; does not switch their module curriculum",
+      "source": "doc4"
+    }
+  ],
+  "important_notes": [
+    "A date in an SPO title is not itself a first-entry semester. Use transition clauses and explicit cohort labels.",
+    "Modulhandbuch is versioned within an SPO and may be updated for a new semester. An upload every semester is not mandatory if the applicable document is unchanged.",
+    "doc8 says Fachspezifisches Englisch is no longer offered; current substitution must be checked in the applicable handbook. Do not offer it automatically every summer.",
+    "Regelstudienverlaufsplan is recommended progression and seasonal planning, not proof of actual timetable availability.",
+    "External course codes, eligibility mappings and historical results must be versioned separately from these requirements."
+  ]
+}

@@ -1,8 +1,7 @@
-import fitz
-import hashlib
+import pymupdf as fitz
 import re
 from dataclasses import dataclass
-from typing import Optional, Tuple
+from typing import Optional
 
 
 MAX_PDF_SIZE_BYTES = 10 * 1024 * 1024  # 10 MB
@@ -48,7 +47,7 @@ def validate_pdf_upload(
     - non-empty
     - file size
     - MIME type
-    - magic bytes (%PDF- в первых 1024 байтах)
+    - magic bytes (%PDF- в начале файла)
     """
     safe_filename = (filename or "").strip()
     safe_content_type = (content_type or "").strip().lower()
@@ -80,9 +79,8 @@ def validate_pdf_upload(
             code="invalid_mime",
         )
 
-    # Magic bytes: PDF header обычно должен встретиться в первых ~1024 байтах
-    header_window = data[:1024]
-    if b"%PDF-" not in header_window:
+    # Require an actual PDF header, independently of the filename and MIME type.
+    if not re.match(br"%PDF-(?:1\.[0-9]|2\.0)", data.lstrip()[:16]):
         raise PdfValidationError(
             safe_message="File content does not look like a valid PDF",
             code="invalid_magic_bytes",
@@ -97,102 +95,38 @@ def validate_pdf_upload(
     )
 
 
-def calculate_sha256(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
-
-
-def extract_text(pdf_bytes: bytes) -> str:
+def inspect_student_pdf(data:bytes):
+    """Strict passive print-export policy before reading transcript rows."""
     try:
-        doc = fitz.open(stream=pdf_bytes, filetype="pdf")
-        try:
-            parts = [page.get_text() for page in doc]
-            return "\n".join(parts).strip()
-        finally:
-            doc.close()
-    except Exception as e:
-        raise PdfProcessingError("Invalid or unreadable PDF") from e
+        with fitz.open(stream=data,filetype='pdf') as doc:
+            if doc.needs_pass or doc.is_encrypted:
+                raise PdfValidationError('Bitte eine unverschlüsselte Druck-PDF aus HISinOne hochladen.','encrypted_pdf')
+            if not 1<=doc.page_count<=80 or doc.xref_length()>100000:
+                raise PdfValidationError('Die PDF ist zu umfangreich.','pdf_limits')
+            if doc.embfile_count() or doc.is_form_pdf:
+                raise PdfValidationError('Bitte eine reine Druck-PDF ohne Anhänge oder Formularfelder hochladen.','active_content')
+            for xref in range(1,doc.xref_length()):
+                value=doc.xref_object(xref,compressed=False)
+                if re.search(r'/(?:JavaScript|JS|Launch|EmbeddedFile|RichMedia|SubmitForm|ImportData)\b',value):
+                    raise PdfValidationError('Interaktive PDF-Inhalte sind nicht erlaubt. Bitte die Leistungen erneut als PDF drucken.','active_content')
+    except PdfValidationError:raise
+    except Exception as error:raise PdfProcessingError('Die PDF ist beschädigt oder nicht lesbar.') from error
 
 
-def extract_styled_lines(pdf_bytes: bytes) -> list[dict]:
-    """
-    Возвращает список "логических строк" с признаком bold.
-    Объединяем спаны в одну строку, bold = True если любой спан в этой строке bold.
-    """
+def parse_student_pdf(data:bytes):
+    import json
+    import os
+    import subprocess
+    import sys
+    env={key:os.environ[key] for key in ('PATH','PYTHONPATH','LANG') if key in os.environ}
     try:
-        doc = fitz.open(stream=pdf_bytes, filetype="pdf")
-        out: list[dict] = []
-
-        try:
-            for page_index, page in enumerate(doc, start=1):
-                data = page.get_text("dict")
-
-                for block in data.get("blocks", []):
-                    if block.get("type") != 0:  # 0 = text
-                        continue
-
-                    for line in block.get("lines", []):
-                        parts = []
-                        line_bold = False
-
-                        for span in line.get("spans", []):
-                            text = (span.get("text") or "").strip()
-                            if not text:
-                                continue
-
-                            parts.append(text)
-
-                            flags = int(span.get("flags", 0))
-                            font = str(span.get("font", "")).lower()
-
-                            is_bold_by_flags = (flags & 16) != 0
-                            is_bold_by_font = "bold" in font
-                            if is_bold_by_flags or is_bold_by_font:
-                                line_bold = True
-
-                        full = " ".join(parts).strip()
-                        if full:
-                            out.append({
-                                "page": page_index,
-                                "text": full,
-                                "bold": line_bold,
-                            })
-
-            return out
-        finally:
-            doc.close()
-
-    except Exception as e:
-        raise PdfProcessingError("Invalid or unreadable PDF") from e
-
-
-def parse_overall(full_text: str) -> Tuple[Optional[float], Optional[int]]:
-    m = re.search(
-        r"Vorläufige Gesamtleistung:\s*([0-9],[0-9])\s*/\s*([0-9]+)\s*Credits",
-        full_text
-    )
-    if not m:
-        return None, None
-
-    grade = float(m.group(1).replace(",", "."))
-    credits = int(m.group(2))
-    return grade, credits
-
-
-def parse_degree_program(full_text: str) -> Tuple[Optional[str], Optional[str]]:
-    """
-    Returns (degree_program_raw, degree_program_key)
-    Example raw: "Wirtschaftsinformatik"
-    Example key: "wi"
-    """
-    m = re.search(r"Studiengang:\s*\n\s*([^\n]+)", full_text)
-    if not m:
-        return None, None
-
-    raw = m.group(1).strip()
-    key = None
-
-    low = raw.lower()
-    if "wirtschaftsinformatik" in low:
-        key = "wi"
-
-    return raw, key
+        result=subprocess.run([sys.executable,'-m','app.services.pdf_worker'],input=data,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,timeout=20,env=env,check=False)
+        if result.returncode or len(result.stdout)>5*1024*1024:raise PdfProcessingError('Die PDF konnte innerhalb der Sicherheitsgrenzen nicht verarbeitet werden.')
+        payload=json.loads(result.stdout)
+    except (subprocess.TimeoutExpired,ValueError,OSError) as error:
+        raise PdfProcessingError('Die PDF konnte innerhalb der Sicherheitsgrenzen nicht verarbeitet werden.') from error
+    if not payload.get('ok'):
+        from app.services.leistungen_import import ExportError,REPRINT
+        message=payload.get('message','Die PDF ist nicht lesbar.').removesuffix(' '+REPRINT)
+        raise ExportError(message,payload.get('code','invalid_pdf'))
+    return payload['parsed']

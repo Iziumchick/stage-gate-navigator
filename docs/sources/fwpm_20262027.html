@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B.O.S.S.</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/all.css">
+</head>
+<body>
+ <div style="min-height: calc(100vh - 110px)">
+  <div class="no-print" style="position: fixed; top: 0px; width: 800px">
+    <div class="alert alert-success alert-dismissible" role="alert">
+      Switched term to WS 26/27
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <div class="no-print" style="float: right; text-align: right">
+     Not logged in. 
+    <br>
+    
+    <br>
+    <p>Not identified.</p> 
+    <p>Current term: <b>WS 26/27</b></p> 
+  </div>
+  <div class="no-print">
+    <a href="/"><img src="/img/oth.png" style="width: 400px; display: inline-block"></a>
+    <h1 style="display: inline-block; padding-left: 100px; color: blue; cursor: pointer" onclick="window.location = '/'">B.O.S.S.</h1><br>
+    <span style="display: inline-block; padding-left: 500px; color: black">Bequemes OTH Stundenplan System</span>
+  </div><br>
+  <hr class="no-print">
+  <div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light no-print">
+<a class="navbar-brand">Main Menu</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarText">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Public</a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+     <li><a class="dropdown-item" href="/public/fwpm">FWPM</a></li>
+     <li><a class="dropdown-item" href="/public/lecturesbyterm">Lectures</a></li>
+     <li><a class="dropdown-item" href="/public/teachers">Teachers</a></li>
+     <li><a class="dropdown-item" href="/public/subjects">Subjects</a></li>
+     <li><a class="dropdown-item" href="/public/tutorials">Tutorials</a></li>
+     <li>
+       <a class="dropdown-item" href="#">Plans &raquo;</a>
+       <ul class="dropdown-menu dropdown-submenu">
+         <li><a class="dropdown-item" href="/public/classes/I">IN</a></li>
+         <li><a class="dropdown-item" href="/public/classes/ICS">ICS</a></li>
+         <li><a class="dropdown-item" href="/public/classes/IW">IW</a></li>
+         <li><a class="dropdown-item" href="/public/classes/IT">IT</a></li>
+         <li><a class="dropdown-item" href="/public/classes/IM">IM</a></li>
+         <li><a class="dropdown-item" href="/public/classes/KI">KI</a></li>
+         <li><a class="dropdown-item" href="/public/classes/MIN">MIN</a></li>
+         <li><a class="dropdown-item" href="/public/classes/MA">MA</a></li>
+         <li><a class="dropdown-item" href="/public/classes/SC">SC</a></li>
+         <li><a class="dropdown-item" href="/public/classes/MBI">MBI</a></li>
+       </ul>
+     </li>
+  </ul>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">WS 26/27</a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+     <li><a class="dropdown-item" href="/switchterm/2025">*SS 25</a></li>
+     <li><a class="dropdown-item" href="/switchterm/2026">SS 26</a></li>
+     <li><a class="dropdown-item" href="/switchterm/2027">SS 27</a></li>
+     <li><a class="dropdown-item" href="/switchterm/20252026">WS 25/26</a></li>
+     <li><a class="dropdown-item" href="/switchterm/20262027">WS 26/27</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+</nav>  <hr class="no-print">
+
+
+    <h1>FWPM IM &mdash; WS 26/27</h1>
+<br><br><br>
+
+This list contains the elective modules together with the student groups, that may choose them.
+The student groups listed in <b>Regular</b> are guaranteed to be free of conflicts, while the
+subjects for the groups listed in <b>Opened for</b> may be in conflict with the regular time table.
+
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr><th>Name</th><th>Subject</th><th>Regular</th><th>Opened for</th></tr>
+</thead>
+<tr><td>DATE</td><td>Data Engineering</td><td>IW,KI</td><td>I,IM</td></tr>
+<tr><td>DCMC</td><td>Compiler Construction</td><td>I,IT</td><td>IW,KI</td></tr>
+<tr><td>DITS</td><td>Internet of Things Security</td><td>I,IT</td><td>KI</td></tr>
+<tr><td>DMSE</td><td>Model-driven Software Engineering</td><td>I,IW</td><td>IT</td></tr>
+<tr><td>DSDS</td><td>Sprachdialogsysteme</td><td>I,KI</td><td>IT,IM</td></tr>
+<tr><td>DSPM</td><td>Information Security and Privacy in Medicine</td><td>IW,IM</td><td>I,IT</td></tr>
+<tr><td>DUXD</td><td>User Experience Design: Designing with the User in Mind</td><td>IW,KI</td><td>IT</td></tr>
+<tr><td>KBAR</td><td>Business Application Re-Engineering</td><td>IW</td><td></td></tr>
+<tr><td>KBIS</td><td>Ditigal Business &amp; Information Systems</td><td>I,IM</td><td>IT,KI</td></tr>
+<tr><td>KDSP</td><td>Applied Data Science with Python</td><td>IM,ICS</td><td>I,KI</td></tr>
+<tr><td>KSAP</td><td>Einführung in die SAP-Entwicklungsumgebung</td><td>IW,IM</td><td>I,IT</td></tr>
+
+</table>
+  
+    
+  </div>
+ </div>
+ <footer class="no-print">
+  <hr>
+  <a href="/">Back to Startpage</a>
+ </footer>
+</body>
+</html>

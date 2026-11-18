@@ -1,0 +1,51 @@
+{
+  "reviewed_on": "2026-10-28",
+  "notes": [
+    "Reviewed against WS 26/27 BOSS IW/I/IT plans and user clarification.",
+    "Shared BW2/PM events belong to the whole module; no split into component hours is asserted.",
+    "Source colors distinguish source variants only, without a verified lecture/group legend.",
+    "SWI both seasons and IS winter / ISC summer are reviewed teaching-offer corrections, not changes to SPO requirements.",
+    "User confirmed on 2026-10-28: IW5 SEM is Seminar Wirtschaftsinformatik, also available to SPO 2026 students. Admission uses the second-stage rule (30 ECTS from Abschnitt 1), not Fachsemester 5. SEM recurrence remains unconfirmed; no calendar export is implemented."
+  ],
+  "season_overrides": {
+    "wi.course.seminar_wi": "both",
+    "wi.course.is": "winter",
+    "wi.course.isc": "summer"
+  },
+  "legacy_courses": [
+    "wi.course.hardware"
+  ],
+  "aliases": {
+    "KSAP": "wi.fwpm.ksap1"
+  },
+  "shared_events": {
+    "BW2": [
+      "wi.course.bwl2_grundlagen",
+      "wi.course.bwl2_fallstudie"
+    ],
+    "BWL2": [
+      "wi.course.bwl2_grundlagen",
+      "wi.course.bwl2_fallstudie"
+    ],
+    "PM": [
+      "wi.course.pm_grundlagen",
+      "wi.course.pm_fallstudie",
+      "wi.course.projektmanagement"
+    ]
+  },
+  "fwpm_host_plans": {
+    "wi.fwpm.kees": "I",
+    "wi.fwpm.diot": "IT",
+    "wi.fwpm.dmse": "I",
+    "wi.fwpm.dsds": "I",
+    "wi.fwpm.duxd": "IT"
+  },
+  "group_aliases": {
+    "IW5": {
+      "SEM": "wi.course.seminar_wi"
+    }
+  },
+  "unconfirmed_codes": [
+    "SEM"
+  ]
+}

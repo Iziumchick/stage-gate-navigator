@@ -1,0 +1,4 @@
+# Preserve source evidence and fixtures byte-for-byte, including iCalendar CRLF.
+/docs/sources/** -text -whitespace
+/backend/tests/fixtures/** -text -whitespace
+*.pdf binary

@@ -1,0 +1,6242 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-15",
+  "term": "WiSe 2026/27",
+  "status": "source_backed_mapping_registry_not_personal_recognition",
+  "runtime_activation": false,
+  "sources": {
+    "mhb2012": {
+      "path": "docs/sources/wi_editions/mhb2012_wise2026_27.pdf",
+      "sha256": "7c528cfea1e6f9fff19a12a4d6de78556a8cadb65e9605e9e0861476c1b5e11a",
+      "term": "WiSe 2026/27",
+      "status": "preliminary"
+    },
+    "mhb2023": {
+      "path": "docs/sources/wi_editions/mhb2023_wise2026_27.pdf",
+      "sha256": "008bd54fd934d65e6563356692225a590f362731fabf32f2e1f989f78d8964e5",
+      "term": "WiSe 2026/27",
+      "status": "preliminary"
+    },
+    "mhb2026": {
+      "path": "docs/sources/wi_editions/mhb2026_wise2026_27_user.pdf",
+      "sha256": "8f453a51d4bfac08ce642ff9a2d75881eff4f5b3caf3ee034efb4622daf83e7b",
+      "term": "WiSe 2026/27",
+      "status": "preliminary"
+    },
+    "fwpm2026": {
+      "path": "docs/sources/wi_editions/fwpm_wise2026_27_full_user.pdf",
+      "sha256": "3b2b693ab61d291fe28b1f85458f2b3b1d6af2036e8acfceddf238de6650301e",
+      "term": "WiSe 2026/27",
+      "status": "semester_catalog"
+    },
+    "plan2023": {
+      "path": "docs/sources/wi_editions/studienplan2023_wise2026_27.pdf",
+      "sha256": "d3699a9f287599cebe3050ec811064b170a6b662aec88b1409124023b06d858a",
+      "term": "WiSe 2026/27",
+      "status": "semester_catalog"
+    },
+    "progress2026": {
+      "path": "docs/sources/wi_editions/09_Studienverlaufsplan_IW ab 03.26.pdf",
+      "sha256": "722d7dd7db947ffd7f7d42d274b885324fb216c567fc3dbc859d6f08c035ed3a",
+      "term": null,
+      "status": "recommended_progression"
+    }
+  },
+  "courses": [
+    {
+      "id": "wi.course.hardware",
+      "title": "Hardware-Grundlagen"
+    },
+    {
+      "id": "wi.course.gwi",
+      "title": "Grundlagen der Wirtschaftsinformatik"
+    },
+    {
+      "id": "wi.course.bwl1",
+      "title": "Betriebswirtschaftslehre 1"
+    },
+    {
+      "id": "wi.course.bwl2",
+      "title": "Betriebswirtschaftslehre 2"
+    },
+    {
+      "id": "wi.course.pg1",
+      "title": "Programmieren 1"
+    },
+    {
+      "id": "wi.course.pg2",
+      "title": "Programmieren 2 (Java)"
+    },
+    {
+      "id": "wi.course.ma1",
+      "title": "Mathematik 1 (Lineare Algebra)"
+    },
+    {
+      "id": "wi.course.ma2",
+      "title": "Mathematik 2 (Analysis)"
+    },
+    {
+      "id": "wi.course.english_legacy",
+      "title": "Fachspezifisches Englisch"
+    },
+    {
+      "id": "wi.course.technical_english_i",
+      "title": "Technical English I"
+    },
+    {
+      "id": "wi.course.it_architektur",
+      "title": "IT-Architektur"
+    },
+    {
+      "id": "wi.course.datenbanken",
+      "title": "Datenbanken"
+    },
+    {
+      "id": "wi.course.statistik",
+      "title": "Statistik"
+    },
+    {
+      "id": "wi.course.gpad",
+      "title": "Geschäftsprozessanalyse und -design"
+    },
+    {
+      "id": "wi.course.produktion_logistik",
+      "title": "Produktion und Logistik"
+    },
+    {
+      "id": "wi.course.algorithmen",
+      "title": "Algorithmen und Datenstrukturen"
+    },
+    {
+      "id": "wi.course.projektmanagement",
+      "title": "Projektmanagement"
+    },
+    {
+      "id": "wi.course.betriebssysteme",
+      "title": "Betriebssysteme"
+    },
+    {
+      "id": "wi.course.software_engineering",
+      "title": "Software Engineering"
+    },
+    {
+      "id": "wi.course.practice_joint",
+      "title": "Praktikum im Betrieb und Praxisseminar"
+    },
+    {
+      "id": "wi.course.rd",
+      "title": "Rechnernetze und Datenkommunikation"
+    },
+    {
+      "id": "wi.course.vs",
+      "title": "Verteilte Systeme"
+    },
+    {
+      "id": "wi.course.ss",
+      "title": "Standardsoftwaresysteme"
+    },
+    {
+      "id": "wi.course.pj",
+      "title": "Projektstudium"
+    },
+    {
+      "id": "wi.course.is",
+      "title": "Informationssicherheit"
+    },
+    {
+      "id": "wi.course.isc",
+      "title": "Informationssicherheit und Compliance"
+    },
+    {
+      "id": "wi.course.rw1",
+      "title": "Rechnungswesen 1"
+    },
+    {
+      "id": "wi.course.us",
+      "title": "Unternehmenssimulation"
+    },
+    {
+      "id": "wi.course.bachelorarbeit",
+      "title": "Bachelorarbeit"
+    },
+    {
+      "id": "wi.course.bachelorseminar",
+      "title": "Bachelorseminar"
+    },
+    {
+      "id": "wi.course.bwl2_grundlagen",
+      "title": "Grundlagen der Betriebswirtschaftslehre 2"
+    },
+    {
+      "id": "wi.course.bwl2_fallstudie",
+      "title": "Fallstudie in der Betriebswirtschaftslehre"
+    },
+    {
+      "id": "wi.course.angewandte_gwi",
+      "title": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik"
+    },
+    {
+      "id": "wi.course.ppst",
+      "title": "Produktionsplanung und -steuerung"
+    },
+    {
+      "id": "wi.course.seminar_wi",
+      "title": "Seminar Wirtschaftsinformatik"
+    },
+    {
+      "id": "wi.course.praktikum",
+      "title": "Praktikum"
+    },
+    {
+      "id": "wi.course.praxisseminar",
+      "title": "Praxisseminar"
+    },
+    {
+      "id": "wi.course.enterprise_systems",
+      "title": "Enterprise Systems"
+    },
+    {
+      "id": "wi.course.nachhaltigkeit",
+      "title": "Nachhaltigkeit in der Informatik"
+    },
+    {
+      "id": "wi.course.pm_fallstudie",
+      "title": "Fallstudie im Projektmanagement"
+    },
+    {
+      "id": "wi.course.pm_grundlagen",
+      "title": "Grundlagen des Projektmanagement"
+    },
+    {
+      "id": "wi.course.vhb_pm",
+      "title": "Fundamentals of Project Management"
+    },
+    {
+      "id": "wi.fwpm.kaps",
+      "title": "Fortgeschrittene Materialplanung und Disposition"
+    },
+    {
+      "id": "wi.fwpm.kdsp",
+      "title": "Applied Data Science with Python"
+    },
+    {
+      "id": "wi.fwpm.kees",
+      "title": "Einfache Einführung Eingebettete Systeme"
+    },
+    {
+      "id": "wi.fwpm.kisc",
+      "title": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung"
+    },
+    {
+      "id": "wi.fwpm.ksap1",
+      "title": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)"
+    },
+    {
+      "id": "wi.fwpm.ktai",
+      "title": "Responsible and Trustworthy Artificial Intelligence Systems"
+    },
+    {
+      "id": "wi.fwpm.date",
+      "title": "Data Engineering"
+    },
+    {
+      "id": "wi.fwpm.diot",
+      "title": "Applied Internet of Things"
+    },
+    {
+      "id": "wi.fwpm.dmse",
+      "title": "Model-Driven Software Engineering"
+    },
+    {
+      "id": "wi.fwpm.dsds",
+      "title": "Sprachdialogsysteme, Spoken Dialogue Systems"
+    },
+    {
+      "id": "wi.fwpm.dspm",
+      "title": "Information Security and Privacy in Medicine"
+    },
+    {
+      "id": "wi.fwpm.duxd",
+      "title": "User Experience Design - Benutzerorientierte Gestaltung"
+    }
+  ],
+  "bindings": [
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.hardware",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Hardware-Grundlagen",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Hardware-Grundlagen",
+      "module_number_as_printed": "1",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            19
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.hardware",
+          "role": "course",
+          "title_as_printed": "Hardware-Grundlagen",
+          "short_code_as_printed": "HW",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                20,
+                21
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.gwi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Grundlagen der Wirtschaftsinformatik",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Grundlagen der Wirtschaftsinformatik",
+      "module_number_as_printed": "2",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            15
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.gwi",
+          "role": "course",
+          "title_as_printed": "Grundlagen der Wirtschaftsinformatik (Fundamentals of Business Informatics)",
+          "short_code_as_printed": "WI",
+          "ects_as_documented": null,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                16,
+                17,
+                18
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 8
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.bwl1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebswirtschaftslehre 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Betriebswirtschaftslehre 1",
+      "module_number_as_printed": "3",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            9
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bwl1",
+          "role": "course",
+          "title_as_printed": "Betriebswirtschaftslehre 1",
+          "short_code_as_printed": "BW 1",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                10,
+                11
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.bwl2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebswirtschaftslehre 2",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Betriebswirtschaftslehre 2",
+      "module_number_as_printed": "4",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            12
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bwl2",
+          "role": "course",
+          "title_as_printed": "Betriebswirtschaftslehre 2",
+          "short_code_as_printed": "BW 2",
+          "ects_as_documented": 7,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                13,
+                14
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.pg1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Programmieren 1",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Programmieren 1",
+      "module_number_as_printed": "5",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            29
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pg1",
+          "role": "course",
+          "title_as_printed": "Programmieren 1",
+          "short_code_as_printed": "PG1",
+          "ects_as_documented": 8,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                30,
+                31
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.pg2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Programmieren 2",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Programmieren 2",
+      "module_number_as_printed": "6",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            32
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pg2",
+          "role": "course",
+          "title_as_printed": "Programmieren 2 (Java)",
+          "short_code_as_printed": "PG2",
+          "ects_as_documented": 8,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                33,
+                34
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.ma1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Mathematik 1",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Mathematik 1",
+      "module_number_as_printed": "7",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            22
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ma1",
+          "role": "course",
+          "title_as_printed": "Mathematik 1 (Lineare Algebra)",
+          "short_code_as_printed": "MA 1",
+          "ects_as_documented": null,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                23,
+                24
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 7
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.ma2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Mathematik 2",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Mathematik 2",
+      "module_number_as_printed": "8",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            25
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ma2",
+          "role": "course",
+          "title_as_printed": "Mathematik 2 (Analysis)",
+          "short_code_as_printed": "MA2",
+          "ects_as_documented": null,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                26,
+                27,
+                28
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 7
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.aw1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+      "module_number_as_printed": "9",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            4
+          ]
+        }
+      ],
+      "mapping_kind": "required_components",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": null,
+          "role": "external_elective_slot",
+          "title_as_printed": "AW-Modul 1",
+          "short_code_as_printed": "AW 1",
+          "ects_as_documented": 2,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                5,
+                6
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        },
+        {
+          "course_id": "wi.course.english_legacy",
+          "role": "required_component",
+          "title_as_printed": "Fachspezifisches Englisch",
+          "short_code_as_printed": "EN",
+          "ects_as_documented": 3,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                7,
+                8
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "currently_taught": false
+        }
+      ],
+      "notes": [
+        "Actual AW course is chosen from the external AW catalog; placeholder has no timetable."
+      ],
+      "substitutions": [
+        {
+          "for_course_id": "wi.course.english_legacy",
+          "course_id": "wi.course.technical_english_i",
+          "status": "documented_requires_individual_recognition",
+          "conditions": [
+            "Register via AW catalog",
+            "Complete Technical English I",
+            "Submit Anrechnung application to the responsible Prüfungskommission"
+          ],
+          "replacement_course_ects": null,
+          "target_component_ects": 3,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.it_architektur",
+      "term": "WiSe 2026/27",
+      "requirement_title": "IT-Architektur",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IT-Architektur",
+      "module_number_as_printed": "10",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            53
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.it_architektur",
+          "role": "course",
+          "title_as_printed": "IT-Architektur",
+          "short_code_as_printed": "IA",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                54,
+                55
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.datenbanken",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Datenbanken",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Datenbanken (Databases)",
+      "module_number_as_printed": "11",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            46
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.datenbanken",
+          "role": "course",
+          "title_as_printed": "Datenbanken",
+          "short_code_as_printed": "DAB",
+          "ects_as_documented": 7,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                47,
+                48
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.statistik",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Statistik",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Statistik",
+      "module_number_as_printed": "12",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            69
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.statistik",
+          "role": "course",
+          "title_as_printed": "Statistik",
+          "short_code_as_printed": "ST",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                70,
+                71
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.gpad",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Geschäftsprozessanalyse und -design",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Geschäftsprozessanalyse und -design",
+      "module_number_as_printed": "13",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            50
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.gpad",
+          "role": "course",
+          "title_as_printed": "Geschäftsprozessanalyse und -design",
+          "short_code_as_printed": "GA",
+          "ects_as_documented": 7,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                51,
+                52
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.produktion_logistik",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Produktion und Logistik",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Produktion und Logistik",
+      "module_number_as_printed": "14",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            59
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.produktion_logistik",
+          "role": "course",
+          "title_as_printed": "Produktion und Logistik",
+          "short_code_as_printed": "PL",
+          "ects_as_documented": 8,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                60,
+                61
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.algorithmen",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Algorithmen und Datenstrukturen",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Algorithmen und Datenstrukturen",
+      "module_number_as_printed": "15",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            35
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.algorithmen",
+          "role": "course",
+          "title_as_printed": "Algorithmen und Datenstrukturen",
+          "short_code_as_printed": "AD",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                36,
+                37
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.projektmanagement",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Projektmanagement",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Projektmanagement",
+      "module_number_as_printed": "16",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            62
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.projektmanagement",
+          "role": "course",
+          "title_as_printed": "Projektmanagement",
+          "short_code_as_printed": "PM",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                63,
+                64,
+                65
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.betriebssysteme",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebssysteme",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Betriebssysteme",
+      "module_number_as_printed": "17",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            43
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.betriebssysteme",
+          "role": "course",
+          "title_as_printed": "Betriebssysteme",
+          "short_code_as_printed": "OS",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                44,
+                45
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.software_engineering",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Software Engineering",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Software Engineering",
+      "module_number_as_printed": "18",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            66
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.software_engineering",
+          "role": "course",
+          "title_as_printed": "Software Engineering",
+          "short_code_as_printed": "SE",
+          "ects_as_documented": 8,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                67,
+                68
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.fwpm1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 1",
+      "module_number_as_printed": "19",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            49
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm1"
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.aw2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Allgemeinwissenschaftliches Wahlpflichtmodul 2",
+      "requirement_ects": 4,
+      "module_title_as_printed": "Allgemeinwissenschaftliches Wahlpflichtmodul 2",
+      "module_number_as_printed": "20",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            38
+          ]
+        }
+      ],
+      "mapping_kind": "required_components",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": null,
+          "role": "external_elective_slot",
+          "title_as_printed": "AW-Modul 2",
+          "short_code_as_printed": "AW 2",
+          "ects_as_documented": 2,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                39,
+                40
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        },
+        {
+          "course_id": null,
+          "role": "external_elective_slot",
+          "title_as_printed": "AW-Modul 3",
+          "short_code_as_printed": "AW 3",
+          "ects_as_documented": 2,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                41,
+                42
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Actual AW course is chosen from the external AW catalog; placeholder has no timetable."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.praktikum",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Praktikum",
+      "requirement_ects": 24,
+      "module_title_as_printed": "Praktikum mit Praxisseminar",
+      "module_number_as_printed": "21 / 22",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            56
+          ]
+        }
+      ],
+      "mapping_kind": "shared_handbook_description",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.practice_joint",
+          "role": "shared_description",
+          "title_as_printed": "Praktikum im Betrieb und Praxisseminar",
+          "short_code_as_printed": "PR + PS",
+          "ects_as_documented": 26,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                57,
+                58
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Handbook describes 26 ECTS jointly. SPO keeps Praktikum 24 + Praxisseminar 2; do not credit the joint description twice."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.praxisseminar",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Praxisseminar",
+      "requirement_ects": 2,
+      "module_title_as_printed": "Praktikum mit Praxisseminar",
+      "module_number_as_printed": "21 / 22",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            56
+          ]
+        }
+      ],
+      "mapping_kind": "shared_handbook_description",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.practice_joint",
+          "role": "shared_description",
+          "title_as_printed": "Praktikum im Betrieb und Praxisseminar",
+          "short_code_as_printed": "PR + PS",
+          "ects_as_documented": 26,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                57,
+                58
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Handbook describes 26 ECTS jointly. SPO keeps Praktikum 24 + Praxisseminar 2; do not credit the joint description twice."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_in1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IN 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IN1",
+      "module_number_as_printed": "23",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            85
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.rd",
+          "role": "course",
+          "title_as_printed": "Rechnernetze und Datenkommunikation",
+          "short_code_as_printed": "RD",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                86,
+                87
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_in2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IN 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IN 2",
+      "module_number_as_printed": "24",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            88
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.vs",
+          "role": "course",
+          "title_as_printed": "Verteilte Systeme",
+          "short_code_as_printed": "VS",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                89,
+                90
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_iw1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IW 1",
+      "module_number_as_printed": "25",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            91
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ss",
+          "role": "course",
+          "title_as_printed": "Standardsoftwaresysteme",
+          "short_code_as_printed": "SS",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                92,
+                93
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_iw2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IW 2",
+      "module_number_as_printed": "26",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            94
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pj",
+          "role": "course",
+          "title_as_printed": "Projektstudium",
+          "short_code_as_printed": "PJ",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                95,
+                96,
+                97
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_iw3",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 3",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IW 3",
+      "module_number_as_printed": "27",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            98
+          ]
+        }
+      ],
+      "mapping_kind": "semester_options",
+      "status": "needs_semester_option_confirmation",
+      "members": [
+        {
+          "course_id": "wi.course.is",
+          "role": "option",
+          "title_as_printed": "Informationssicherheit",
+          "short_code_as_printed": "IS",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                99,
+                100
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        },
+        {
+          "course_id": "wi.course.isc",
+          "role": "option",
+          "title_as_printed": "Informationssicherheit und Compliance",
+          "short_code_as_printed": "ISC",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                101,
+                102
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Requirement remains 5 ECTS; listed five-credit courses are not added into a 10-ECTS requirement."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_bwl1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul BWL 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul BWL 1",
+      "module_number_as_printed": "28",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            79
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.rw1",
+          "role": "course",
+          "title_as_printed": "Rechnungswesen 1",
+          "short_code_as_printed": "RW 1",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                80,
+                81
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.vertiefung_bwl2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul BWL 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul BWL 2",
+      "module_number_as_printed": "29",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            82
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.us",
+          "role": "course",
+          "title_as_printed": "Unternehmenssimulation",
+          "short_code_as_printed": "US",
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                83,
+                84
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.fwpm2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 2",
+      "module_number_as_printed": "30",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            77
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            26
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm2"
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.fwpm3",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 3",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 3",
+      "module_number_as_printed": "31",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            78
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            75
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm3"
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.bachelorarbeit",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Bachelorarbeit",
+      "requirement_ects": 12,
+      "module_title_as_printed": "Bachelorarbeit",
+      "module_number_as_printed": "32",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            72
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bachelorarbeit",
+          "role": "requirement",
+          "title_as_printed": "Bachelor-Arbeit",
+          "short_code_as_printed": "BA",
+          "ects_as_documented": 12,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                73,
+                74
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2012",
+      "requirement_id": "wi.req.bachelorseminar",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Bachelorseminar",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Bachelorseminar",
+      "module_number_as_printed": "33",
+      "evidence": [
+        {
+          "source": "mhb2012",
+          "pdf_pages": [
+            75
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bachelorseminar",
+          "role": "requirement",
+          "title_as_printed": "Bachelorseminar",
+          "short_code_as_printed": "BS",
+          "ects_as_documented": 3,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2012",
+              "pdf_pages": [
+                76
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.hardware",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Hardware-Grundlagen",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Hardware-Grundlagen",
+      "module_number_as_printed": "1",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            27
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.hardware",
+          "role": "course",
+          "title_as_printed": "Hardware-Grundlagen",
+          "short_code_as_printed": "HW",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                28,
+                29
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.gwi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Grundlagen der Wirtschaftsinformatik",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Grundlagen der Wirtschaftsinformatik",
+      "module_number_as_printed": "2",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            23
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.gwi",
+          "role": "course",
+          "title_as_printed": "Grundlagen der Wirtschaftsinformatik (Fundamentals of Business Informatics)",
+          "short_code_as_printed": "WI",
+          "ects_as_documented": 8,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                24,
+                25,
+                26
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.bwl1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebswirtschaftslehre 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Betriebswirtschaftslehre 1",
+      "module_number_as_printed": "3",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            15
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bwl1",
+          "role": "course",
+          "title_as_printed": "Betriebswirtschaftslehre 1",
+          "short_code_as_printed": "BW 1",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                16,
+                17
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.bwl2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebswirtschaftslehre 2",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Betriebswirtschaftslehre 2",
+      "module_number_as_printed": "4",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            18
+          ]
+        }
+      ],
+      "mapping_kind": "required_components",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bwl2_grundlagen",
+          "role": "required_component",
+          "title_as_printed": "2.1 Grundlagen der Betriebswirtschaftslehre 2",
+          "short_code_as_printed": "BW 2.1",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                19,
+                20
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "component_spo_number": "4.1"
+        },
+        {
+          "course_id": "wi.course.bwl2_fallstudie",
+          "role": "required_component",
+          "title_as_printed": "2.2 Fallstudie in der Betriebswirtschaftslehre",
+          "short_code_as_printed": "BW 2.2",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                21,
+                22
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "component_spo_number": "4.2"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.pg1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Programmieren 1",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Programmieren 1",
+      "module_number_as_printed": "5",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            37
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pg1",
+          "role": "course",
+          "title_as_printed": "Programmieren 1",
+          "short_code_as_printed": "PG1",
+          "ects_as_documented": 8,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                38,
+                39
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.pg2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Programmieren 2",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Programmieren 2",
+      "module_number_as_printed": "6",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            40
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pg2",
+          "role": "course",
+          "title_as_printed": "Programmieren 2 (Java)",
+          "short_code_as_printed": "PG2",
+          "ects_as_documented": 8,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                41,
+                42
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.ma1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Mathematik 1",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Mathematik 1",
+      "module_number_as_printed": "7",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            30
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ma1",
+          "role": "course",
+          "title_as_printed": "Mathematik 1 (Lineare Algebra)",
+          "short_code_as_printed": "MA1",
+          "ects_as_documented": null,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                31,
+                32
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 7
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.ma2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Mathematik 2",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Mathematik 2",
+      "module_number_as_printed": "8",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            33
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ma2",
+          "role": "course",
+          "title_as_printed": "Mathematik 2 (Analysis)",
+          "short_code_as_printed": "MA2",
+          "ects_as_documented": null,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                34,
+                35,
+                36
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 7
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.angewandte_gwi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+      "module_number_as_printed": "9",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            9
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.angewandte_gwi",
+          "role": "course",
+          "title_as_printed": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+          "short_code_as_printed": null,
+          "ects_as_documented": 3,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                10,
+                11
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.aw1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+      "requirement_ects": 2,
+      "module_title_as_printed": "Allgemeinwissenschaftliches Wahlpflichtmodul 1",
+      "module_number_as_printed": "10",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            12
+          ]
+        }
+      ],
+      "mapping_kind": "external_elective",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": null,
+          "role": "external_elective_slot",
+          "title_as_printed": "AW-Modul 1",
+          "short_code_as_printed": "AW 1",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                13,
+                14
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Actual AW course is chosen from the external AW catalog; placeholder has no timetable."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.it_architektur",
+      "term": "WiSe 2026/27",
+      "requirement_title": "IT-Architektur",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IT-Architektur",
+      "module_number_as_printed": "11",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            59
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.it_architektur",
+          "role": "course",
+          "title_as_printed": "IT-Architektur",
+          "short_code_as_printed": "11",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                60,
+                61
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.datenbanken",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Datenbanken",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Datenbanken (Databases)",
+      "module_number_as_printed": "12",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            52
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.datenbanken",
+          "role": "course",
+          "title_as_printed": "Datenbanken",
+          "short_code_as_printed": "DAB",
+          "ects_as_documented": 7,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                53,
+                54
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.statistik",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Statistik",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Statistik",
+      "module_number_as_printed": "13",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            80
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.statistik",
+          "role": "course",
+          "title_as_printed": "Statistik",
+          "short_code_as_printed": "ST",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                81,
+                82
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.gpad",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Geschäftsprozessanalyse und -design",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Geschäftsprozessanalyse und -design",
+      "module_number_as_printed": "14",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            56
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.gpad",
+          "role": "course",
+          "title_as_printed": "Geschäftsprozessanalyse und -design",
+          "short_code_as_printed": "GA",
+          "ects_as_documented": 7,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                57,
+                58
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.ppst",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Produktionsplanung und -steuerung",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Produktionsplanung und -steuerung",
+      "module_number_as_printed": "15",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            67
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ppst",
+          "role": "course",
+          "title_as_printed": "Produktionsplanung und-steuerung",
+          "short_code_as_printed": "PPST",
+          "ects_as_documented": 7,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                68,
+                69
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.algorithmen",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Algorithmen und Datenstrukturen",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Algorithmen und Datenstrukturen",
+      "module_number_as_printed": "16",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            43
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.algorithmen",
+          "role": "course",
+          "title_as_printed": "Algorithmen und Datenstrukturen",
+          "short_code_as_printed": "AD",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                44,
+                45
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.projektmanagement",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Projektmanagement",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Projektmanagement",
+      "module_number_as_printed": "17",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            70
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.projektmanagement",
+          "role": "course",
+          "title_as_printed": "Projektmanagement",
+          "short_code_as_printed": "PM",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                71,
+                72,
+                73
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.betriebssysteme",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebssysteme",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Betriebssysteme",
+      "module_number_as_printed": "18",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            49
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.betriebssysteme",
+          "role": "course",
+          "title_as_printed": "Betriebssysteme",
+          "short_code_as_printed": "OS",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                50,
+                51
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.software_engineering",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Software Engineering",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Software Engineering",
+      "module_number_as_printed": "19",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            77
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.software_engineering",
+          "role": "course",
+          "title_as_printed": "Software Engineering",
+          "short_code_as_printed": "SE",
+          "ects_as_documented": 8,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                78,
+                79
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.fwpm1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 1",
+      "module_number_as_printed": "20",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            55
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm1"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.seminar_wi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Seminar Wirtschaftsinformatik",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Seminar Wirtschaftsinformatik",
+      "module_number_as_printed": "21",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            74
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.seminar_wi",
+          "role": "course",
+          "title_as_printed": "Seminar Wirtschaftsinformatik",
+          "short_code_as_printed": "SWI",
+          "ects_as_documented": 3,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                75,
+                76
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.aw2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Allgemeinwissenschaftliches Wahlpflichtmodul 2",
+      "requirement_ects": 2,
+      "module_title_as_printed": "Allgemeinwissenschaftliches Wahlpflichtmodul 2",
+      "module_number_as_printed": "22",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            46
+          ]
+        }
+      ],
+      "mapping_kind": "external_elective",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": null,
+          "role": "external_elective_slot",
+          "title_as_printed": "AW-Modul 2",
+          "short_code_as_printed": "AW 2",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                47,
+                48
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Actual AW course is chosen from the external AW catalog; placeholder has no timetable."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.praktikum",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Praktikum",
+      "requirement_ects": 24,
+      "module_title_as_printed": "Praktisches Studiensemester (Practical Semester)",
+      "module_number_as_printed": "23",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            62
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.praktikum",
+          "role": "requirement",
+          "title_as_printed": "Praktikum (Industrial Placement)",
+          "short_code_as_printed": "PS",
+          "ects_as_documented": 24,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                63,
+                64
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.praxisseminar",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Praxisseminar",
+      "requirement_ects": 2,
+      "module_title_as_printed": "Praktisches Studiensemester (Practical Semester)",
+      "module_number_as_printed": "23",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            62
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.praxisseminar",
+          "role": "requirement",
+          "title_as_printed": "Praxisseminar (Industrial Placement Seminar)",
+          "short_code_as_printed": "PS",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                65,
+                66
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_in1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IN 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IN1",
+      "module_number_as_printed": "24",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            96
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.rd",
+          "role": "course",
+          "title_as_printed": "Rechnernetze und Datenkommunikation",
+          "short_code_as_printed": "RD",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                97,
+                98
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_in2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IN 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IN 2",
+      "module_number_as_printed": "25",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            99
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.vs",
+          "role": "course",
+          "title_as_printed": "Verteilte Systeme",
+          "short_code_as_printed": "VS",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                100,
+                101
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_iw1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IW 1",
+      "module_number_as_printed": "26",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            102
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ss",
+          "role": "course",
+          "title_as_printed": "Standardsoftwaresysteme",
+          "short_code_as_printed": "SS",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                103,
+                104
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_iw2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IW 2",
+      "module_number_as_printed": "27",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            105
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pj",
+          "role": "course",
+          "title_as_printed": "Projektstudium",
+          "short_code_as_printed": "PJ",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                106,
+                107,
+                108
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_iw3",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 3",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul IW 3",
+      "module_number_as_printed": "28",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            109
+          ]
+        },
+        {
+          "source": "plan2023",
+          "pdf_pages": [
+            2
+          ]
+        }
+      ],
+      "mapping_kind": "semester_options",
+      "status": "source_disagreement",
+      "members": [
+        {
+          "course_id": "wi.course.isc",
+          "role": "option",
+          "title_as_printed": "Informationssicherheit und Compliance",
+          "short_code_as_printed": "ISC",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                110,
+                111
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        },
+        {
+          "course_id": "wi.course.is",
+          "role": "option",
+          "title_as_printed": "Informationssicherheit",
+          "short_code_as_printed": "IS",
+          "ects_as_documented": null,
+          "frequency": "unknown",
+          "evidence": [
+            {
+              "source": "plan2023",
+              "pdf_pages": [
+                2
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_plan_entry"
+        }
+      ],
+      "notes": [
+        "Requirement remains 5 ECTS; listed five-credit courses are not added into a 10-ECTS requirement.",
+        "Semester Studienplan lists IS and ISC; current handbook only describes ISC. IS applicability is documented in the plan, but its description is absent from this handbook."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_bwl1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul BWL 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul BWL 1",
+      "module_number_as_printed": "29",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            90
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.rw1",
+          "role": "course",
+          "title_as_printed": "Rechnungswesen 1",
+          "short_code_as_printed": "RW 1",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                91,
+                92
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.vertiefung_bwl2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul BWL 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Vertiefungsmodul BWL 2",
+      "module_number_as_printed": "30",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            93
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.us",
+          "role": "course",
+          "title_as_printed": "Unternehmenssimulation",
+          "short_code_as_printed": "US",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                94,
+                95
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.fwpm2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 2",
+      "module_number_as_printed": "31",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            88
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            26
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm2"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.fwpm3",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 3",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 3",
+      "module_number_as_printed": "32",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            89
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            75
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm3"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.bachelorarbeit",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Bachelorarbeit",
+      "requirement_ects": 12,
+      "module_title_as_printed": "Bachelorarbeit (Bachelor Thesis)",
+      "module_number_as_printed": "33",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            83
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bachelorarbeit",
+          "role": "requirement",
+          "title_as_printed": "Schriftlliche Ausarbeitung (Thesis)",
+          "short_code_as_printed": "BA",
+          "ects_as_documented": 12,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                86,
+                87
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "requirement_id": "wi.req.bachelorseminar",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Bachelorseminar",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Bachelorarbeit (Bachelor Thesis)",
+      "module_number_as_printed": "33",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            83
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bachelorseminar",
+          "role": "requirement",
+          "title_as_printed": "Bachelorseminar",
+          "short_code_as_printed": "BS",
+          "ects_as_documented": 3,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2023",
+              "pdf_pages": [
+                84,
+                85
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.enterprise_systems",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Enterprise Systems",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Enterprise Systems",
+      "module_number_as_printed": "1",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            4
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.enterprise_systems",
+          "role": "course",
+          "title_as_printed": "Enterprise Systems",
+          "short_code_as_printed": null,
+          "ects_as_documented": 5,
+          "frequency": "unknown",
+          "frequency_as_printed": null,
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.gwi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Grundlagen der Wirtschaftsinformatik",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Grundlagen der Wirtschaftsinformatik",
+      "module_number_as_printed": "2",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            20
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.gwi",
+          "role": "course",
+          "title_as_printed": "Grundlagen der Wirtschaftsinformatik (Fundamentals of Business Informatics)",
+          "short_code_as_printed": "WI",
+          "ects_as_documented": null,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 8
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.bwl1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebswirtschaftslehre 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Betriebswirtschaftslehre 1",
+      "module_number_as_printed": "3",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            12
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bwl1",
+          "role": "course",
+          "title_as_printed": "Betriebswirtschaftslehre 1",
+          "short_code_as_printed": "BW 1",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                13,
+                14
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.bwl2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebswirtschaftslehre 2",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Betriebswirtschaftslehre 2",
+      "module_number_as_printed": "4",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            15
+          ]
+        }
+      ],
+      "mapping_kind": "required_components",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bwl2_grundlagen",
+          "role": "required_component",
+          "title_as_printed": "2.1 Grundlagen der Betriebswirtschaftslehre 2",
+          "short_code_as_printed": "BW 2.1",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                16,
+                17
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "component_spo_number": "4.1"
+        },
+        {
+          "course_id": "wi.course.bwl2_fallstudie",
+          "role": "required_component",
+          "title_as_printed": "2.2 Fallstudie in der Betriebswirtschaftslehre",
+          "short_code_as_printed": "BW 2.2",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                18,
+                19
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "component_spo_number": "4.2"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.pg1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Programmieren 1",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Programmieren 1",
+      "module_number_as_printed": "5",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            34
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pg1",
+          "role": "course",
+          "title_as_printed": "Programmieren 1",
+          "short_code_as_printed": "PG1",
+          "ects_as_documented": 8,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                35,
+                36
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.pg2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Programmieren 2",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Programmieren 2",
+      "module_number_as_printed": "6",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            37
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pg2",
+          "role": "course",
+          "title_as_printed": "Programmieren 2 (Java)",
+          "short_code_as_printed": "PG2",
+          "ects_as_documented": 8,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                38,
+                39
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.ma1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Mathematik 1",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Mathematik 1",
+      "module_number_as_printed": "7",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            27
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ma1",
+          "role": "course",
+          "title_as_printed": "Mathematik 1 (Lineare Algebra)",
+          "short_code_as_printed": "MA1",
+          "ects_as_documented": null,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                28,
+                29
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 7
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.ma2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Mathematik 2",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Mathematik 2",
+      "module_number_as_printed": "8",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            30
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ma2",
+          "role": "course",
+          "title_as_printed": "Mathematik 2 (Analysis)",
+          "short_code_as_printed": "MA2",
+          "ects_as_documented": null,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                31,
+                32,
+                33
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "course_table_blank; target value retained from curriculum",
+          "target_ects_from_curriculum": 7
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.angewandte_gwi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+      "module_number_as_printed": "9",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            9
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.angewandte_gwi",
+          "role": "course",
+          "title_as_printed": "IW_ Anwendungsorientierte Grundlagen der Wirtschaftsinformatik",
+          "short_code_as_printed": null,
+          "ects_as_documented": 3,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                10,
+                11
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.nachhaltigkeit",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Nachhaltigkeit in der Informatik",
+      "requirement_ects": 2,
+      "module_title_as_printed": "I_IW_IT_Nachhaltigkeit in der Informatik",
+      "module_number_as_printed": "4",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            24
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.nachhaltigkeit",
+          "role": "course",
+          "title_as_printed": "I_IW_IT_Nachhaltigkeit in der Informatik",
+          "short_code_as_printed": "4",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                25,
+                26
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.it_architektur",
+      "term": "WiSe 2026/27",
+      "requirement_title": "IT-Architektur",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IT-Architektur",
+      "module_number_as_printed": "11",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            57
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.it_architektur",
+          "role": "course",
+          "title_as_printed": "IT-Architektur",
+          "short_code_as_printed": "11",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                58,
+                59
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.datenbanken",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Datenbanken",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Datenbanken (Databases)",
+      "module_number_as_printed": "12",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            49
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.datenbanken",
+          "role": "course",
+          "title_as_printed": "Datenbanken",
+          "short_code_as_printed": "DAB",
+          "ects_as_documented": 7,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                50,
+                51
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.statistik",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Statistik",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Statistik",
+      "module_number_as_printed": "13",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            79
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.statistik",
+          "role": "course",
+          "title_as_printed": "Statistik",
+          "short_code_as_printed": "ST",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                80,
+                81
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.gpad",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Geschäftsprozessanalyse und -design",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Geschäftsprozessanalyse und -design",
+      "module_number_as_printed": "14",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            54
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.gpad",
+          "role": "course",
+          "title_as_printed": "Geschäftsprozessanalyse und -design",
+          "short_code_as_printed": "GA",
+          "ects_as_documented": 7,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                55,
+                56
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.ppst",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Produktionsplanung und -steuerung",
+      "requirement_ects": 7,
+      "module_title_as_printed": "Produktionsplanung und -steuerung",
+      "module_number_as_printed": "15",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            65
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.ppst",
+          "role": "course",
+          "title_as_printed": "Produktionsplanung und-steuerung",
+          "short_code_as_printed": "PPST",
+          "ects_as_documented": 7,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                66,
+                67
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.algorithmen",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Algorithmen und Datenstrukturen",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Algorithmen und Datenstrukturen",
+      "module_number_as_printed": "16",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            40
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.algorithmen",
+          "role": "course",
+          "title_as_printed": "Algorithmen und Datenstrukturen",
+          "short_code_as_printed": "AD",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                41,
+                42
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.projektmanagement",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Projektmanagement",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Projektmanagement",
+      "module_number_as_printed": "17",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            68
+          ]
+        }
+      ],
+      "mapping_kind": "required_components",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pm_fallstudie",
+          "role": "required_component",
+          "title_as_printed": "Fallstudie im Projektmanagement",
+          "short_code_as_printed": null,
+          "ects_as_documented": 2,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                69,
+                70
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "component_spo_number": "17.2"
+        },
+        {
+          "course_id": "wi.course.pm_grundlagen",
+          "role": "required_component",
+          "title_as_printed": "Grundlagen des Projektmanagement",
+          "short_code_as_printed": null,
+          "ects_as_documented": 3,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                71,
+                72
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table",
+          "component_spo_number": "17.1"
+        }
+      ],
+      "notes": [],
+      "substitutions": [
+        {
+          "for_course_id": "wi.course.pm_grundlagen",
+          "course_id": "wi.course.vhb_pm",
+          "status": "documented_optional_alternative",
+          "conditions": [
+            "Recognition procedure not specified on this handbook page; no automatic personal credit inferred"
+          ],
+          "replacement_course_ects": null,
+          "target_component_ects": 3,
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                72
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.betriebssysteme",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Betriebssysteme",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Betriebssysteme",
+      "module_number_as_printed": "18",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            46
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.betriebssysteme",
+          "role": "course",
+          "title_as_printed": "Betriebssysteme",
+          "short_code_as_printed": "OS",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                47,
+                48
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.software_engineering",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Software Engineering",
+      "requirement_ects": 8,
+      "module_title_as_printed": "Software Engineering",
+      "module_number_as_printed": "19",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            76
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.software_engineering",
+          "role": "course",
+          "title_as_printed": "Software Engineering",
+          "short_code_as_printed": "SE",
+          "ects_as_documented": 8,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                77,
+                78
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.fwpm1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 1",
+      "module_number_as_printed": "20",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            52
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm1"
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.seminar_wi",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Seminar Wirtschaftsinformatik",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Seminar Wirtschaftsinformatik",
+      "module_number_as_printed": "21",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            73
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.seminar_wi",
+          "role": "course",
+          "title_as_printed": "Seminar Wirtschaftsinformatik",
+          "short_code_as_printed": "SWI",
+          "ects_as_documented": 3,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                74,
+                75
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.aw",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Allgemeinwissenschaftliches Wahlpflichtmodul",
+      "requirement_ects": 2,
+      "module_title_as_printed": "Allgemeinwissenschaftliches Wahlpflichtmodul",
+      "module_number_as_printed": "22",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            43
+          ]
+        }
+      ],
+      "mapping_kind": "external_elective",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": null,
+          "role": "external_elective_slot",
+          "title_as_printed": "AW-Modul",
+          "short_code_as_printed": "AW",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                44,
+                45
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Actual AW course is chosen from the external AW catalog; placeholder has no timetable."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.praktikum",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Praktikum",
+      "requirement_ects": 24,
+      "module_title_as_printed": "Praktisches Studiensemester (Practical Semester)",
+      "module_number_as_printed": "23",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            60
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.praktikum",
+          "role": "requirement",
+          "title_as_printed": "Praktikum (Industrial Placement)",
+          "short_code_as_printed": "PS",
+          "ects_as_documented": 24,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                61,
+                62
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.praxisseminar",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Praxisseminar",
+      "requirement_ects": 2,
+      "module_title_as_printed": "Praktisches Studiensemester (Practical Semester)",
+      "module_number_as_printed": "23",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            60
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.praxisseminar",
+          "role": "requirement",
+          "title_as_printed": "Praxisseminar (Industrial Placement Seminar)",
+          "short_code_as_printed": "PS",
+          "ects_as_documented": 2,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                63,
+                64
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_in1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IN 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul IN1",
+      "module_number_as_printed": "24",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            97
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.rd",
+          "role": "course",
+          "title_as_printed": "IW_ Rechnernetze und Datenkommunikation",
+          "short_code_as_printed": "RD",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                98,
+                99
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_in2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IN 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul IN 2",
+      "module_number_as_printed": "25",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            100
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.vs",
+          "role": "course",
+          "title_as_printed": "IW_ Verteilte Systeme",
+          "short_code_as_printed": "VS",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                101,
+                102
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_iw1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul IW 1",
+      "module_number_as_printed": "26",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            103
+          ]
+        },
+        {
+          "source": "progress2026",
+          "pdf_pages": [
+            1
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "source_disagreement",
+      "members": [
+        {
+          "course_id": "wi.course.ss",
+          "role": "course",
+          "title_as_printed": "IW_ Standardsoftwaresysteme",
+          "short_code_as_printed": "SS",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                104,
+                105
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Handbook describes Standardsoftwaresysteme; Studienverlaufsplan says course not yet announced. Keep candidate, do not silently publish as confirmed offering."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_iw2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul IW 2",
+      "module_number_as_printed": "27",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            106
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.pj",
+          "role": "course",
+          "title_as_printed": "IW_ Projektstudium",
+          "short_code_as_printed": "PJ",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                107,
+                108,
+                109
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_iw3",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul IW 3",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul IW 3",
+      "module_number_as_printed": "28 A + B",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            110
+          ]
+        }
+      ],
+      "mapping_kind": "semester_options",
+      "status": "needs_semester_option_confirmation",
+      "members": [
+        {
+          "course_id": "wi.course.is",
+          "role": "option",
+          "title_as_printed": "Informationssicherheit",
+          "short_code_as_printed": "IS",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                111,
+                112
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        },
+        {
+          "course_id": "wi.course.isc",
+          "role": "option",
+          "title_as_printed": "Informationssicherheit und Compliance",
+          "short_code_as_printed": "ISC",
+          "ects_as_documented": 5,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                113,
+                114
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": [
+        "Requirement remains 5 ECTS; listed five-credit courses are not added into a 10-ECTS requirement."
+      ]
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_bwl1",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul BWL 1",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul BWL 1",
+      "module_number_as_printed": "29",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            91
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.rw1",
+          "role": "course",
+          "title_as_printed": "Rechnungswesen 1",
+          "short_code_as_printed": "RW 1",
+          "ects_as_documented": 5,
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                92,
+                93
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.vertiefung_bwl2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Vertiefungsmodul BWL 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "IW_ Vertiefungsmodul BWL 2",
+      "module_number_as_printed": "30",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            94
+          ]
+        }
+      ],
+      "mapping_kind": "direct",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.us",
+          "role": "course",
+          "title_as_printed": "Unternehmenssimulation",
+          "short_code_as_printed": "US",
+          "ects_as_documented": 5,
+          "frequency": "summer",
+          "frequency_as_printed": "nur im Sommersemester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                95,
+                96
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.fwpm2",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 2",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 2",
+      "module_number_as_printed": "31",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            87
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            26
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm2"
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.fwpm3",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Fachbezogenes Wahlpflichtmodul 3",
+      "requirement_ects": 5,
+      "module_title_as_printed": "Fachbezogenes Wahlpflichtmodul 3",
+      "module_number_as_printed": "32",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            89
+          ]
+        },
+        {
+          "source": "fwpm2026",
+          "pdf_pages": [
+            2,
+            3,
+            75
+          ]
+        }
+      ],
+      "mapping_kind": "semester_elective_pool",
+      "status": "documented_catalog",
+      "members": [],
+      "notes": [
+        "Slot has no timetable. Choose one eligible IW course; personal admission and seat allocation are separate."
+      ],
+      "pool_id": "wi.fwpm.wise2026_27.fwpm3"
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.bachelorarbeit",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Bachelorarbeit",
+      "requirement_ects": 12,
+      "module_title_as_printed": "Bachelorarbeit (Bachelor Thesis)",
+      "module_number_as_printed": "33",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            82
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bachelorarbeit",
+          "role": "requirement",
+          "title_as_printed": "Schriftlliche Ausarbeitung (Thesis)",
+          "short_code_as_printed": "BA",
+          "ects_as_documented": 12,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                85,
+                86
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "edition_id": "wi_bsc_2026",
+      "requirement_id": "wi.req.bachelorseminar",
+      "term": "WiSe 2026/27",
+      "requirement_title": "Bachelorseminar",
+      "requirement_ects": 3,
+      "module_title_as_printed": "Bachelorarbeit (Bachelor Thesis)",
+      "module_number_as_printed": "33",
+      "evidence": [
+        {
+          "source": "mhb2026",
+          "pdf_pages": [
+            82
+          ]
+        }
+      ],
+      "mapping_kind": "non_weekly_requirement",
+      "status": "documented_preliminary",
+      "members": [
+        {
+          "course_id": "wi.course.bachelorseminar",
+          "role": "requirement",
+          "title_as_printed": "Bachelorseminar",
+          "short_code_as_printed": "BS",
+          "ects_as_documented": 3,
+          "frequency": "both",
+          "frequency_as_printed": "in jedem Semester",
+          "evidence": [
+            {
+              "source": "mhb2026",
+              "pdf_pages": [
+                83,
+                84
+              ]
+            }
+          ],
+          "actual_semester_offering": "not_established_by_handbook",
+          "ects_basis": "handbook_course_table"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "elective_pools": [
+    {
+      "id": "wi.fwpm.wise2026_27.fwpm1",
+      "term": "WiSe 2026/27",
+      "requirement_id": "wi.req.fwpm1",
+      "editions": [
+        "wi_bsc_2012",
+        "wi_bsc_2023",
+        "wi_bsc_2026"
+      ],
+      "status": "documented_semester_catalog",
+      "members": [
+        {
+          "course_id": "wi.fwpm.kaps",
+          "short_code_as_printed": "KAPS",
+          "title_as_printed": "Fortgeschrittene Materialplanung und Disposition",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                4
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kdsp",
+          "short_code_as_printed": "KDSP",
+          "title_as_printed": "Applied Data Science with Python",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                4
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                15,
+                16
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kees",
+          "short_code_as_printed": "KEES",
+          "title_as_printed": "Einfache Einführung Eingebettete Systeme",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                4
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                17,
+                18
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kisc",
+          "short_code_as_printed": "KISC",
+          "title_as_printed": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                4
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                19,
+                20
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.ksap1",
+          "short_code_as_printed": "KSAP1",
+          "title_as_printed": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                4
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                21,
+                22
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.ktai",
+          "short_code_as_printed": "KTAI",
+          "title_as_printed": "Responsible and Trustworthy Artificial Intelligence Systems",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                4
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                23,
+                24,
+                25
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        }
+      ],
+      "selection_count": 1,
+      "recognition_policy": "one achievement allocated to one requirement; do not double credit across FWPM2/FWPM3"
+    },
+    {
+      "id": "wi.fwpm.wise2026_27.fwpm2",
+      "term": "WiSe 2026/27",
+      "requirement_id": "wi.req.fwpm2",
+      "editions": [
+        "wi_bsc_2012",
+        "wi_bsc_2023",
+        "wi_bsc_2026"
+      ],
+      "status": "documented_semester_catalog",
+      "members": [
+        {
+          "course_id": "wi.fwpm.date",
+          "short_code_as_printed": "DATE",
+          "title_as_printed": "Data Engineering",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                28,
+                29
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.diot",
+          "short_code_as_printed": "DIOT",
+          "title_as_printed": "Applied Internet of Things",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                38,
+                39,
+                40
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.dmse",
+          "short_code_as_printed": "DMSE",
+          "title_as_printed": "Model-Driven Software Engineering",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                43,
+                44
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.dsds",
+          "short_code_as_printed": "DSDS",
+          "title_as_printed": "Sprachdialogsysteme, Spoken Dialogue Systems",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                47,
+                48,
+                49
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.dspm",
+          "short_code_as_printed": "DSPM",
+          "title_as_printed": "Information Security and Privacy in Medicine",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                50,
+                51
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.duxd",
+          "short_code_as_printed": "DUXD",
+          "title_as_printed": "User Experience Design - Benutzerorientierte Gestaltung",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                52,
+                53
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kaps",
+          "short_code_as_printed": "KAPS",
+          "title_as_printed": "Fortgeschrittene Materialplanung und Disposition",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                54,
+                55,
+                56
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kdsp",
+          "short_code_as_printed": "KDSP",
+          "title_as_printed": "Applied Data Science with Python",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                64,
+                65
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kees",
+          "short_code_as_printed": "KEES",
+          "title_as_printed": "Einfache Einführung Eingebettete Systeme",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                66,
+                67
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kisc",
+          "short_code_as_printed": "KISC",
+          "title_as_printed": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                68,
+                69
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.ksap1",
+          "short_code_as_printed": "KSAP1",
+          "title_as_printed": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                70,
+                71
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.ktai",
+          "short_code_as_printed": "KTAI",
+          "title_as_printed": "Responsible and Trustworthy Artificial Intelligence Systems",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                26
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                72,
+                73,
+                74
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        }
+      ],
+      "selection_count": 1,
+      "recognition_policy": "one achievement allocated to one requirement; do not double credit across FWPM2/FWPM3"
+    },
+    {
+      "id": "wi.fwpm.wise2026_27.fwpm3",
+      "term": "WiSe 2026/27",
+      "requirement_id": "wi.req.fwpm3",
+      "editions": [
+        "wi_bsc_2012",
+        "wi_bsc_2023",
+        "wi_bsc_2026"
+      ],
+      "status": "documented_semester_catalog",
+      "members": [
+        {
+          "course_id": "wi.fwpm.date",
+          "short_code_as_printed": "DATE",
+          "title_as_printed": "Data Engineering",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                77,
+                78
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.diot",
+          "short_code_as_printed": "DIOT",
+          "title_as_printed": "Applied Internet of Things",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                87,
+                88,
+                89
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.dmse",
+          "short_code_as_printed": "DMSE",
+          "title_as_printed": "Model-Driven Software Engineering",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                92,
+                93
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.dsds",
+          "short_code_as_printed": "DSDS",
+          "title_as_printed": "Sprachdialogsysteme, Spoken Dialogue Systems",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                96,
+                97,
+                98
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.dspm",
+          "short_code_as_printed": "DSPM",
+          "title_as_printed": "Information Security and Privacy in Medicine",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                99,
+                100
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.duxd",
+          "short_code_as_printed": "DUXD",
+          "title_as_printed": "User Experience Design - Benutzerorientierte Gestaltung",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                101,
+                102
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kaps",
+          "short_code_as_printed": "KAPS",
+          "title_as_printed": "Fortgeschrittene Materialplanung und Disposition",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "winter",
+          "frequency_as_printed": "nur im Wintersemester",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                103,
+                104,
+                105
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kdsp",
+          "short_code_as_printed": "KDSP",
+          "title_as_printed": "Applied Data Science with Python",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                113,
+                114
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kees",
+          "short_code_as_printed": "KEES",
+          "title_as_printed": "Einfache Einführung Eingebettete Systeme",
+          "ects_as_documented": 5,
+          "iw_mark": "(X)",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                115,
+                116
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.kisc",
+          "short_code_as_printed": "KISC",
+          "title_as_printed": "Künstliche Intelligenz in der Supply Chain: Methoden, Anwendungen und Forschung",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                117,
+                118
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.ksap1",
+          "short_code_as_printed": "KSAP1",
+          "title_as_printed": "ABAP-Entwicklung von SAP Netweaver (Grundkurs)",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                119,
+                120
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        },
+        {
+          "course_id": "wi.fwpm.ktai",
+          "short_code_as_printed": "KTAI",
+          "title_as_printed": "Responsible and Trustworthy Artificial Intelligence Systems",
+          "ects_as_documented": 5,
+          "iw_mark": "X",
+          "frequency": "irregular",
+          "frequency_as_printed": "unregelmäßig wiederholende Lehrveranstaltung",
+          "evidence": [
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                2,
+                75
+              ]
+            },
+            {
+              "source": "fwpm2026",
+              "pdf_pages": [
+                121,
+                122,
+                123
+              ]
+            }
+          ],
+          "actual_semester_offering": "listed_in_semester_catalog_not_weekly_timetable_confirmation"
+        }
+      ],
+      "selection_count": 1,
+      "recognition_policy": "one achievement allocated to one requirement; do not double credit across FWPM2/FWPM3"
+    }
+  ],
+  "external_identifiers": [
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210010",
+      "spo_number_as_printed": "1",
+      "short_code_as_printed": "HW",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210010        1            HW                          Hardw are-Grundlagen                                           Hardw are Fundamentals                             PM                         2      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210020",
+      "spo_number_as_printed": "2",
+      "short_code_as_printed": "WI",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210020        2             WI                 Grundlagen der Wirtschaftsinformatik                            Fundamentals of Business Informatics                      PM                         1      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210030",
+      "spo_number_as_printed": "3",
+      "short_code_as_printed": "BW1",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210030        3            BW1                       Betriebsw irtschaftslehre 1                                     Business Administration 1                           PM                         1      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210040",
+      "spo_number_as_printed": "4.1",
+      "short_code_as_printed": "BW2G",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210040       4.1          BW2G               Grundlagen der Betriebsw irtschaftslehre 2                       Fundamentals Business Administration 2                     PM                         2      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210090",
+      "spo_number_as_printed": "4.2",
+      "short_code_as_printed": "BW2F",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210090       4.2          BW2F                Fallstudie in der Betriebsw irtschaftslehre                      Case Study in Business Administration                     PM                         2      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210050",
+      "spo_number_as_printed": "5",
+      "short_code_as_printed": "PG1",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210050        5            PG1                            Programmieren 1                                                  Programming 1                                 PM                         1      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210060",
+      "spo_number_as_printed": "6",
+      "short_code_as_printed": "PG2",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210060        6            PG2                            Programmieren 2                                                  Programming 2                                 PM                         2      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210070",
+      "spo_number_as_printed": "7",
+      "short_code_as_printed": "MA1",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210070        7            MA1                              Mathematik 1                                                   Mathematics 1                                 PM                         1      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210080",
+      "spo_number_as_printed": "8",
+      "short_code_as_printed": "MA2",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210080        8            MA2                              Mathematik 2                                                   Mathematics 2                                 PM                         2      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4210110",
+      "spo_number_as_printed": "9",
+      "short_code_as_printed": "AGWI",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4210110        9            AGWI     Anw endungsorientierte Grundlagen der Wirtschaftsinformatik            Fundamentals of Applied Business Informatics                  PM                         2      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220010",
+      "spo_number_as_printed": "11",
+      "short_code_as_printed": "IA",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220010        11            IA                              IT-Architektur                                                 IT Architecture                               PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220020",
+      "spo_number_as_printed": "12",
+      "short_code_as_printed": "DB",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220020        12            DB                              Datenbanken                                                      Databases                                   PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220040",
+      "spo_number_as_printed": "13",
+      "short_code_as_printed": "ST",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220040        13            ST                                 Statistik                                                      Statistics                                 PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220050",
+      "spo_number_as_printed": "14",
+      "short_code_as_printed": "GA",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220050        14            GA                 Geschäftsprozessanalyse und -design                              Business Process Analysis and Design                     PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220060",
+      "spo_number_as_printed": "15",
+      "short_code_as_printed": "PPST",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220060        15           PPST                 Produktionsplanung und -steuerung                               Production Planning and Scheduling                       PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220090",
+      "spo_number_as_printed": "16",
+      "short_code_as_printed": "AD",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220090        16            AD                   Algorithmen und Datenstrukturen                                  Algorithms and Data Structures                         PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220100",
+      "spo_number_as_printed": "17",
+      "short_code_as_printed": "PM",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220100        17            PM                          Projektmanagement                                               Project Management                               PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220140",
+      "spo_number_as_printed": "18",
+      "short_code_as_printed": "OS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220140        18            OS                            Betriebssysteme                                                Operating Systems                               PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4220120",
+      "spo_number_as_printed": "19",
+      "short_code_as_printed": "SE",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4220120        19            SE                         Softw are Engineering                                           Softw are Engineering                             PM                        3_4     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4224010",
+      "spo_number_as_printed": "21",
+      "short_code_as_printed": "SIW",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4224010        21           SIW                     Seminar Wirtschaftsinformatik                                    Seminar Business Informatics                         PM                         5      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4224020",
+      "spo_number_as_printed": "23.2",
+      "short_code_as_printed": "PS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4224020       23.2           PS                           Praktikumsseminar                                          Industrial Placement Seminar                         PM                         5      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230030",
+      "spo_number_as_printed": "24",
+      "short_code_as_printed": "RD",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230030        24            RD                Rechnernetze und Datenkommunikation                                            Netw orking                                 PM         VT IN 1        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230050",
+      "spo_number_as_printed": "25",
+      "short_code_as_printed": "VS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230050        25            VS                            Verteilte Systeme                                             Distributed Systems                              PM         VT IN 2        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230010",
+      "spo_number_as_printed": "26",
+      "short_code_as_printed": "SS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230010        26            SS                       Standard Softw aresysteme                                       Standard Softw aresystems                           PM         VT IW 1        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230020",
+      "spo_number_as_printed": "27",
+      "short_code_as_printed": "PJ",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230020        27            PJ                             Projektstudium                                                  Project Studies                               PM         VT IW 2        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230080",
+      "spo_number_as_printed": "28",
+      "short_code_as_printed": "ISC",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230080        28            ISC               Informationssicherheit und Compliance                                  IT-Security and Compliance                          PM         VT IW 3        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236360",
+      "spo_number_as_printed": "28",
+      "short_code_as_printed": "IS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236360        28            IS                         Informationssicherheit                                                IT-Security                                 PM         VT IW 3        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230040",
+      "spo_number_as_printed": "29",
+      "short_code_as_printed": "RW1",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230040        29           RW1                           Rechnungsw esen 1                                             Business Accounting 1                             PM        VT BWL 1        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4230070",
+      "spo_number_as_printed": "30",
+      "short_code_as_printed": "US",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4230070        30            US                        Unternehmenssimulation                                            Business Simulations                             PM        VT BWL 2        6_7     s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4444470",
+      "spo_number_as_printed": "33.2",
+      "short_code_as_printed": "BS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4444470       33.2           BS                            Bachelorseminar                                                      Seminar                                   PM                         7      s. Modulhandbuch    s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236250",
+      "spo_number_as_printed": "31/32",
+      "short_code_as_printed": "DIOT",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236250      31/32          DIOT                  Angew andtes Internet der Dinge                                     Applied Internet of Things                         WM                        6_7       s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236260",
+      "spo_number_as_printed": "31/32",
+      "short_code_as_printed": "DMSE",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236260      31/32         DMSE                  Model-driven Softw are Engineering                               Model-driven Softw are Engineering                     WM                        6_7       s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236270",
+      "spo_number_as_printed": "31/32",
+      "short_code_as_printed": "DSDS",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236270      31/32          DSDS                        Sprachdialogsysteme                                           Spoken Dialogue Systems                            WM                        6_7       s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236280",
+      "spo_number_as_printed": "31/32",
+      "short_code_as_printed": "DSPM",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236280      31/32         DSPM             Information Security and Privacy in Medicine                     Information Security and Privacy in Medicine                WM                        6_7       s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236290",
+      "spo_number_as_printed": "20/31/32",
+      "short_code_as_printed": "Responsible",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236290     20/31/32                                                                                 Responsible and Trustw orthy Artificial Intelligence Systems        WM                       3_4_6_7    s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236300",
+      "spo_number_as_printed": "20/31/32",
+      "short_code_as_printed": "Advanced",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236300     20/31/32                                                                                                  Advanced Planning System                           WM                       3_4_6_7    s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236150",
+      "spo_number_as_printed": "20/31/32",
+      "short_code_as_printed": "KDSP",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236150     20/31/32        KDSP                 Applied Data Science w ith Python                                Applied Data Science w ith Python                      WM                       3_4_6_7    s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236310",
+      "spo_number_as_printed": "20/31/32",
+      "short_code_as_printed": "KEES",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236310     20/31/32        KEES              Einfache Einführung Eingebettete Systeme                       Simple Introduction to Embedded Systems                     WM                       3_4_6_7    s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236030",
+      "spo_number_as_printed": "20/31/32",
+      "short_code_as_printed": "KSAP1",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236030     20/31/32       KSAP1                    ABAP-Entw icklung (Grundkurs)                         Introduction to the SAP development environment                WM                       3_4_6_7    s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236220",
+      "spo_number_as_printed": "31/32",
+      "short_code_as_printed": "DUXD",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236220      31/32         DUXD        User Experience Design: Benutzerorientierte Gestaltung         User Experience Design: Designing With The User in Mind            WM                        6_7       s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236320",
+      "spo_number_as_printed": "31/32",
+      "short_code_as_printed": "DATE",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236320      31/32          DATE                            Date Engineering                                                  Date Engineering                           WM                        6_7       s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236330",
+      "spo_number_as_printed": "20/31/32",
+      "short_code_as_printed": "WM",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236330     20/31/32                                                                                                                                                     WM                       3_4_6_7    s. Modulhandbuch   s. Modulhandbuch   s. Modulhandbuch"
+    },
+    {
+      "edition_id": "wi_bsc_2023",
+      "term": "WiSe 2026/27",
+      "his_code": "4236240",
+      "spo_number_as_printed": "20",
+      "short_code_as_printed": "ZNCF",
+      "evidence": {
+        "source": "plan2023",
+        "pdf_pages": [
+          2
+        ]
+      },
+      "raw_row": "4236240        20           ZNCF                                                                                                                                         WM                        3_4"
+    }
+  ],
+  "source_anomalies": [
+    {
+      "edition_id": "wi_bsc_2023",
+      "type": "unassigned_extra_course",
+      "course_id": "wi.course.enterprise_systems",
+      "evidence": [
+        {
+          "source": "mhb2023",
+          "pdf_pages": [
+            4,
+            5
+          ]
+        }
+      ],
+      "note": "Enterprise Systems is present alongside Hardware-Grundlagen; no replacement binding for old students is established by these pages."
+    },
+    {
+      "type": "non_unique_short_code",
+      "code": "PS",
+      "note": "2023/2026 handbooks use PS for both Praktikum and Praxisseminar. Never resolve by this code alone."
+    },
+    {
+      "type": "non_unique_module_number",
+      "edition_id": "wi_bsc_2026",
+      "code": "4",
+      "note": "Nachhaltigkeit has number 4 in handbook, also used for BWL2; use source-scoped requirement identity."
+    }
+  ],
+  "policies": [
+    "Curriculum ECTS/weights/components remain in wi_editions.json; mappings never rewrite them.",
+    "All bindings are scoped to edition and semester; no future-semester fallback.",
+    "Handbook frequency is not evidence of cancellation, seats, admission or actual meetings.",
+    "Shared course identity allows shared offerings, but equivalence of assessment/credit is not inferred.",
+    "Historical transcript names remain intact; ambiguous recognition must not auto-complete a requirement.",
+    "Faculty-wide FWPM contents are intersected with IW X/(X) and section/slot membership.",
+    "Template FWPM parts labelled Vorlage are not courses."
+  ],
+  "runtime_activation_scope": "automatic_personal_elective_allocation",
+  "presentation_enabled": true
+}

@@ -27,7 +27,7 @@ class Import(Base):
 
     raw_text: Mapped[str | None] = mapped_column(Text, nullable=True)
 
-    # ✅ новое поле для строк со стилем
+    # Legacy columns are scrubbed during the structured-storage migration.
     raw_lines_json: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     parsed_modules_json: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -77,3 +77,27 @@ class Achievement(Base):
     __table_args__ = (
         Index("ix_achievements_import_norm", "import_id", "module_name_norm"),
     )
+
+class User(Base):
+    __tablename__ = 'users'
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    email: Mapped[str] = mapped_column(String(254), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(100))
+    password_hash: Mapped[str] = mapped_column(Text)
+    role: Mapped[str] = mapped_column(String(16), default='student')
+    privacy_version: Mapped[str | None] = mapped_column(String(40),nullable=True)
+    privacy_accepted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True),nullable=True)
+    last_active_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True),default=utcnow,nullable=True)
+
+
+class LoginSession(Base):
+    __tablename__ = 'login_sessions'
+    token_hash: Mapped[str] = mapped_column(String(64), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey('users.id'), index=True)
+    expires_at: Mapped[float] = mapped_column(Float)
+
+
+class UserImport(Base):
+    __tablename__ = 'user_imports'
+    user_id: Mapped[int] = mapped_column(ForeignKey('users.id'), primary_key=True)
+    import_id: Mapped[int] = mapped_column(ForeignKey('imports.id'), primary_key=True)

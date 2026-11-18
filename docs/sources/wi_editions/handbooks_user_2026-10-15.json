@@ -1,0 +1,29 @@
+[
+  {
+    "file": "mhb2023_wise2025_26_user.pdf",
+    "original_path": "/Users/izium/Desktop/BA/Knowladge Base/Modulhandbuch_IW.pdf",
+    "sha256": "503033dad542dc67cb8d0be27a469a69e051e681a937e4659bdcf30ce888e2fd",
+    "edition": "wi_bsc_2023",
+    "term": "WiSe 2025/26",
+    "status": "no_preliminary_mark_on_cover",
+    "review_scope": "cover; FWPM applicability table; not a complete course mapping"
+  },
+  {
+    "file": "mhb2026_wise2026_27_user.pdf",
+    "original_path": "/Users/izium/Desktop/BA/Knowladge Base/Modulhandbuch_IW 2.pdf",
+    "sha256": "8f453a51d4bfac08ce642ff9a2d75881eff4f5b3caf3ee034efb4622daf83e7b",
+    "edition": "wi_bsc_2026",
+    "term": "WiSe 2026/27",
+    "status": "preliminary",
+    "review_scope": "cover; FWPM applicability table; not a complete course mapping"
+  },
+  {
+    "file": "fwpm_wise2026_27_full_user.pdf",
+    "original_path": "/Users/izium/Desktop/BA/Knowladge Base/Modulhandbuch_FWPM.pdf",
+    "sha256": "3b2b693ab61d291fe28b1f85458f2b3b1d6af2036e8acfceddf238de6650301e",
+    "edition": null,
+    "term": "WiSe 2026/27",
+    "status": "faculty_catalog",
+    "review_scope": "cover; FWPM applicability table; not a complete course mapping"
+  }
+]
