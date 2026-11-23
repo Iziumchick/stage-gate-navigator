@@ -21,10 +21,9 @@ router = APIRouter(prefix='/auth')
 _dummy_hash = hash_password(secrets.token_urlsafe(24))
 
 
-class Credentials(BaseModel):
+class EmailAddress(BaseModel):
     model_config = ConfigDict(extra='forbid')
     email: str = Field(max_length=254)
-    password: str = Field(min_length=1, max_length=200)
 
     @field_validator('email')
     @classmethod
@@ -33,6 +32,10 @@ class Credentials(BaseModel):
         if len(value.split('@')) != 2 or not all(value.split('@')) or any(c.isspace() for c in value):
             raise ValueError('Bitte eine gültige E-Mail-Adresse eingeben.')
         return value
+
+
+class Credentials(EmailAddress):
+    password: str = Field(min_length=1, max_length=200)
 
 
 class Registration(Credentials):

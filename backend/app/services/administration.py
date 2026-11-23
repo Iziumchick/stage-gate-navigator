@@ -1,9 +1,10 @@
 """Explicit server-operator account changes. Never exposed through HTTP."""
 import os
+import hashlib
 import secrets
 
 from app.db import SessionLocal
-from app.models import User, LoginSession, EmailVerification
+from app.models import User, LoginSession, EmailVerification, PasswordReset
 from app.services.auth_service import hash_password
 from app.services.institutional_email import allowed, configured_admin, valid_mailbox
 
@@ -19,6 +20,7 @@ def mailbox(value):
 
 
 def revoke_sessions(db,user):
+    db.query(PasswordReset).filter((PasswordReset.user_id==user.id)|(PasswordReset.email_hash==hashlib.sha256(user.email.encode()).hexdigest())).delete(synchronize_session=False)
     db.query(LoginSession).filter_by(user_id=user.id).delete(synchronize_session=False)
     db.query(EmailVerification).filter((EmailVerification.user_id==user.id)|(EmailVerification.email==user.email)).delete(synchronize_session=False)
 

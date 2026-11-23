@@ -54,3 +54,18 @@ class InstitutionalMailTests(unittest.TestCase):
         with patch.dict(os.environ,{**config,'ADMIN_EMAIL':'owner@example.test'},clear=True),patch('smtplib.SMTP_SSL') as constructor:
             email.send_test('owner@example.test')
             self.assertEqual(constructor.return_value.__enter__.return_value.send_message.call_args.args[0]['To'],'owner@example.test')
+
+    def test_recovery_mail_is_distinct_and_change_notification_contains_no_password(self):
+        config={'SMTP_HOST':'smtp.test.invalid','SMTP_FROM':'sender@example.test','SMTP_SECURITY':'starttls','SMTP_PORT':'2525'}
+        with patch.dict(os.environ,config,clear=True),patch('smtplib.SMTP') as constructor:
+            smtp=constructor.return_value.__enter__.return_value
+            email.send_password_reset('synthetic@oth-regensburg.de','654321')
+            message=smtp.send_message.call_args.args[0]
+            self.assertEqual(message['Subject'],'Study Navigator: Passwort zurücksetzen')
+            self.assertIn('654321',message.get_content());self.assertIn('10 Minuten',message.get_content())
+            self.assertIn('Passwort bleibt unverändert',message.get_content())
+            email.send_password_changed('synthetic@oth-regensburg.de')
+            notification=smtp.send_message.call_args.args[0]
+            self.assertNotIn('654321',notification.get_content())
+            self.assertIn('Anmeldesitzungen wurden beendet',notification.get_content())
+            self.assertEqual(notification['Subject'],'Study Navigator: Passwort geändert')

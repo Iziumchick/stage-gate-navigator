@@ -103,6 +103,18 @@ class EmailVerification(Base):
     pending_registration_json: Mapped[str | None] = mapped_column(Text,nullable=True)
 
 
+class PasswordReset(Base):
+    __tablename__ = 'password_resets'
+    ticket_hash: Mapped[str] = mapped_column(String(64),primary_key=True)
+    email_hash: Mapped[str] = mapped_column(String(64),index=True)
+    user_id: Mapped[int | None] = mapped_column(ForeignKey('users.id'),nullable=True,index=True)
+    password_fingerprint: Mapped[str | None] = mapped_column(String(64),nullable=True)
+    code_hash: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[float] = mapped_column(Float)
+    expires_at: Mapped[float] = mapped_column(Float,index=True)
+    attempts: Mapped[int] = mapped_column(Integer,default=0)
+
+
 class LoginSession(Base):
     __tablename__ = 'login_sessions'
     token_hash: Mapped[str] = mapped_column(String(64), primary_key=True)

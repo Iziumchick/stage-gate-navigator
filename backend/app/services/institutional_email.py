@@ -90,6 +90,42 @@ Wenn du keinen Code angefordert hast, kannst du diese Nachricht ignorieren.
     deliver(message)
 
 
+def send_password_reset(email,code):
+    _,_,sender,_,_,_=smtp_config()
+    message=EmailMessage()
+    message['From']=sender
+    message['To']=email
+    message['Subject']='Study Navigator: Passwort zurücksetzen'
+    message['Auto-Submitted']='auto-generated'
+    message['X-Auto-Response-Suppress']='All'
+    message.set_content(f'''Dein Code zum Zurücksetzen des Study-Navigator-Passworts lautet:
+
+{code}
+
+Der Code ist 10 Minuten gültig und kann nur einmal verwendet werden.
+Gib ihn ausschließlich im Fenster „Passwort zurücksetzen“ ein, in dem du ihn angefordert hast.
+Erst mit dem Code und einem neuen Passwort wird dein bisheriges Passwort ersetzt.
+Deine Leistungen und dein Studienplan bleiben erhalten.
+
+Wenn du keinen Code angefordert hast, ignoriere diese Nachricht. Dein Passwort bleibt unverändert.
+Teile den Code mit niemandem. Study Navigator ist ein privates Bachelorarbeitsprojekt,
+kein offizieller Dienst der OTH Regensburg. Diese E-Mail enthält keine Leistungsdaten.
+''')
+    deliver(message)
+
+
+def send_password_changed(email):
+    _,_,sender,_,_,_=smtp_config()
+    message=EmailMessage()
+    message['From']=sender
+    message['To']=email
+    message['Subject']='Study Navigator: Passwort geändert'
+    message['Auto-Submitted']='auto-generated'
+    message['X-Auto-Response-Suppress']='All'
+    message.set_content('Dein Passwort für Study Navigator wurde geändert. Alle bisherigen Anmeldesitzungen wurden beendet.\nDeine Leistungen und dein Studienplan bleiben erhalten.\nFalls du das nicht selbst veranlasst hast, fordere auf study-navigator.de über „Passwort vergessen?“ einen neuen Code an und sichere auch dein E-Mail-Konto.\nStudy Navigator ist ein privates Bachelorarbeitsprojekt und kein offizieller OTH-Dienst.\n')
+    deliver(message)
+
+
 def send_test(email):
     """Explicit operator-run delivery test; no account, grades or verification code."""
     if not (allowed(email) or configured_admin(email)):raise MailUnavailable()

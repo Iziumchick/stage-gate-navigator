@@ -4,7 +4,7 @@ import hashlib
 import json
 from datetime import datetime,timedelta,timezone
 from sqlalchemy import or_
-from app.models import Achievement,Import,LoginSession,User,UserImport,EmailVerification
+from app.models import Achievement,Import,LoginSession,User,UserImport,EmailVerification,PasswordReset
 from app.services.leistungen_import import import_groups
 
 
@@ -20,6 +20,7 @@ def erase_import(db,user_id,import_id):
 
 
 def erase_user(db,user):
+    db.query(PasswordReset).filter((PasswordReset.user_id==user.id)|(PasswordReset.email_hash==hashlib.sha256(user.email.encode()).hexdigest())).delete(synchronize_session=False)
     db.query(EmailVerification).filter((EmailVerification.user_id==user.id)|(EmailVerification.email==user.email)).delete(synchronize_session=False)
     for link in db.query(UserImport).filter(UserImport.user_id==user.id).all():erase_import(db,user.id,link.import_id)
     db.query(LoginSession).filter(LoginSession.user_id==user.id).delete(synchronize_session=False)
@@ -59,6 +60,7 @@ def expire_inactive(db,days):
     for user in users:erase_user(db,user)
     db.query(LoginSession).filter(LoginSession.expires_at<datetime.now(timezone.utc).timestamp()).delete(synchronize_session=False)
     db.query(EmailVerification).filter(EmailVerification.expires_at<=datetime.now(timezone.utc).timestamp()).delete(synchronize_session=False)
+    db.query(PasswordReset).filter(PasswordReset.expires_at<=datetime.now(timezone.utc).timestamp()).delete(synchronize_session=False)
     db.commit()
     return len(users)
 
