@@ -9,7 +9,7 @@ async function openImport(page:any, data=dashboard) {
   await page.route('**/api/imports', (r:any)=>r.fulfill({json:[{id:1,status:'success'}]}));
   await page.route('**/api/imports/1/dashboard*',(r:any)=>r.fulfill({json:data}));
   await page.goto('/?preview=dashboard');
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByTestId('official-credits')).toBeVisible();
 }
 
 test('passed module shows attempt history without an open retake recommendation',async({page})=>{

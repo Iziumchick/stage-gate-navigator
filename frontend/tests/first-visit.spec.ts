@@ -33,7 +33,9 @@ test('minimal profile persists and study start can be corrected through settings
 });
 
 test('one upload opens the dashboard without asking for Fachsemester',async({page})=>{
-  await page.route('**/api/imports/upload',r=>r.fulfill({json:{import_id:10}}));
+  let uploaded=false;
+  await page.route('**/api/imports',r=>r.fulfill({json:uploaded?[{id:10,status:'success',created_at:'2026-11-23T12:00:00Z'}]:[]}));
+  await page.route('**/api/imports/upload',r=>{uploaded=true;return r.fulfill({json:{import_id:10}});});
   await page.route('**/api/imports/10/dashboard*',r=>r.fulfill({json:{import_id:10,program:'Wirtschaftsinformatik',supported:true,official_grade:2.5,official_credits:30,spo_version:'Test',stages:[],unmatched_groups:[]}}));
   await page.goto('/?preview=welcome');
   await page.getByLabel('Studiengang',{exact:true}).selectOption('Wirtschaftsinformatik (B.Sc.)');
@@ -74,8 +76,8 @@ test('personal semester plan survives import refresh and does not change passing
   await page.route('**/api/imports', route => route.fulfill({ json: [{ id: 1, status: 'success' }] }));
   await page.route('**/api/imports/1/dashboard*', route => route.fulfill({ json: { import_id: 1, program: 'Wirtschaftsinformatik', supported: true, official_grade: null, official_credits: 0, spo_version: 'Test', stages: [{ id: 'abschnitt_1', title: 'Abschnitt 1', modules }], unmatched_groups: [] } }));
   await page.goto('/?preview=dashboard');
-  await expect(page.locator('#import-select option[value="1"]')).toHaveCount(1);
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByLabel('Datenquelle')).toHaveCount(0);
+  await expect(page.getByTestId('official-credits')).toBeVisible();
   await page.getByRole('button', { name: 'Programmieren 2: Offen' }).click();
   await expect(page.getByLabel('ELO-Kurslink')).toHaveCount(0);
   await page.getByRole('button', { name: 'Zum aktuellen Semester hinzufügen' }).click();
@@ -85,7 +87,7 @@ test('personal semester plan survives import refresh and does not change passing
   await page.getByRole('button', { name: 'Kursangaben speichern' }).click();
   await page.getByRole('button', { name: 'Details schließen' }).click();
   await expect(page.getByText('Dienstag, 08:00', { exact: true })).toHaveCount(0);
-  await page.getByRole('button', { name: 'Importe aktualisieren' }).click();
+  await page.getByRole('button', { name: 'Ansicht aktualisieren' }).click();
   await page.getByRole('button',{name:/^Programmieren 2 8 ECTS/}).click();
   await expect(page.getByLabel('ELO-Kurslink',{exact:true})).toHaveCount(0);
   await expect(page.getByRole('link',{name:'ELO-Kurs öffnen'})).toHaveAttribute('href','https://example.org/my-pg2');
@@ -139,7 +141,7 @@ test('shared metadata, handbook pages and course coexist with personal data', as
   await page.route('**/api/imports', route => route.fulfill({ json: [{ id: 1, status: 'success' }] }));
   await page.route('**/api/imports/1/dashboard*', route => route.fulfill({ json: { import_id: 1, program: 'Wirtschaftsinformatik', supported: true, official_grade: null, official_credits: 0, spo_version: 'Test', stages: [{ id: 'abschnitt_1', title: 'Abschnitt 1', modules }], unmatched_groups: [] } }));
   await page.goto('/?preview=dashboard');
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByTestId('official-credits')).toBeVisible();
   await page.getByRole('button', { name: 'Programmieren 2: Offen' }).click();
   const dialog = page.getByRole('dialog');
   await expect(dialog).not.toContainText('Beschreibung aus dem gemeinsamen Katalog');
@@ -161,8 +163,8 @@ test('unverified admissions cannot be added to the current semester', async ({ p
   const modules = [{ id: 'pg2', title: 'Programmieren 2', short_title: 'PG2', required_ects: 8, status: 'unknown', source: null, grade: null,
     admission: { status: 'unknown', reason: 'Regelquelle fehlt' } }];
   await page.route('**/api/programs/wi/dashboard*', route => route.fulfill({ json: { import_id: null, program: 'Wirtschaftsinformatik', supported: true, official_grade: null, official_credits: null, spo_version: 'Test', stages: [{ id: 'abschnitt_1', title: 'Abschnitt 1', modules }], unmatched_groups: [] } }));
-  await page.goto('/?preview=dashboard');
-  await page.getByLabel('Datenquelle').selectOption('catalog');
+  await page.addInitScript(()=>localStorage.setItem('stage-gate.profile:1',JSON.stringify({name:'Student',program:'Wirtschaftsinformatik (B.Sc.)',startTerm:'WiSe 2023/24',referenceTerm:'WiSe 2026/27'})));
+  await page.goto('/');
   await page.getByRole('button', { name: 'Programmieren 2: Offen' }).click();
   await expect(page.getByRole('dialog')).toContainText('Regelquelle fehlt');
   await expect(page.getByRole('button', { name: 'Zum aktuellen Semester hinzufügen' })).toHaveCount(0);

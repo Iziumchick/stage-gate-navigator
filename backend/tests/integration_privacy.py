@@ -61,6 +61,26 @@ class PrivacyTests(unittest.TestCase):
   self.call(a,'/auth/me',status=401)
   with SessionLocal() as db:
    self.assertIsNone(db.get(User,ua['id']));self.assertFalse(db.query(LoginSession).filter_by(user_id=ua['id']).count());self.assertIsNotNone(db.get(Import,second))
+ def test_latest_upload_is_authoritative_including_a_reuploaded_existing_pdf(self):
+  client,user=self.user('privacy-latest-upload')
+  first_pdf=pdf_export();first=self.upload(client,first_pdf)['import_id']
+  with pymupdf.open(stream=first_pdf,filetype='pdf') as doc:
+   doc[0].insert_text((10,10),'SECOND_SYNTHETIC_EXPORT');second_pdf=doc.tobytes()
+  second=self.upload(client,second_pdf)['import_id'];self.assertNotEqual(first,second)
+  # Existing installs may have no last_uploaded_at; use their creation time.
+  with SessionLocal() as db:
+   for key,year in ((first,2024),(second,2025)):
+    item=db.get(Import,key);item.created_at=datetime(year,6,1,tzinfo=timezone.utc);item.last_uploaded_at=None
+   db.commit()
+  items,_=self.call(client,'/imports');self.assertEqual([i['id'] for i in items],[second,first])
+  self.assertEqual(items[0]['uploaded_at'],items[0]['created_at'])
+  self.assertEqual(self.upload(client,first_pdf)['import_id'],first)
+  items,_=self.call(client,'/imports');self.assertEqual([i['id'] for i in items],[first,second])
+  self.assertTrue(items[0]['created_at'].startswith('2024-'));self.assertNotEqual(items[0]['uploaded_at'],items[0]['created_at'])
+  self.upload(client,b'not a PDF',status=400)
+  after,_=self.call(client,'/imports');self.assertEqual(after,items)
+  with SessionLocal() as db:self.assertEqual(db.query(UserImport).filter_by(user_id=user['id']).count(),2)
+
  def test_consent_withdrawal_and_request_protection(self):
   client,user=self.user('privacy-controls');self.upload(client,pdf_export())
   self.call(client,'/account/results',method='DELETE')

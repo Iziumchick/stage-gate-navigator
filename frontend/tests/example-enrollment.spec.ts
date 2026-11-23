@@ -20,7 +20,7 @@ test('scenario enrollment drives the header, SPO and pace without changing the r
  });
  await page.goto('/?example=first');
  for(const [id,c] of Object.entries(cases)){
-  await page.getByLabel('Datenquelle',{exact:true}).selectOption(`example:${id}`);
+  await page.getByLabel('Testbeispiel auswählen',{exact:true}).selectOption(`example:${id}`);
   await expect(page.getByTestId('official-credits')).toHaveText(`${c.credits} / 210`);
   const study=page.getByRole('group',{name:'Studieninformationen',exact:true});
   await expect(study.locator('summary')).toContainText(`Start ${c.start}`);
@@ -30,7 +30,7 @@ test('scenario enrollment drives the header, SPO and pace without changing the r
   expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('stage-gate.profile:1')!))).toEqual(personal);
  }
  expect(requests.length).toBeGreaterThanOrEqual(3);expect(requests.every(q=>!new URLSearchParams(q).has('start_term'))).toBe(true);
- await page.getByLabel('Datenquelle',{exact:true}).selectOption('catalog');
+ await page.getByLabel('Testbeispiel auswählen',{exact:true}).selectOption('catalog');
  await expect(page.getByTestId('official-credits')).toHaveText('— / 210');
  await expect(page.getByRole('group',{name:'Studieninformationen',exact:true}).locator('summary')).toContainText('Start SoSe 2022');
 });

@@ -22,8 +22,8 @@ test('import displays official values, unknown semester and source details', asy
   await page.route('**/api/imports', route => route.fulfill({ json: imported }));
   await page.route('**/api/imports/1/dashboard*', route => route.fulfill({ json: dashboard }));
   await page.goto('/?preview=dashboard');
-  await expect(page.locator('#import-select option[value="1"]')).toHaveCount(1);
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByLabel('Datenquelle')).toHaveCount(0);
+  await expect(page.getByTestId('official-credits')).toBeVisible();
   await expect(page.getByTestId('official-grade')).toHaveText('2,97');
   await expect(page.getByTestId('official-credits')).toHaveText('52 / 210');
   await expect(page.getByText('Dein Semesterplan ist noch leer.')).toBeVisible();
@@ -49,7 +49,7 @@ test('upload selects the new import without re-parsing', async ({ page }) => {
   await page.goto('/?preview=dashboard');
   await page.getByLabel('Leistungen PDF aktualisieren').setInputFiles({ name: 'transcript.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.4 test') });
   await expect(page.getByTestId('official-credits')).toHaveText('52 / 210');
-  await expect(page.getByLabel('Datenquelle')).toHaveValue('1');
+  await expect(page.getByTestId('personal-report-version')).toContainText('PDF hochgeladen am');
   await expect(page.getByRole('dialog')).toHaveCount(0);
 });
 
@@ -66,15 +66,15 @@ test('server and PDF validation errors are visible and recoverable', async ({ pa
   await expect(page.getByRole('button', { name: 'Leistungen aktualisieren' })).toBeEnabled();
 });
 
-test('failed import fetch does not display previous student data', async ({ page }) => {
-  await page.route('**/api/imports', route => route.fulfill({ json: [...imported, { ...imported[0], id: 2 }] }));
+test('failed latest report fetch does not fall back to older grades', async ({ page }) => {
+  let latest=false;
+  await page.route('**/api/imports', route => route.fulfill({ json: latest ? [{ ...imported[0], id: 2 }, ...imported] : imported }));
   await page.route('**/api/imports/1/dashboard*', route => route.fulfill({ json: dashboard }));
   await page.route('**/api/imports/2/dashboard*', route => route.fulfill({ status: 404, json: { detail: 'Import not found' } }));
   await page.goto('/?preview=dashboard');
-  await expect(page.locator('#import-select option[value="2"]')).toHaveCount(1);
-  await page.getByLabel('Datenquelle').selectOption('1');
-  await expect(page.getByTestId('official-credits')).toBeVisible();
-  await page.getByLabel('Datenquelle').selectOption('2');
+  await expect(page.getByTestId('official-credits')).toHaveText('52 / 210');
+  latest=true;
+  await page.getByRole('button',{name:'Ansicht aktualisieren',exact:true}).click();
   await expect(page.getByRole('alert')).toContainText('Import not found');
   await expect(page.getByTestId('official-credits')).toHaveCount(0);
 });

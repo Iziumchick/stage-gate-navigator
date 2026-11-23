@@ -20,7 +20,20 @@ test('account deletion requires a password and an explicit confirmation before c
  let called=0;await page.route('**/api/account/delete',r=>{called++;expect(JSON.parse(r.request().postData()!).password).toBe('my-current-password');return r.fulfill({json:{deleted:true}});});
  await open(page);const dialog=page.getByRole('dialog');await dialog.getByRole('button',{name:'Konto und zugehörige Daten löschen',exact:true}).click();const remove=dialog.getByRole('button',{name:'Endgültig löschen',exact:true});await expect(remove).toBeDisabled();await dialog.getByRole('checkbox').check();await expect(remove).toBeDisabled();await dialog.getByLabel('Aktuelles Passwort',{exact:true}).fill('my-current-password');await remove.click();await expect(page.getByRole('button',{name:'Einloggen',exact:true})).toBeVisible();expect(called).toBe(1);expect(await page.evaluate(()=>localStorage.getItem('stage-gate.profile:1'))).toBeNull();
 });
-test('an existing account must confirm the current notice before importing grades',async({page})=>{
- await page.route('**/api/auth/me',r=>r.fulfill({json:{id:1,name:'Student',email:'student@example.test',role:'student',privacy_version:null}}));await page.route('**/api/imports',r=>r.fulfill({json:[]}));await page.route('**/api/account/consent',r=>r.fulfill({json:{id:1,name:'Student',email:'student@example.test',role:'student',privacy_version:'2026-11-21'}}));
- await page.goto('/?preview=welcome');const banner=page.getByRole('region',{name:'Datenschutzbestätigung',exact:true});await expect(banner).toBeVisible();await expect(banner.getByRole('button',{name:'Einwilligung bestätigen',exact:true})).toBeDisabled();await banner.getByRole('checkbox').check();await banner.getByRole('button',{name:'Einwilligung bestätigen',exact:true}).click();await expect(banner).toHaveCount(0);
+test('an existing account confirms the current notice in the upload dialog before any PDF is sent',async({page})=>{
+ const user={id:1,name:'Student',email:'student@example.test',role:'student',privacy_version:null};
+ let sent=0;
+ await page.route('**/api/auth/me',r=>r.fulfill({json:user}));
+ await page.route('**/api/imports',r=>r.fulfill({json:sent?[{id:8,status:'success'}]:[]}));
+ await page.route('**/api/account/consent',r=>r.fulfill({json:{...user,privacy_version:'2026-11-21'}}));
+ await page.route('**/api/imports/upload',r=>{sent++;return r.fulfill({json:{import_id:8}});});
+ await page.route('**/api/imports/8/dashboard*',r=>r.fulfill({json:{import_id:8,program:'Wirtschaftsinformatik',supported:true,official_grade:2,official_credits:30,spo_version:'Test',stages:[],unmatched_groups:[]}}));
+ await page.goto('/?preview=dashboard');
+ await expect(page.getByRole('region',{name:'Datenschutzbestätigung',exact:true})).toHaveCount(0);
+ await page.getByLabel('Leistungen PDF aktualisieren').setInputFiles({name:'Leistungen.pdf',mimeType:'application/pdf',buffer:Buffer.from('%PDF-1.4 test')});
+ const dialog=page.getByRole('dialog',{name:'Datenschutz vor dem PDF-Upload',exact:true});
+ await expect(dialog).toBeVisible();expect(sent).toBe(0);
+ const confirm=dialog.getByRole('button',{name:'Bestätigen und PDF hochladen',exact:true});
+ await expect(confirm).toBeDisabled();await dialog.getByRole('checkbox').check();await confirm.click();
+ await expect(dialog).toHaveCount(0);await expect(page.getByTestId('official-credits')).toHaveText('30 / 210');expect(sent).toBe(1);
 });

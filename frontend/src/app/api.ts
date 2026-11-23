@@ -39,6 +39,7 @@ export interface CourseOption {
 export interface ImportItem {
   id: number;
   created_at: string | null;
+  uploaded_at?: string | null;
   degree_program_raw: string | null;
   status: string;
 }

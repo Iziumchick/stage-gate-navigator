@@ -20,6 +20,7 @@ class Import(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, index=True)
+    last_uploaded_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
     source: Mapped[str] = mapped_column(String(64))
     parser_version: Mapped[str] = mapped_column(String(32))

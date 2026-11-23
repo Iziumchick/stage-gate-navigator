@@ -7,7 +7,7 @@ test('FWPM selection requires a confirmed place and shows the real course in sem
   await page.route('**/api/imports', route => route.fulfill({ json: [{ id: 1, status: 'success' }] }));
   await page.route('**/api/imports/1/dashboard*', route => route.fulfill({ json: { import_id: 1, program: 'Wirtschaftsinformatik', supported: true, official_grade: null, official_credits: 0, spo_version: 'Test', curriculum_edition: 'wi_bsc_2023', stages: [{ id: 'abschnitt_3', title: 'Abschnitt 3', modules: [{ id: 'wi.req.fwpm2', title: 'Fachbezogenes Wahlpflichtmodul 2', short_title: 'FWPM 2', required_ects: 5, status: 'unknown', grade: null, source: null, admission: { status: 'available', reason: 'Voraussetzungen erfüllt' }, requires_course_selection: true, course_options: options }] }], unmatched_groups: [] } }));
   await page.goto('/?preview=dashboard');
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByTestId('official-credits')).toBeVisible();
   await page.getByRole('button', { name: 'Fachbezogenes Wahlpflichtmodul 2: Offen' }).click();
   const dialog = page.getByRole('dialog');
   const add = dialog.getByRole('button', { name: 'Zum aktuellen Semester hinzufügen' });
@@ -25,7 +25,7 @@ test('FWPM selection requires a confirmed place and shows the real course in sem
   await expect(page.getByTestId('official-credits')).toHaveText('0 / 210');
   await page.screenshot({ path: 'test-results/fwpm-course-details.png', fullPage: true });
   await page.reload();
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByTestId('official-credits')).toBeVisible();
   await expect(page.getByRole('button', { name: /^Data Engineering 5 ECTS/ })).toBeVisible();
   await page.getByRole('button', { name: 'Fachbezogenes Wahlpflichtmodul 2: Offen' }).click();
   await page.getByLabel('FWPM-Disziplin auswählen').selectOption('wi.fwpm.zapp');

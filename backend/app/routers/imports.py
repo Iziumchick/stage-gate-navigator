@@ -4,10 +4,11 @@ import json
 import threading
 from fastapi import APIRouter,Depends,File,HTTPException,Query,UploadFile,Request
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from starlette.concurrency import run_in_threadpool
 from app.db import get_db
-from app.models import Import,UserImport,User,Achievement
+from app.models import Import,UserImport,User,Achievement,utcnow
 from app.services.auth_service import import_owner,require_student
 from app.services.privacy import consent_required
 from app.services.privacy_storage import erase_import
@@ -28,8 +29,8 @@ def _parse(data):
 
 @router.get('/imports')
 def list_imports(db:Session=Depends(get_db),user:User=Depends(require_student)):
-    items=db.query(Import).join(UserImport,UserImport.import_id==Import.id).filter(UserImport.user_id==user.id).order_by(Import.created_at.desc()).all()
-    return [{'id':i.id,'created_at':i.created_at.isoformat() if i.created_at else None,'source':i.source,'parser_version':i.parser_version,'degree_program_raw':i.degree_program_raw,'degree_program_key':i.degree_program_key,'overall_grade':i.overall_grade,'overall_credits':i.overall_credits,'status':i.status,'error_message':None,'stats_total_rows':i.stats_total_rows,'stats_saved_rows':i.stats_saved_rows} for i in items]
+    items=db.query(Import).join(UserImport,UserImport.import_id==Import.id).filter(UserImport.user_id==user.id).order_by(func.coalesce(Import.last_uploaded_at,Import.created_at).desc(),Import.id.desc()).all()
+    return [{'id':i.id,'created_at':i.created_at.isoformat() if i.created_at else None,'uploaded_at':(i.last_uploaded_at or i.created_at).isoformat() if (i.last_uploaded_at or i.created_at) else None,'source':i.source,'parser_version':i.parser_version,'degree_program_raw':i.degree_program_raw,'degree_program_key':i.degree_program_key,'overall_grade':i.overall_grade,'overall_credits':i.overall_credits,'status':i.status,'error_message':None,'stats_total_rows':i.stats_total_rows,'stats_saved_rows':i.stats_saved_rows} for i in items]
 
 
 @router.post('/imports/upload')
@@ -48,7 +49,9 @@ async def import_pdf(request:Request,file:UploadFile=File(...),force:bool=Query(
     digest=hashlib.sha256(f'{user.id}:'.encode()+hashlib.sha256(data).digest()).hexdigest()
     del data
     existing=db.query(Import).join(UserImport).filter(Import.pdf_sha256==digest,UserImport.user_id==user.id).first()
-    if existing and not force:return {'import_id':existing.id,'deduplicated':True}
+    if existing and not force:
+        existing.last_uploaded_at=utcnow();db.commit()
+        return {'import_id':existing.id,'deduplicated':True}
     item=existing or Import(pdf_sha256=digest)
     item.source='hisinone_leistungen';item.parser_version=VERSION
     item.parsed_modules_json=json.dumps(parsed,ensure_ascii=False)
@@ -56,6 +59,7 @@ async def import_pdf(request:Request,file:UploadFile=File(...),force:bool=Query(
     item.degree_program_raw='Wirtschaftsinformatik';item.degree_program_key='wi'
     item.overall_grade=parsed['overall_grade'];item.overall_credits=parsed['overall_credits']
     item.status='success';item.error_message=None
+    item.last_uploaded_at=utcnow()
     item.stats_total_rows=parsed['report']['attempt_count'];item.stats_saved_rows=len(parsed['groups'])
     db.add(item)
     try:
@@ -66,6 +70,7 @@ async def import_pdf(request:Request,file:UploadFile=File(...),force:bool=Query(
         db.rollback()
         same=db.query(Import).join(UserImport).filter(Import.pdf_sha256==digest,UserImport.user_id==user.id).first()
         if not same:raise HTTPException(409,'Der Import wurde gleichzeitig verändert. Bitte erneut versuchen.')
+        same.last_uploaded_at=utcnow();db.commit()
         return {'import_id':same.id,'deduplicated':True}
     return {'import_id':item.id,'deduplicated':bool(existing),'overall_grade':item.overall_grade,'overall_credits':item.overall_credits}
 

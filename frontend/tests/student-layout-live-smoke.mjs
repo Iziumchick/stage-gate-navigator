@@ -45,7 +45,7 @@ try {
  await page.getByRole('button',{name:'Studienplan ohne PDF öffnen',exact:true}).click();
  await page.getByRole('heading',{name:'Mein Status',exact:true}).waitFor();
  assert.ok(importsBefore.length,'Sample account should retain its existing PDF import');
- await page.getByLabel('Datenquelle').selectOption(String(importsBefore.find(i=>i.source==='hisinone_leistungen' && i.overall_credits===195)?.id || importsBefore[0].id));
+ assert.equal(importsBefore.find(i=>i.status==='success')?.overall_credits,195,'Use a sample account whose latest upload has 195 ECTS');
  await page.getByTestId('official-credits').waitFor();
  assert.equal(await page.getByTestId('official-credits').innerText(),'195 / 210');
  assert.equal(await page.getByTestId('official-grade').innerText(),'2,52');

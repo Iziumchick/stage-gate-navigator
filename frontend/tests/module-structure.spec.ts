@@ -4,7 +4,7 @@ async function dashboard(page: any, module: any) {
   await page.route('**/api/imports', (route: any) => route.fulfill({ json: [{ id: 1, status: 'success' }] }));
   await page.route('**/api/imports/1/dashboard*', (route: any) => route.fulfill({ json: { import_id: 1, program: 'Wirtschaftsinformatik', supported: true, official_grade: null, official_credits: 0, spo_version: 'SPO 2026', stages: [{ id: 'abschnitt_1', title: 'Abschnitt 1', modules: [module] }], unmatched_groups: [] } }));
   await page.goto('/?preview=dashboard');
-  await page.getByLabel('Datenquelle').selectOption('1');
+  await expect(page.getByTestId('official-credits')).toBeVisible();
 }
 
 const bwl2={id:'wi.req.bwl2',title:'Betriebswirtschaftslehre 2',short_title:'BW2',required_ects:7,status:'unknown',grade:null,source:null,completion_rule:'all',admission:{status:'available',reason:'Test'},details:{completion_rule:'all',components:[{title:'Grundlagen',ects:5},{title:'Fallstudie',ects:2}]},course_options:[
@@ -20,7 +20,7 @@ test('BWL2 is one whole semester card with both parts and a single credit total'
  await expect(card).toHaveCount(1);await expect(page.getByTestId('semester-ects')).toHaveText('7 ECTS');
  await card.click();await expect(dialog).toContainText('Montag 08:15–09:45 · D201');await expect(dialog).toContainText('Mittwoch 10:00–11:30 · K014');
  await page.getByLabel('Notizen',{exact:true}).fill('Beide Bestandteile zusammen');await page.getByRole('button',{name:'Kursangaben speichern'}).click();
- await page.getByRole('button',{name:'Details schließen'}).click();await page.reload();await page.getByLabel('Datenquelle').selectOption('1');await expect(page.getByTestId('official-credits')).toHaveText('0 / 210');await expect(overview).toBeVisible();await card.click();
+ await page.getByRole('button',{name:'Details schließen'}).click();await page.reload();await expect(page.getByTestId('official-credits')).toBeVisible();await expect(page.getByTestId('official-credits')).toHaveText('0 / 210');await expect(overview).toBeVisible();await card.click();
  await expect(page.getByLabel('Notizen',{exact:true})).toHaveValue('Beide Bestandteile zusammen');
  await page.getByRole('button',{name:'Aus aktuellem Semester entfernen',exact:true}).click();await expect(card).toHaveCount(0);await expect(page.getByTestId('semester-ects')).toHaveText('0 ECTS');
  await overview.dragTo(page.getByLabel('Module in aktuelles Semester ziehen'));await expect(card).toBeVisible();

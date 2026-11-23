@@ -6,7 +6,7 @@ import { currentSemester } from './semesterClock';
 import { InfoPopover } from './InfoPopover';
 import { LeistungenInstructions } from './LeistungenHelp';
 import { CatalogEditor } from './CatalogEditor';
-import {AccountDataDialog,ConsentBanner,ResearchFooter,PRIVACY_VERSION} from './Privacy';
+import {AccountDataDialog,UploadConsentDialog,ResearchFooter,PRIVACY_VERSION} from './Privacy';
 import DemoDashboard from './DemoDashboard';
 import { GuestDemo } from './GuestDemo';
 import { LegalPage } from './LegalPage';
@@ -24,13 +24,6 @@ const exampleOptions = [
   ['repeat-first', 'Pflichtwiederholung im aktuellen Semester'],
   ['thesis', 'Studienabschluss · Bachelorarbeit und Seminar'],
 ];
-function savedExample(value:string) {
-  const id=value.slice('example:'.length);
-  if (exampleOptions.some(([key])=>key===id)) return value;
-  if (id.startsWith('repeat-')) return 'example:repeat-first';
-  return id==='thesis-seminar'?'example:thesis':'example:practice';
-}
-
 function readProfile(profileKey: string): StudyProfile | null {
 
   try {
@@ -71,9 +64,9 @@ function AuthenticatedApp() {
 }
 function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { user: AuthUser; name: string; onLogout: () => void;onUserChanged:(user:AuthUser)=>void;onDeleted:()=>void }) {
   const profileKey = `stage-gate.profile:${user.id}`;
-  const selectionKey = `stage-gate.selection:${user.id}`;
   const [profile, setProfile] = useState<StudyProfile | null>(() => readProfile(profileKey));
   const [dataOpen,setDataOpen]=useState(false);
+  const [pendingUpload,setPendingUpload]=useState<{file:File;profile?:StudyProfile}|null>(null);
   const [profileOpen, setProfileOpen] = useState(false);
   const [needsConfirmation, setNeedsConfirmation] = useState(false);
   const [storageError, setStorageError] = useState('');
@@ -82,14 +75,8 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
     if (examplePreview && ['first','open','practice','third','practice-seminar','thesis','thesis-seminar','repeat-first','repeat-later','repeat-due','repeat-no-course','repeat-review','repeat-unknown'].includes(examplePreview)) return `example:${examplePreview}`;
     if (preview === 'dashboard') return 'demo';
     if (preview === 'welcome' || !profile || !validStudyStart(profile.startTerm)) return 'welcome';
-    try { const saved = localStorage.getItem(selectionKey); return saved && (/^[0-9]+$/.test(saved) || saved === 'catalog' || !!examplePreview && /^example:(first|open|practice|third|practice-seminar|thesis|thesis-seminar|repeat-first|repeat-later|repeat-due|repeat-no-course|repeat-review|repeat-unknown)$/.test(saved)) ? (saved.startsWith('example:')?savedExample(saved):saved) : saved?.startsWith('example:') ? 'catalog' : 'welcome'; }
-    catch { return 'welcome'; }
+    return 'catalog';
   });
-  useEffect(() => {
-    if (profile && !preview && selection !== 'demo') {
-      try { localStorage.setItem(selectionKey, selection); } catch { /* In-memory fallback. */ }
-    }
-  }, [selection, profile]);
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState('');
   const [listError, setListError] = useState('');
@@ -103,17 +90,34 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
     const controller = new AbortController();
     setListLoading(true);
     request<ImportItem[]>('/imports', { signal: controller.signal })
-      .then(items => { setImports(items.filter(item => item.status === 'success')); setListError(''); })
+      .then(items => {
+        if(controller.signal.aborted)return;
+        const successful=items.filter(item=>item.status==='success');
+        setImports(successful);setListError('');
+      })
       .catch(e => { if (!controller.signal.aborted) setListError(e.message); })
       .finally(() => { if (!controller.signal.aborted) setListLoading(false); });
     return () => controller.abort();
   }, [revision]);
 
+  useEffect(()=>{
+    if(listLoading||listError)return;
+    setSelection(current=>{
+      if(examplePreview)return current;
+      if(!profile||!validStudyStart(profile.startTerm))return 'welcome';
+      if(preview==='welcome'&&current==='welcome')return current;
+      if(imports.length)return String(imports[0].id);
+      return current==='demo'||current==='welcome'?current:'catalog';
+    });
+  },[imports,listLoading,listError,profile?.startTerm]);
+
   useEffect(() => {
     setData(null);
     setError('');
+    if (listLoading || listError) {setLoading(false);return;}
     if (selection === 'demo' || selection === 'welcome') { setLoading(false); return; }
     const example=selection.startsWith('example:');
+    if(!example&&imports.length&&selection!==String(imports[0].id)){setLoading(false);return;}
     if (!example && (!profile || !validStudyStart(profile.startTerm))) { setSelection('welcome'); setLoading(false); return; }
     const controller = new AbortController();
     setLoading(true);
@@ -122,13 +126,17 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
       .catch(e => { if (!controller.signal.aborted) setError(e.message); })
       .finally(() => { if (!controller.signal.aborted) setLoading(false); });
     return () => controller.abort();
-  }, [selection, revision, profile?.referenceTerm, profile?.startTerm]);
+  }, [selection, revision, profile?.referenceTerm, profile?.startTerm,listLoading,listError,imports]);
 
-  async function upload(file: File, confirmedProfile?: StudyProfile) {
+  async function upload(file: File, confirmedProfile?: StudyProfile, consentUser:AuthUser=user) {
     setError('');
-    if(user.privacy_version!==PRIVACY_VERSION){setError('Bitte zuerst die Datenschutzinformation bestätigen.');return;}
     if (!file.name.toLowerCase().endsWith('.pdf')) { setError('Bitte eine PDF-Datei auswählen.'); return; }
     if (file.size > 10 * 1024 * 1024) { setError('Die PDF darf höchstens 10 MB groß sein.'); return; }
+    if(consentUser.id!==user.id||consentUser.privacy_version!==PRIVACY_VERSION){
+      setPendingUpload({file,profile:confirmedProfile});
+      if(fileInput.current)fileInput.current.value='';
+      return;
+    }
     setUploading(true);
     try {
       const body = new FormData();
@@ -138,7 +146,10 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
       setNeedsConfirmation(!(confirmedProfile || profile));
       setSelection(String(result.import_id));
       setRevision(value => value + 1);
-    } catch (e) { setError(e instanceof Error ? e.message : 'Upload fehlgeschlagen.'); }
+    } catch (e) {
+      if(e instanceof APIError&&e.status===428)setPendingUpload({file,profile:confirmedProfile});
+      else setError(e instanceof Error ? e.message : 'Upload fehlgeschlagen.');
+    }
     finally { setUploading(false); if (fileInput.current) fileInput.current.value = ''; }
   }
 
@@ -155,7 +166,10 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
   const contextProfile = selection.startsWith('example:')
     ? {name,program:'Wirtschaftsinformatik (B.Sc.)',startTerm:data?.example_start_term || profile?.startTerm || 'WiSe 2023/24',referenceTerm:currentSemester()}
     : profile;
-  const knownSelection = imports.some(item => String(item.id) === selection);
+  const currentImport = imports.find(item=>String(item.id)===selection);
+  const uploadedAt=currentImport?.uploaded_at||currentImport?.created_at;
+  const uploadTime=uploadedAt?new Date(uploadedAt.includes('T')&&!/(?:Z|[+-]\d{2}:\d{2})$/.test(uploadedAt)?uploadedAt+'Z':uploadedAt):null;
+  const uploadedDate=uploadTime&&!Number.isNaN(uploadTime.getTime())?uploadTime.toLocaleString('de-DE',{timeZone:'Europe/Berlin',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):null;
   return (
     <div className="min-h-screen bg-gray-50 min-w-[1280px]">
       <header className="bg-white border-b border-gray-200">
@@ -164,18 +178,10 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
           <div className="flex items-center gap-2 mr-auto">
             <div className="min-w-0 max-w-64">
             <p className="text-sm font-medium truncate" title={name} data-testid="personal-report-owner">{name}<span className="font-normal text-gray-500 text-xs"> · Mein Studienstand</span></p>
-            <label htmlFor="import-select" className="sr-only">Datenquelle</label>
-            <select id="import-select" value={selection} disabled={uploading} onChange={event => setSelection(event.target.value)} className="border rounded-md px-3 py-2 mt-1 max-w-64 w-full bg-white text-sm">
-              <option value="welcome">Meine Übersicht</option>
-              <option value="catalog">Studienplan ohne PDF</option>
-              {selection==='demo' && <option value="demo">Designvorschau</option>}
-              {examplePreview&&<optgroup label="Beispiele">{exampleOptions.map(([id,label])=><option key={id} value={`example:${id}`}>{label}</option>)}</optgroup>}
-              {selection.startsWith('example:')&&!exampleOptions.some(([id])=>selection===`example:${id}`)&&<option hidden value={selection}>{data?.example_label||'Testbeispiel'}</option>}
-              {selection !== 'demo' && selection !== 'welcome' && selection !== 'catalog' && !selection.startsWith('example:') && !knownSelection && <option value={selection}>Notenstand #{selection}</option>}
-              {imports.map(item => <option key={item.id} value={item.id}>Notenstand · {item.created_at ? new Date(item.created_at).toLocaleDateString('de-DE') : 'Datum unbekannt'}</option>)}
-            </select>
+            <p className="text-xs text-gray-500 mt-1" data-testid="personal-report-version">{listLoading?'Leistungsdaten werden geladen …':currentImport?uploadedDate?`PDF hochgeladen am ${uploadedDate}`:'Leistungsdaten aus deiner letzten PDF':selection.startsWith('example:')?'Testbeispiel':selection==='demo'?'Designvorschau':profile?'Studienplan ohne Leistungsdaten':'Noch keine Leistungsdaten'}</p>
+            {examplePreview&&<><label htmlFor="example-select" className="sr-only">Testbeispiel auswählen</label><select id="example-select" value={selection} onChange={event=>setSelection(event.target.value)} className="border rounded-md px-3 py-2 mt-1 max-w-64 w-full bg-white text-sm"><option value="catalog">Eigener Studienplan</option>{exampleOptions.map(([id,label])=><option key={id} value={`example:${id}`}>{label}</option>)}{selection.startsWith('example:')&&!exampleOptions.some(([id])=>selection===`example:${id}`)&&<option hidden value={selection}>{data?.example_label||'Testbeispiel'}</option>}</select></>}
             </div>
-            <button className="action-button" title="Importe aktualisieren" aria-label="Importe aktualisieren" disabled={uploading || listLoading || loading} onClick={() => setRevision(value => value + 1)}><RefreshCw size={17} /></button>
+            <button className="action-button" title="Ansicht aktualisieren" aria-label="Ansicht aktualisieren" disabled={uploading || listLoading || loading} onClick={() => setRevision(value => value + 1)}><RefreshCw size={17} /></button>
             <input ref={fileInput} type="file" accept="application/pdf,.pdf" className="hidden" aria-label="Leistungen PDF aktualisieren" onChange={event => { const file = event.target.files?.[0]; if (file) void upload(file); }} />
             <button className="action-button bg-blue-600 text-white border-blue-600" disabled={uploading} onClick={() => profile && validStudyStart(profile.startTerm) ? fileInput.current?.click() : setSelection('welcome')}><Upload size={17} />{uploading ? 'PDF wird verarbeitet …' : profile ? 'Leistungen aktualisieren' : 'PDF importieren'}</button>
             <InfoPopover align="right" label="PDF aus HISinOne erstellen" trigger={<span className="action-button" aria-label="PDF-Anleitung öffnen"><CircleHelp size={17}/></span>}><LeistungenInstructions/></InfoPopover>
@@ -187,15 +193,15 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
           </div>
         </div>
       </header>
-      {user.privacy_version!==PRIVACY_VERSION&&<ConsentBanner onAccepted={onUserChanged}/>}
       <div className="max-w-[1920px] mx-auto px-8 pt-4 space-y-2" aria-live="polite">
         {storageError && <p role="status" className="text-amber-700 text-sm">{storageError}</p>}
-        {selection === 'demo' && <p className="rounded border border-blue-200 bg-blue-50 px-4 py-2 text-sm text-blue-900">Designvorschau mit fiktiven Daten. Für deinen Studienstand eine Leistungen-PDF importieren oder einen Import auswählen.</p>}
+        {selection === 'demo' && <p className="rounded border border-blue-200 bg-blue-50 px-4 py-2 text-sm text-blue-900">Designvorschau mit fiktiven Daten. Für deinen Studienstand eine Leistungen-PDF importieren.</p>}
         {(error || listError) && <div role="alert" className="border border-red-200 bg-red-50 text-red-800 rounded px-4 py-3 flex justify-between gap-4"><span>{error || listError}</span><button className="underline" onClick={() => setRevision(value => value + 1)}>Erneut versuchen</button></div>}
         {data?.example_scenario && <p className="text-xs text-blue-800">Beispiel · {data.example_label} · Fiktive Ergebnisse, getrennt von deinen Noten und deinem Semesterplan.</p>}
       </div>
-      {selection === 'welcome' ? <WelcomeDashboard name={name} profile={profile} uploading={uploading} onUpload={(file, value) => void upload(file, value)} onSave={saveProfile} onManual={() => setProfileOpen(true)} /> : selection === 'demo' ? <DemoDashboard /> : loading ? <p role="status" className="p-8 text-gray-600">Notenübersicht wird geladen …</p> : data ? <LiveDashboard data={data} profile={contextProfile} ownerKey={selection.startsWith('example:') ? `${user.id}:${selection}` : String(user.id)} /> : <p className="p-8 text-gray-600">Für diesen Import sind zurzeit keine Daten verfügbar.</p>}
+      {selection === 'welcome' ? <WelcomeDashboard name={name} profile={profile} uploading={uploading} onUpload={(file, value) => void upload(file, value)} onSave={saveProfile} onManual={() => setProfileOpen(true)} /> : selection === 'demo' ? <DemoDashboard /> : loading || listLoading ? <p role="status" className="p-8 text-gray-600">Notenübersicht wird geladen …</p> : data ? <LiveDashboard data={data} profile={contextProfile} ownerKey={selection.startsWith('example:') ? `${user.id}:${selection}` : String(user.id)} /> : <p className="p-8 text-gray-600">Für diesen Import sind zurzeit keine Daten verfügbar.</p>}
       <ResearchFooter/>
+      {pendingUpload&&<UploadConsentDialog fileName={pendingUpload.file.name} onClose={()=>setPendingUpload(null)} onAccepted={updated=>{const pending=pendingUpload;setPendingUpload(null);onUserChanged(updated);void upload(pending.file,pending.profile,updated);}}/>}
       {dataOpen&&<AccountDataDialog user={user} imports={imports} onClose={()=>setDataOpen(false)} onDeleted={onDeleted} onChanged={()=>{setProfile(readProfile(profileKey));setSelection('welcome');setRevision(v=>v+1);void request<AuthUser>('/auth/me').then(onUserChanged).catch(()=>{});}}/>}
       {profileOpen && <ProfileDialog open={profileOpen} name={name} profile={profile} suggestedProgram={data?.program || null} onClose={() => setProfileOpen(false)} onSave={saveProfile} />}
     </div>
