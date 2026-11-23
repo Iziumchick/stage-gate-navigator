@@ -1,4 +1,4 @@
-export interface AuthUser { id: number; email: string; name: string; role: 'student' | 'admin'; privacy_version?:string|null }
+export interface AuthUser { id: number; email: string; name: string; role: 'student' | 'admin'; privacy_version?:string|null; email_verified?:boolean }
 export class APIError extends Error { constructor(message: string, public status: number) { super(message); } }
 export interface Admission {
   status: 'available' | 'blocked' | 'unknown' | 'completed';

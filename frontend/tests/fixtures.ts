@@ -1,7 +1,8 @@
 import { test as base, expect } from '@playwright/test';
 export const test = base.extend({
   page: async ({ page }, use) => {
-    const user = { id: 1, name: 'Sergii', email: 'sergii@example.org', role: 'student',privacy_version:'2026-11-16' };
+    const user = { id: 1, name: 'Sergii', email: 'sergii@example.org', role: 'student',privacy_version:'2026-11-21' };
+    await page.route('**/api/auth/options',route=>route.fulfill({json:{institutional_email_required:false,allowed_email_domains:[]}}));
     await page.route('**/api/auth/me', route => route.fulfill({ json: user }));
     await page.route('**/api/auth/register', route => route.fulfill({ json: user }));
     await page.route('**/api/auth/logout', route => route.fulfill({ json: { ok: true } }));

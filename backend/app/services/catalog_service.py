@@ -108,9 +108,9 @@ def admission_for(rule: dict | None, modules: list[dict], credits) -> dict:
             'reason': ' '.join(reasons) or 'Hinterlegte Zulassungsbedingungen erfüllt.', 'source': rule['source']}
 
 
-def apply_catalog(stages: dict, catalog: dict, credits, term: str | None, *, include_semester_data: bool = True) -> None:
+def apply_catalog(stages: dict, catalog: dict, credits, term: str | None, *, include_semester_data: bool = True, semester_data: dict | None = None) -> None:
     modules = [m for stage in stages.values() for m in stage['modules']]
-    semesters = published_semesters() if include_semester_data else {}
+    semesters = (published_semesters() if semester_data is None else semester_data) if include_semester_data else {}
     semester = semesters.get(term, {}) if term else {}
     published = semester.get('status') == 'published'
     for stage in stages.values():

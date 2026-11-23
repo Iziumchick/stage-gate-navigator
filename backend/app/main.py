@@ -10,8 +10,8 @@ from app.db import SessionLocal,engine
 from app.services.auth_service import bootstrap_admin
 from app.services.privacy import assert_production_ready,retention_days
 from app.services.privacy_storage import minimize_existing,expire_inactive,compact_after_scrub
-from app.services.security import BodyLimitMiddleware,allowed_origins,production
-from app.routers import account,auth,catalog,dashboard,imports
+from app.services.security import BodyLimitMiddleware,allowed_origins,production,ROBOTS_POLICY
+from app.routers import account,auth,catalog,dashboard,demo,imports
 
 async def maintenance():
     while True:
@@ -36,7 +36,7 @@ async def lifespan(app):
         with suppress(asyncio.CancelledError):await task
 
 app=FastAPI(title='Study Navigator',version='0.4.0',docs_url=None if production() else '/docs',redoc_url=None,openapi_url=None if production() else '/openapi.json',lifespan=lifespan)
-for router in (auth.router,account.router,imports.router,dashboard.router,catalog.router):app.include_router(router)
+for router in (auth.router,account.router,imports.router,dashboard.router,catalog.router,demo.router):app.include_router(router)
 app.add_middleware(BodyLimitMiddleware)
 app.add_middleware(TrustedHostMiddleware,allowed_hosts=list({urlparse(o).hostname for o in allowed_origins()}|{'localhost','127.0.0.1','backend','testserver'}|({'host.docker.internal'} if not production() else set())))
 
@@ -53,7 +53,7 @@ async def protect_requests(request:Request,call_next):
     if request.method not in ('GET','HEAD','OPTIONS'):
         origin=request.headers.get('origin')
         if request.headers.get('x-requested-with')!='StudyNavigator' or (origin and origin.rstrip('/') not in allowed_origins()):
-            return JSONResponse({'detail':'Ungültige Anfrage.'},status_code=403)
+            return JSONResponse({'detail':'Ungültige Anfrage.'},status_code=403,headers={'X-Robots-Tag':ROBOTS_POLICY})
     response=await call_next(request)
-    for key,value in {'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(), microphone=(), geolocation=()'}.items():response.headers[key]=value
+    for key,value in {'Cache-Control':'no-store','X-Robots-Tag':ROBOTS_POLICY,'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(), microphone=(), geolocation=()'}.items():response.headers[key]=value
     return response

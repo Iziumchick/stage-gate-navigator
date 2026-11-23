@@ -1,0 +1,5 @@
+# This site opts out of search indexing through meta robots and X-Robots-Tag.
+# Crawlers must be able to fetch pages to see those noindex directives.
+# robots.txt is not access control and does not protect public contact details.
+User-agent: *
+Disallow:

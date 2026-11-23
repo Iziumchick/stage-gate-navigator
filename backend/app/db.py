@@ -22,7 +22,7 @@ Base.metadata.create_all(bind=engine)
 # Additive migration for the existing prototype database; no account reset.
 columns={c['name'] for c in inspect(engine).get_columns('users')}
 with engine.begin() as connection:
-    for name,kind in [('privacy_version','VARCHAR(40)'),('privacy_accepted_at','DATETIME'),('last_active_at','DATETIME')]:
+    for name,kind in [('privacy_version','VARCHAR(40)'),('privacy_accepted_at','DATETIME'),('last_active_at','DATETIME'),('email_verified_at','DATETIME')]:
         if name not in columns:connection.execute(text(f'ALTER TABLE users ADD COLUMN {name} {kind}'))
     connection.execute(text('UPDATE users SET last_active_at=CURRENT_TIMESTAMP WHERE last_active_at IS NULL'))
 

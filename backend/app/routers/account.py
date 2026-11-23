@@ -31,7 +31,7 @@ def consent(value:Consent,user:User=Depends(require_student),db:Session=Depends(
 @router.get('/account/export')
 def export(user:User=Depends(require_student),db:Session=Depends(get_db)):
     items=db.query(Import).join(UserImport).filter(UserImport.user_id==user.id).all()
-    return {'account':{'name':user.name,'email':user.email,'last_active_at':user.last_active_at.isoformat() if user.last_active_at else None,'privacy_version':user.privacy_version,'privacy_accepted_at':user.privacy_accepted_at.isoformat() if user.privacy_accepted_at else None},'imports':[{'id':i.id,'created_at':i.created_at.isoformat() if i.created_at else None,'program':i.degree_program_raw,'source':i.source,'parser_version':i.parser_version,'grade':i.overall_grade,'ects':i.overall_credits,'groups':import_groups(i)} for i in items]}
+    return {'account':{'name':user.name,'email':user.email,'email_verified_at':user.email_verified_at.isoformat() if user.email_verified_at else None,'last_active_at':user.last_active_at.isoformat() if user.last_active_at else None,'privacy_version':user.privacy_version,'privacy_accepted_at':user.privacy_accepted_at.isoformat() if user.privacy_accepted_at else None},'imports':[{'id':i.id,'created_at':i.created_at.isoformat() if i.created_at else None,'program':i.degree_program_raw,'source':i.source,'parser_version':i.parser_version,'grade':i.overall_grade,'ects':i.overall_credits,'groups':import_groups(i)} for i in items]}
 
 @router.delete('/account/results')
 def clear_results(user:User=Depends(require_student),db:Session=Depends(get_db)):

@@ -111,8 +111,8 @@ test('read-only curriculum and module pages are absent', async ({ page }) => {
   await setup(page, { documents: [{ ...core, digest: 'c'.repeat(64), edition_id: 'wi_bsc_2023', created_on: '09.10.2026' }, core, { ...core, digest: 'd'.repeat(64), edition_id: 'wi_bsc_2012' }, fwpm] });
   await page.getByRole('button', { name: 'Weiter', exact: true }).click();
   await expect(page.getByRole('heading',{name:'FWPM-Angebot',exact:true})).toBeVisible();
-  await expect(page.getByRole('navigation')).not.toContainText('Studienprogramm');
-  await expect(page.getByRole('navigation')).not.toContainText('Module & Teilmodule');
+  await expect(page.getByRole('navigation',{name:'Vorbereitungsschritte'})).not.toContainText('Studienprogramm');
+  await expect(page.getByRole('navigation',{name:'Vorbereitungsschritte'})).not.toContainText('Module & Teilmodule');
   await expect(page.getByLabel('Pflichtprogramm-PDF')).toHaveCount(0);
 });
 

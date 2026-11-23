@@ -4,13 +4,13 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.db import get_db
-from app.services.auth_service import import_owner
+from app.services.auth_service import import_owner,institutional_access
 from app.models import Import
 from app.services.dashboard_service import build_dashboard
 from app.services.program_editions import edition_for_start, edition_registry, public_edition
 from app.services.leistungen_import import import_groups, stored_payload
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(institutional_access)])
 
 
 @router.get('/imports/{import_id}/dashboard', dependencies=[Depends(import_owner)])

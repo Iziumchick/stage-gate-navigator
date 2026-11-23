@@ -30,7 +30,7 @@ def verify_password(password: str, value: str) -> bool:
 
 
 def public_user(user: User) -> dict:
-    return {'id': user.id, 'email': user.email, 'name': user.name, 'role': user.role,'privacy_version':user.privacy_version}
+    return {'id': user.id, 'email': user.email, 'name': user.name, 'role': user.role,'privacy_version':user.privacy_version,'email_verified':user.email_verified_at is not None}
 
 
 def current_user(request: Request, db: Session = Depends(get_db)) -> User:
@@ -39,9 +39,17 @@ def current_user(request: Request, db: Session = Depends(get_db)) -> User:
     user = db.get(User, session.user_id) if session and session.expires_at > time.time() else None
     if not user:
         raise HTTPException(401, 'Bitte anmelden.')
+    from app.services import institutional_email
+    if institutional_email.required() and (not institutional_email.allowed(user.email) or not user.email_verified_at):
+        raise HTTPException(401,'Bitte mit einer bestätigten Hochschuladresse neu anmelden.')
     if user.last_active_at is None or time.time()-user.last_active_at.replace(tzinfo=timezone.utc).timestamp()>86400:
         user.last_active_at=utcnow();db.commit()
     return user
+
+
+def institutional_access(request:Request,db:Session=Depends(get_db)):
+    from app.services.institutional_email import required
+    if required():return current_user(request,db)
 
 
 def require_admin(user: User = Depends(current_user)) -> User:

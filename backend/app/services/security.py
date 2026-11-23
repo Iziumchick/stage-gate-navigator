@@ -8,6 +8,7 @@ from fastapi import HTTPException, Request
 
 _lock=threading.Lock()
 _buckets=OrderedDict()
+ROBOTS_POLICY='noindex, nofollow, nosnippet'
 
 def rate_limit(request:Request,scope='auth',limit=30,seconds=900,key=None):
     identity=key or (request.client.host if request.client else 'unknown')

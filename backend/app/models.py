@@ -88,6 +88,19 @@ class User(Base):
     privacy_version: Mapped[str | None] = mapped_column(String(40),nullable=True)
     privacy_accepted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True),nullable=True)
     last_active_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True),default=utcnow,nullable=True)
+    email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True),nullable=True)
+
+
+class EmailVerification(Base):
+    __tablename__ = 'email_verifications'
+    ticket_hash: Mapped[str] = mapped_column(String(64),primary_key=True)
+    email: Mapped[str] = mapped_column(String(254),index=True)
+    user_id: Mapped[int | None] = mapped_column(ForeignKey('users.id'),nullable=True,index=True)
+    code_hash: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[float] = mapped_column(Float)
+    expires_at: Mapped[float] = mapped_column(Float,index=True)
+    attempts: Mapped[int] = mapped_column(Integer,default=0)
+    pending_registration_json: Mapped[str | None] = mapped_column(Text,nullable=True)
 
 
 class LoginSession(Base):

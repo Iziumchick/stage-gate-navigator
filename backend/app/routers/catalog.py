@@ -8,7 +8,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
 from fastapi.responses import FileResponse
-from app.services.auth_service import require_admin
+from app.services.auth_service import require_admin,institutional_access
 from app.services.catalog_schema import Catalog, Preparation
 from app.services.handbook_catalog import reference_document, document_summary, semester_catalog, read_document, stored_path
 from app.services.catalog_service import catalog_path, editor_catalog, revision, published_semesters
@@ -207,7 +207,7 @@ def upload_handbook(file: UploadFile = File(...), kind: str | None = None, extra
     return {**result, 'url': url}
 
 
-@router.get('/programs/wi/handbooks/{filename}')
+@router.get('/programs/wi/handbooks/{filename}',dependencies=[Depends(institutional_access)])
 def read_versioned_handbook(filename: str):
     if not re.fullmatch(r'[a-f0-9]{64}\.pdf', filename):
         raise HTTPException(404, 'Modulhandbuch nicht gefunden.')
@@ -218,7 +218,7 @@ def read_versioned_handbook(filename: str):
     return FileResponse(path, media_type='application/pdf')
 
 
-@router.get('/programs/wi/handbook')
+@router.get('/programs/wi/handbook',dependencies=[Depends(institutional_access)])
 def read_legacy_handbook():
     path = catalog_path().with_name('wi_handbook.pdf')
     if not path.exists():

@@ -5,6 +5,11 @@ services:
       - "127.0.0.1:5173:80"
     depends_on:
       - backend
+    logging:
+      driver: local
+      options:
+        max-size: "10m"
+        max-file: "3"
   backend:
     build: ./backend
     ports:
@@ -23,8 +28,18 @@ services:
       - PRIVACY_HOSTING_COUNTRY=${PRIVACY_HOSTING_COUNTRY:-}
       - PRIVACY_AUTHORITY=${PRIVACY_AUTHORITY:-}
       - PRIVACY_BACKUP_POLICY=${PRIVACY_BACKUP_POLICY:-}
+      - PRIVACY_LOG_POLICY=${PRIVACY_LOG_POLICY:-}
+      - PRIVACY_MAIL_PROVIDER=${PRIVACY_MAIL_PROVIDER:-}
+      - PRIVACY_MAIL_RETENTION=${PRIVACY_MAIL_RETENTION:-}
       - PRIVACY_REVIEWED=${PRIVACY_REVIEWED:-false}
       - DATA_RETENTION_DAYS=${DATA_RETENTION_DAYS:-90}
+      - REQUIRE_INSTITUTIONAL_EMAIL=${REQUIRE_INSTITUTIONAL_EMAIL:-false}
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_SECURITY=${SMTP_SECURITY:-starttls}
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:-}
+      - SMTP_FROM=${SMTP_FROM:-}
     read_only: true
     tmpfs:
       - /tmp:size=67108864,mode=1777,noexec,nosuid
@@ -34,6 +49,11 @@ services:
     mem_limit: 1g
     volumes:
       - app_data:/data
+    logging:
+      driver: local
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
   app_data:

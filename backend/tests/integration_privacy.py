@@ -67,11 +67,15 @@ class PrivacyTests(unittest.TestCase):
   items,_=self.call(client,'/imports');self.assertEqual(items,[])
   with SessionLocal() as db:self.assertIsNone(db.get(User,user['id']).privacy_version)
   self.upload(client,pdf_export(),status=428)
-  self.call(client,'/account/consent',{'accepted':True},headers={'Origin':'https://untrusted.example'},status=403)
+  _,blocked=self.call(client,'/account/consent',{'accepted':True},headers={'Origin':'https://untrusted.example'},status=403)
+  self.assertIn('noindex',blocked.headers.get('X-Robots-Tag',''))
   self.call(client,'/account/consent',{'accepted':True})
   self.call(client,'/auth/register',{'email':'invalid','name':'x','password':'DO_NOT_ECHO_THIS_PASSWORD','privacy_accepted':True},status=422)
   data,response=self.call(client,'/auth/register',{'email':'redaction@example.test','name':'x','password':'SECRET'},status=422)
   self.assertNotIn('SECRET',json.dumps(data));self.assertEqual(response.headers.get('X-Content-Type-Options'),'nosniff')
+  for path in ('/privacy','/health'):
+   _,public=self.call(client,path)
+   self.assertEqual(public.headers.get('X-Robots-Tag'),'noindex, nofollow, nosnippet')
   self.call(client,'/health',headers={'Host':'untrusted.example'},status=400)
   self.call(client,'/account/consent',b'',headers={'Content-Type':'application/json','Content-Length':str(12*1024*1024+1)},status=413)
  def test_pdf_validation_rejects_active_encrypted_wrong_and_excessive_documents(self):

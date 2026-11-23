@@ -25,11 +25,13 @@ class SecurityTests(unittest.TestCase):
     def test_production_requires_real_reviewed_information_and_https(self):
         with patch.dict(os.environ, {'APP_ENV':'production'}, clear=True):
             self.assertRaises(RuntimeError, assert_production_ready)
-            fields = ['CONTROLLER','CONTACT','ADDRESS','HOSTING_PROVIDER','HOSTING_COUNTRY','AUTHORITY','BACKUP_POLICY']
+            fields = ['CONTROLLER','CONTACT','ADDRESS','HOSTING_PROVIDER','HOSTING_COUNTRY','AUTHORITY','BACKUP_POLICY','LOG_POLICY','MAIL_PROVIDER','MAIL_RETENTION']
             os.environ.update({f'PRIVACY_{key}':'Synthetic configuration only' for key in fields})
             os.environ.update(PRIVACY_REVIEWED='true', COOKIE_SECURE='true', APP_ORIGINS='http://test.invalid')
             self.assertRaises(RuntimeError, assert_production_ready)
             os.environ['APP_ORIGINS']='https://test.invalid'
+            self.assertRaises(RuntimeError, assert_production_ready)
+            os.environ.update(SMTP_HOST='smtp.test.invalid',SMTP_FROM='sender@example.test',SMTP_SECURITY='starttls')
             assert_production_ready()
 
     def test_rate_limit_is_per_identity(self):

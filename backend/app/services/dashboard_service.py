@@ -25,7 +25,7 @@ def normalize(title: str) -> str:
     return re.sub(r'[^\w]', '', title)
 
 
-def build_dashboard(groups: list[dict], *, program_key: str | None, grade, credits, term: str | None = None, catalog: dict | None = None, start_term: str | None = None) -> dict:
+def build_dashboard(groups: list[dict], *, program_key: str | None, grade, credits, term: str | None = None, catalog: dict | None = None, start_term: str | None = None, semester_data: dict | None = None) -> dict:
     supported = program_key == 'wi'
     edition = edition_for_start(start_term) if supported and start_term else None
     requirements = edition['requirements'] if edition else [
@@ -159,8 +159,8 @@ def build_dashboard(groups: list[dict], *, program_key: str | None, grade, credi
                 if r['id'] in ('wi.req.aw1','wi.req.aw2'):
                     entry['aw_components'] = r.get('components') or [{'title':r['title'],'ects':r['ects'],'kind':'elective'}]
                 if r.get('notes'): entry['description'] = '\n'.join(r['notes'])
-        apply_catalog(stages, metadata, credits, term, include_semester_data=not edition or edition['id'] == 'wi_bsc_2023')
-        apply_course_options(stages, edition['id'] if edition else 'wi_bsc_2023', term, published_semesters())
+        apply_catalog(stages, metadata, credits, term, include_semester_data=not edition or edition['id'] == 'wi_bsc_2023', semester_data=semester_data)
+        apply_course_options(stages, edition['id'] if edition else 'wi_bsc_2023', term, published_semesters() if semester_data is None else semester_data)
     if edition:
         by_id={m['id']:m for stage in stages.values() for m in stage['modules']}
         for requirement in requirements:
@@ -212,7 +212,7 @@ def build_dashboard(groups: list[dict], *, program_key: str | None, grade, credi
         'curriculum_edition': edition['id'] if edition else None,
         'curriculum_assignment': 'regular_start_term' if edition else 'legacy_preview',
         'semester_data_configured': True,
-        'semester_calendar': published_semesters().get(term, {}).get('calendar', {}) if supported and term else {},
+        'semester_calendar': (published_semesters() if semester_data is None else semester_data).get(term, {}).get('calendar', {}) if supported and term else {},
         'stages': list(stages.values()) if supported else [],
         'unmatched_groups': [g for i, g in enumerate(groups) if i not in matched_indexes],
     }

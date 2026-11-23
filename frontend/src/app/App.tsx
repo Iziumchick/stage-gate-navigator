@@ -8,11 +8,14 @@ import { LeistungenInstructions } from './LeistungenHelp';
 import { CatalogEditor } from './CatalogEditor';
 import {AccountDataDialog,ConsentBanner,ResearchFooter,PRIVACY_VERSION} from './Privacy';
 import DemoDashboard from './DemoDashboard';
+import { GuestDemo } from './GuestDemo';
+import { LegalPage } from './LegalPage';
 import { LiveDashboard } from './LiveDashboard';
 import { APIError, request, type AuthUser, type DashboardData, type ImportItem } from './api';
 
 const preview = import.meta.env.DEV ? new URLSearchParams(window.location.search).get('preview'):null;
-const examplePreview = new URLSearchParams(window.location.search).get('example');
+// Explicit local diagnostics remain available to regression tests, never in a public build.
+const examplePreview = import.meta.env.DEV ? new URLSearchParams(window.location.search).get('example') : null;
 
 const exampleOptions = [
   ['first', 'Studienstart · Abschnitt 1'],
@@ -38,6 +41,11 @@ function readProfile(profileKey: string): StudyProfile | null {
   } catch { return null; }
 }
 export default function App() {
+  if (['/impressum','/datenschutz'].includes(window.location.pathname)) return <LegalPage/>;
+  if (new URLSearchParams(window.location.search).has('demo')) return <GuestDemo/>;
+  return <AuthenticatedApp/>;
+}
+function AuthenticatedApp() {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [checking, setChecking] = useState(true);
   const [error, setError] = useState('');
@@ -58,7 +66,7 @@ export default function App() {
   if (checking) return <p role="status" className="p-10">Sitzung wird geprüft …</p>;
   if (error) return <div className="p-10"><p role="alert">{error}</p><button className="action-button mt-4" onClick={() => setAttempt(value => value + 1)}>Erneut versuchen</button></div>;
   if (!user) return <LoginPage onContinue={setUser} />;
-  if (user.role === 'admin') return <CatalogEditor onLogout={() => void logout()} />;
+  if (user.role === 'admin') return <><CatalogEditor onLogout={() => void logout()} /><ResearchFooter/></>;
   return <DashboardWorkspace key={user.id} user={user} name={user.name} onUserChanged={setUser} onDeleted={()=>setUser(null)} onLogout={() => void logout()} />;
 }
 function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { user: AuthUser; name: string; onLogout: () => void;onUserChanged:(user:AuthUser)=>void;onDeleted:()=>void }) {
@@ -74,7 +82,7 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
     if (examplePreview && ['first','open','practice','third','practice-seminar','thesis','thesis-seminar','repeat-first','repeat-later','repeat-due','repeat-no-course','repeat-review','repeat-unknown'].includes(examplePreview)) return `example:${examplePreview}`;
     if (preview === 'dashboard') return 'demo';
     if (preview === 'welcome' || !profile || !validStudyStart(profile.startTerm)) return 'welcome';
-    try { const saved = localStorage.getItem(selectionKey); return saved && (/^[0-9]+$/.test(saved) || saved === 'catalog' || /^example:(first|open|practice|third|practice-seminar|thesis|thesis-seminar|repeat-first|repeat-later|repeat-due|repeat-no-course|repeat-review|repeat-unknown)$/.test(saved)) ? (saved.startsWith('example:')?savedExample(saved):saved) : 'welcome'; }
+    try { const saved = localStorage.getItem(selectionKey); return saved && (/^[0-9]+$/.test(saved) || saved === 'catalog' || !!examplePreview && /^example:(first|open|practice|third|practice-seminar|thesis|thesis-seminar|repeat-first|repeat-later|repeat-due|repeat-no-course|repeat-review|repeat-unknown)$/.test(saved)) ? (saved.startsWith('example:')?savedExample(saved):saved) : saved?.startsWith('example:') ? 'catalog' : 'welcome'; }
     catch { return 'welcome'; }
   });
   useEffect(() => {
@@ -154,16 +162,19 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
         <div className="max-w-[1920px] mx-auto px-8 py-4 flex items-center justify-between gap-6">
           <div className="flex items-center gap-3"><div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center"><GraduationCap className="w-6 h-6 text-white" /></div><div><span className="text-sm font-medium">Study Navigator <span className="text-gray-400 font-normal">· Forschungsprototyp</span></span>{contextProfile && <div className="mt-1 text-xs text-gray-500"><InfoPopover label="Studieninformationen" title={`Studienbeginn ${contextProfile.startTerm} · ${data?.spo_version || 'SPO anhand des Studienbeginns'}`} trigger={<>{contextProfile.program.replace(' (B.Sc.)','')} · Start {contextProfile.startTerm}<Info size={12}/></>}><div className="space-y-3"><p className="font-medium">Dein Studienplan</p><p>{data?.spo_version || 'Die Studienordnung wird anhand deines Studienbeginns zugeordnet.'}</p><p className="text-gray-500">Die Ergebnisse werden mit den Anforderungen dieser SPO abgeglichen. Ein fehlender Nachweis bedeutet noch keinen Fehlversuch. Einplanen ersetzt keine Anmeldung.</p>{data?.semester_data_configured===false && <p>Semesterangebote werden für diese SPO noch eingerichtet.</p>}{data?.import_report?.warnings?.map(w=><p key={w} className="text-amber-800">{w}</p>)}</div></InfoPopover></div>}</div></div>
           <div className="flex items-center gap-2 mr-auto">
+            <div className="min-w-0 max-w-64">
+            <p className="text-sm font-medium truncate" title={name} data-testid="personal-report-owner">{name}<span className="font-normal text-gray-500 text-xs"> · Mein Studienstand</span></p>
             <label htmlFor="import-select" className="sr-only">Datenquelle</label>
-            <select id="import-select" value={selection} disabled={uploading} onChange={event => setSelection(event.target.value)} className="border rounded-md px-3 py-2 max-w-80 bg-white text-sm">
+            <select id="import-select" value={selection} disabled={uploading} onChange={event => setSelection(event.target.value)} className="border rounded-md px-3 py-2 mt-1 max-w-64 w-full bg-white text-sm">
               <option value="welcome">Meine Übersicht</option>
               <option value="catalog">Studienplan ohne PDF</option>
               {selection==='demo' && <option value="demo">Designvorschau</option>}
-              <optgroup label="Beispiele">{exampleOptions.map(([id,label])=><option key={id} value={`example:${id}`}>{label}</option>)}</optgroup>
+              {examplePreview&&<optgroup label="Beispiele">{exampleOptions.map(([id,label])=><option key={id} value={`example:${id}`}>{label}</option>)}</optgroup>}
               {selection.startsWith('example:')&&!exampleOptions.some(([id])=>selection===`example:${id}`)&&<option hidden value={selection}>{data?.example_label||'Testbeispiel'}</option>}
               {selection !== 'demo' && selection !== 'welcome' && selection !== 'catalog' && !selection.startsWith('example:') && !knownSelection && <option value={selection}>Notenstand #{selection}</option>}
               {imports.map(item => <option key={item.id} value={item.id}>Notenstand · {item.created_at ? new Date(item.created_at).toLocaleDateString('de-DE') : 'Datum unbekannt'}</option>)}
             </select>
+            </div>
             <button className="action-button" title="Importe aktualisieren" aria-label="Importe aktualisieren" disabled={uploading || listLoading || loading} onClick={() => setRevision(value => value + 1)}><RefreshCw size={17} /></button>
             <input ref={fileInput} type="file" accept="application/pdf,.pdf" className="hidden" aria-label="Leistungen PDF aktualisieren" onChange={event => { const file = event.target.files?.[0]; if (file) void upload(file); }} />
             <button className="action-button bg-blue-600 text-white border-blue-600" disabled={uploading} onClick={() => profile && validStudyStart(profile.startTerm) ? fileInput.current?.click() : setSelection('welcome')}><Upload size={17} />{uploading ? 'PDF wird verarbeitet …' : profile ? 'Leistungen aktualisieren' : 'PDF importieren'}</button>
@@ -183,7 +194,7 @@ function DashboardWorkspace({ user, name, onLogout,onUserChanged,onDeleted }: { 
         {(error || listError) && <div role="alert" className="border border-red-200 bg-red-50 text-red-800 rounded px-4 py-3 flex justify-between gap-4"><span>{error || listError}</span><button className="underline" onClick={() => setRevision(value => value + 1)}>Erneut versuchen</button></div>}
         {data?.example_scenario && <p className="text-xs text-blue-800">Beispiel · {data.example_label} · Fiktive Ergebnisse, getrennt von deinen Noten und deinem Semesterplan.</p>}
       </div>
-      {selection === 'welcome' ? <WelcomeDashboard name={name} profile={profile} uploading={uploading} onUpload={(file, value) => void upload(file, value)} onSave={saveProfile} onManual={() => setProfileOpen(true)} onDemo={() => setSelection('example:open')} /> : selection === 'demo' ? <DemoDashboard /> : loading ? <p role="status" className="p-8 text-gray-600">Notenübersicht wird geladen …</p> : data ? <LiveDashboard data={data} profile={contextProfile} ownerKey={selection.startsWith('example:') ? `${user.id}:${selection}` : String(user.id)} /> : <p className="p-8 text-gray-600">Für diesen Import sind zurzeit keine Daten verfügbar.</p>}
+      {selection === 'welcome' ? <WelcomeDashboard name={name} profile={profile} uploading={uploading} onUpload={(file, value) => void upload(file, value)} onSave={saveProfile} onManual={() => setProfileOpen(true)} /> : selection === 'demo' ? <DemoDashboard /> : loading ? <p role="status" className="p-8 text-gray-600">Notenübersicht wird geladen …</p> : data ? <LiveDashboard data={data} profile={contextProfile} ownerKey={selection.startsWith('example:') ? `${user.id}:${selection}` : String(user.id)} /> : <p className="p-8 text-gray-600">Für diesen Import sind zurzeit keine Daten verfügbar.</p>}
       <ResearchFooter/>
       {dataOpen&&<AccountDataDialog user={user} imports={imports} onClose={()=>setDataOpen(false)} onDeleted={onDeleted} onChanged={()=>{setProfile(readProfile(profileKey));setSelection('welcome');setRevision(v=>v+1);void request<AuthUser>('/auth/me').then(onUserChanged).catch(()=>{});}}/>}
       {profileOpen && <ProfileDialog open={profileOpen} name={name} profile={profile} suggestedProgram={data?.program || null} onClose={() => setProfileOpen(false)} onSave={saveProfile} />}

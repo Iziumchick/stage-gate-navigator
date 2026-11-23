@@ -45,7 +45,7 @@ def shift_months(d, months):
     return date(y,m,min(d.day,monthrange(y,m)[1]))
 
 
-def student_example(scenario, start_term=None, term=None):
+def student_example(scenario, start_term=None, term=None, *, semester_data=None):
     start_term=start_term or SCENARIO_START_TERMS[scenario]
     edition=edition_for_start(start_term);requirements=edition['requirements']
     completed={'wi.req.gwi','wi.req.bwl1','wi.req.pg1','wi.req.ma1','wi.req.ma2'}
@@ -83,5 +83,5 @@ def student_example(scenario, start_term=None, term=None):
     credits=sum(r['ects'] for r in requirements if r['id'] in completed and r['id'] not in held)
     weighted=[(float(g['requirement_meta']['grade_val']),next(r['grade_weight'] for r in requirements if r['title']==g['requirement_title'])) for g in groups if g['passed'] and g['requirement_meta']['grade_val'] is not None and not any(r['id'] in held and r['title']==g['requirement_title'] for r in requirements)]
     average=round(sum(g*w for g,w in weighted)/sum(w for _,w in weighted),2) if weighted else None
-    data=build_dashboard(groups,program_key='wi',grade=average,credits=credits,term=term,start_term=start_term)
+    data=build_dashboard(groups,program_key='wi',grade=average,credits=credits,term=term,start_term=start_term,semester_data=semester_data)
     return {'import_id':None,'program':'Wirtschaftsinformatik','example_scenario':scenario,'example_label':SCENARIOS[scenario],'example_start_term':start_term,**data}
