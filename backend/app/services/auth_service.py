@@ -1,6 +1,7 @@
 """Password authentication with revocable server-side sessions."""
 import hashlib
 import hmac
+import logging
 import os
 import secrets
 import time
@@ -40,8 +41,8 @@ def current_user(request: Request, db: Session = Depends(get_db)) -> User:
     if not user:
         raise HTTPException(401, 'Bitte anmelden.')
     from app.services import institutional_email
-    if institutional_email.required() and (not institutional_email.allowed(user.email) or not user.email_verified_at):
-        raise HTTPException(401,'Bitte mit einer bestätigten Hochschuladresse neu anmelden.')
+    if institutional_email.required() and (not institutional_email.account_allowed(user.email,user.role) or not user.email_verified_at):
+        raise HTTPException(401,'Bitte mit einer bestätigten und freigegebenen E-Mail-Adresse neu anmelden.')
     if user.last_active_at is None or time.time()-user.last_active_at.replace(tzinfo=timezone.utc).timestamp()>86400:
         user.last_active_at=utcnow();db.commit()
     return user
@@ -81,7 +82,7 @@ def bootstrap_admin():
         existing = db.query(User).filter(User.email == email).first()
         if existing:
             if existing.role != 'admin':
-                raise RuntimeError('Configured administrator email belongs to a student')
+                logging.getLogger(__name__).error('Administrator bootstrap skipped: configured address belongs to a study account. Use the explicit operator provisioning command or choose a separate administrator address.')
             return
         db.add(User(id=secrets.randbelow(2**52-1)+1,email=email, name='Administrator', role='admin', password_hash=hash_password(password)))
         db.commit()

@@ -24,7 +24,7 @@ export function EmailVerification({initial,onContinue,onBack}:{initial:EmailChal
     catch(e){setError((e as Error).message);}finally{setBusy(false);}
   }
   return <section aria-labelledby="verify-email-title">
-    <h2 id="verify-email-title" className="text-2xl">Hochschuladresse bestätigen</h2>
+    <h2 id="verify-email-title" className="text-2xl">E-Mail-Adresse bestätigen</h2>
     <p className="text-sm text-gray-600 mt-3">Wir haben einen sechsstelligen Code an <strong>{challenge.email}</strong> gesendet. Er ist 10 Minuten gültig. Erst nach der Bestätigung wird dein Zugang freigeschaltet.</p>
     <form onSubmit={e=>void submit(e)} className="space-y-4 mt-6"><label className="block text-sm">Bestätigungscode<input className="form-input mt-2 tracking-widest" required autoFocus inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6}" maxLength={6} value={code} onChange={e=>setCode(e.target.value.replace(/[^0-9]/g,''))} disabled={busy}/></label>
       {error&&<p role="alert" className="text-sm text-red-700">{error}</p>}

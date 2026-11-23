@@ -57,9 +57,17 @@ class VerificationCode(VerificationTicket):
     code:str=Field(pattern=r'^[0-9]{6}$')
 
 
-def check_domain(email):
-    if institutional_email.required() and not institutional_email.allowed(email):
+def check_domain(email,role='student'):
+    if institutional_email.required() and not institutional_email.account_allowed(email,role):
         raise HTTPException(403,'Bitte eine Adresse mit @st.oth-regensburg.de oder @oth-regensburg.de verwenden.')
+
+
+def check_challenge_account(db,item):
+    # Resolve the current server-side role, never a client-supplied role.
+    user=db.get(User,item.user_id) if item.user_id is not None else None
+    if item.user_id is not None and (user is None or user.email!=item.email):
+        raise verification_error()
+    check_domain(item.email,user.role if user else 'student')
 
 
 def verification_error():
@@ -142,7 +150,7 @@ def login(value: Credentials, request: Request, response: Response, db: Session 
     correct = verify_password(value.password, user.password_hash if user else _dummy_hash)
     if not user or not correct:
         raise HTTPException(401, 'E-Mail-Adresse oder Passwort ist falsch.')
-    check_domain(user.email)
+    check_domain(user.email,user.role)
     if institutional_email.required() and not user.email_verified_at:
         return begin_verification(request,db,user.email,user_id=user.id)
     return start_session(user, db, response)
@@ -152,7 +160,7 @@ def login(value: Credentials, request: Request, response: Response, db: Session 
 def verify_email(value:VerificationCode,request:Request,response:Response,db:Session=Depends(get_db)):
     rate_limit(request,'email-code',20,900,key=value.ticket)
     item=challenge_record(db,value.ticket)
-    check_domain(item.email)
+    check_challenge_account(db,item)
     if item.attempts>=5:raise verification_error()
     expected=hashlib.sha256(f'{value.ticket}:{value.code}'.encode()).hexdigest()
     if not hmac.compare_digest(item.code_hash,expected):
@@ -183,7 +191,7 @@ def verify_email(value:VerificationCode,request:Request,response:Response,db:Ses
 @router.post('/email/resend')
 def resend_email(value:VerificationTicket,request:Request,db:Session=Depends(get_db)):
     item=challenge_record(db,value.ticket)
-    check_domain(item.email)
+    check_challenge_account(db,item)
     return begin_verification(request,db,item.email,user_id=item.user_id,pending=json.loads(item.pending_registration_json) if item.pending_registration_json else None)
 
 

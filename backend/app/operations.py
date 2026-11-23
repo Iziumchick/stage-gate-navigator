@@ -11,8 +11,26 @@ def main(argv=None):
     commands=parser.add_subparsers(dest='command',required=True)
     commands.add_parser('check',help='Validate configuration without sending email')
     smtp=commands.add_parser('smtp-test',help='Send one test email; delivery must be checked in the recipient mailbox')
-    smtp.add_argument('--to',required=True,help='Your own permitted OTH email address')
+    smtp.add_argument('--to',required=True,help='Your own permitted OTH address or the exact configured administrator address')
+    provision=commands.add_parser('provision-admin',help='Explicitly provision the exact ADMIN_EMAIL using the private ADMIN_PASSWORD; email confirmation remains required')
+    provision.add_argument('--email',required=True)
+    provision.add_argument('--adopt-existing',action='store_true',help='Explicitly convert this existing study account to an administrator, retaining its study data')
+    provision.add_argument('--reset-password',action='store_true',help='Explicitly replace an existing administrator password from ADMIN_PASSWORD and require new email confirmation')
+    grant=commands.add_parser('grant-admin',help='Grant administrator access to an existing verified staff account @oth-regensburg.de')
+    grant.add_argument('--email',required=True)
+    revoke=commands.add_parser('revoke-admin',help='Revoke a delegated administrator role and invalidate its sessions')
+    revoke.add_argument('--email',required=True)
     args=parser.parse_args(argv)
+    if args.command in ('provision-admin','grant-admin','revoke-admin'):
+        # Import lazily: configuration checks and SMTP tests must not open a DB.
+        from app.services.administration import AdministrationError,provision_admin,grant_staff_admin,revoke_admin
+        try:
+            if args.command=='provision-admin':result=provision_admin(args.email,adopt_existing=args.adopt_existing,reset_password=args.reset_password)
+            elif args.command=='grant-admin':result=grant_staff_admin(args.email)
+            else:result=revoke_admin(args.email)
+        except AdministrationError as error:
+            print(str(error),file=sys.stderr);return 1
+        print(result);return 0
     if args.command=='smtp-test':
         try:send_test(args.to)
         except MailUnavailable:

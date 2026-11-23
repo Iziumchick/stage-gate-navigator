@@ -15,10 +15,30 @@ def required():
     return production() or os.getenv('REQUIRE_INSTITUTIONAL_EMAIL','false')=='true'
 
 
-def allowed(email):
+def valid_mailbox(email):
     parts=email.strip().split('@')
     display,address=parseaddr(email)
-    return len(parts)==2 and bool(parts[0]) and not display and address==email and not any(c.isspace() for c in email) and parts[1].lower() in ALLOWED_DOMAINS
+    return (len(email)<=254 and len(parts)==2 and bool(parts[0]) and not display
+            and address==email and not any(c.isspace() for c in email)
+            and len(parts[0])<=64 and len(parts[1].split('.'))>=2
+            and all(re.fullmatch(r'[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?',label)
+                    for label in parts[1].split('.')))
+
+
+def allowed(email):
+    """Public study-account registration: exact university domains only."""
+    return valid_mailbox(email) and email.rsplit('@',1)[1].lower() in ALLOWED_DOMAINS
+
+
+def configured_admin(email):
+    target=os.getenv('ADMIN_EMAIL','').strip().lower()
+    return bool(target) and valid_mailbox(email) and email.lower()==target
+
+
+def account_allowed(email,role):
+    # The exception is for an existing, explicitly provisioned admin only.
+    # It never permits external registration or grants a role from an email.
+    return allowed(email) or (role=='admin' and configured_admin(email))
 
 
 class MailUnavailable(Exception):
@@ -45,7 +65,7 @@ def assert_ready():
     try:smtp_config()
     except MailUnavailable:raise RuntimeError('Institutional access requires configured TLS SMTP delivery.') from None
     admin=os.getenv('ADMIN_EMAIL','').strip()
-    if admin and not allowed(admin):raise RuntimeError('Institutional access requires an administrator email in the permitted OTH domains.')
+    if admin and not valid_mailbox(admin):raise RuntimeError('ADMIN_EMAIL must be a valid mailbox; external access is limited to this explicitly configured administrator.')
 
 
 def send_verification(email,code):
@@ -72,7 +92,7 @@ Wenn du keinen Code angefordert hast, kannst du diese Nachricht ignorieren.
 
 def send_test(email):
     """Explicit operator-run delivery test; no account, grades or verification code."""
-    if not allowed(email):raise MailUnavailable()
+    if not (allowed(email) or configured_admin(email)):raise MailUnavailable()
     _,_,sender,_,_,_=smtp_config()
     message=EmailMessage()
     message['From']=sender

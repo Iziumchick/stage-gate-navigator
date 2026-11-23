@@ -11,7 +11,7 @@ async function login(page:any){
  await page.goto('/');await expect(page.getByText('Bitte ein eigenes Passwort für Study Navigator verwenden.',{exact:false})).toBeVisible();
  await page.getByLabel('E-Mail-Adresse',{exact:true}).fill(user.email);await page.getByLabel('Passwort',{exact:true}).fill('synthetic-password-123');
  await page.getByRole('button',{name:'Einloggen',exact:true}).click();
- await expect(page.getByRole('heading',{name:'Hochschuladresse bestätigen',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'E-Mail-Adresse bestätigen',exact:true})).toBeVisible();
 }
 
 test('dashboard stays closed until a correct email code is submitted; failures can be corrected',async({page})=>{
@@ -45,6 +45,26 @@ test('registration shows confirmation rather than onboarding and allows returnin
  await page.route('**/api/auth/register',r=>r.fulfill({json:challenge}));
  await page.goto('/');await page.getByRole('button',{name:'Registrieren',exact:true}).click();
  await page.getByLabel('Anzeigename (Pseudonym möglich)',{exact:true}).fill('Test participant');await page.getByLabel('E-Mail-Adresse',{exact:true}).fill(user.email);await page.getByLabel('Passwort',{exact:true}).fill('synthetic-password-123');await page.getByRole('checkbox').check();
- await page.getByRole('button',{name:'Konto erstellen',exact:true}).click();await expect(page.getByRole('heading',{name:'Hochschuladresse bestätigen',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Konto erstellen',exact:true}).click();await expect(page.getByRole('heading',{name:'E-Mail-Adresse bestätigen',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Zur Anmeldung',exact:true}).click();await expect(page.getByRole('heading',{name:'Willkommen zurück',exact:true})).toBeVisible();await expect(page.getByLabel('Passwort',{exact:true})).toHaveValue('');
+});
+
+test('a separately provisioned private administrator confirms email and opens the semester overview',async({page})=>{
+ const admin={...user,id:77,email:'private-owner@example.test',role:'admin'};
+ const proof={...challenge,email:admin.email};
+ await page.route('**/api/auth/me',r=>r.fulfill({status:401,json:{detail:'Bitte anmelden.'}}));
+ await page.route('**/api/auth/options',r=>r.fulfill({json:{institutional_email_required:true,allowed_email_domains:['st.oth-regensburg.de','oth-regensburg.de']}}));
+ await page.route('**/api/auth/login',r=>r.fulfill({json:proof}));
+ await page.route('**/api/auth/email/verify',r=>r.fulfill({json:admin}));
+ await page.route('**/api/programs/wi/catalog',r=>r.fulfill({json:{program_id:'wi',revision:'test',program:{name:'Wirtschaftsinformatik',spo_version:'SPO'},documents:[],semesters:{},semester_catalogs:{}}}));
+ await page.goto('/');
+ await expect(page.getByText('Separat freigegebene Administrationskonten',{exact:false})).toBeVisible();
+ await page.getByLabel('E-Mail-Adresse',{exact:true}).fill(admin.email);
+ await page.getByLabel('Passwort',{exact:true}).fill('private-admin-password-123');
+ await page.getByRole('button',{name:'Einloggen',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'E-Mail-Adresse bestätigen',exact:true})).toBeVisible();
+ await page.getByLabel('Bestätigungscode',{exact:true}).fill('123456');
+ await page.getByRole('button',{name:'E-Mail bestätigen',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Semesterübersicht',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Füge dein Studium hinzu',exact:true})).toHaveCount(0);
 });

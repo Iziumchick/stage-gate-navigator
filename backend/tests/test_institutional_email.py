@@ -27,6 +27,21 @@ class InstitutionalMailTests(unittest.TestCase):
     def test_production_enforces_verification_even_if_local_flag_is_false(self):
         with patch.dict(os.environ,{'APP_ENV':'production','REQUIRE_INSTITUTIONAL_EMAIL':'false'},clear=True):self.assertTrue(email.required())
 
+    def test_private_operator_exception_requires_exact_address_and_admin_role(self):
+        with patch.dict(os.environ,{'ADMIN_EMAIL':'owner@example.test'},clear=True):
+            self.assertFalse(email.allowed('owner@example.test'))
+            self.assertTrue(email.account_allowed('owner@example.test','admin'))
+            for address,role in [('owner@example.test','student'),('other@example.test','admin'),('owner@example.test.attacker.test','admin'),('Owner <owner@example.test>','admin')]:
+                self.assertFalse(email.account_allowed(address,role))
+            self.assertTrue(email.account_allowed('staff@oth-regensburg.de','student'))
+
+    def test_configured_operator_mailbox_is_validated(self):
+        config={'APP_ENV':'production','SMTP_HOST':'smtp.test.invalid','SMTP_FROM':'sender@example.test','ADMIN_EMAIL':'owner@example.test'}
+        with patch.dict(os.environ,config,clear=True):email.assert_ready()
+        for invalid in ('not-an-email','Owner <owner@example.test>','owner@bad..test','a\n@other.test'):
+            with patch.dict(os.environ,{**config,'ADMIN_EMAIL':invalid},clear=True):
+                self.assertRaises(RuntimeError,email.assert_ready)
+
     def test_operator_delivery_test_contains_no_grades_or_verification_code(self):
         config={'SMTP_HOST':'smtp.test.invalid','SMTP_FROM':'sender@example.test','SMTP_SECURITY':'ssl','SMTP_PORT':'465'}
         with patch.dict(os.environ,config,clear=True),patch('smtplib.SMTP_SSL') as constructor:
@@ -36,3 +51,6 @@ class InstitutionalMailTests(unittest.TestCase):
             self.assertIsNotNone(message['Date']);self.assertIsNotNone(message['Message-ID'])
             self.assertEqual(message['To'],'synthetic@oth-regensburg.de')
             with self.assertRaises(email.MailUnavailable):email.send_test('outside@example.test')
+        with patch.dict(os.environ,{**config,'ADMIN_EMAIL':'owner@example.test'},clear=True),patch('smtplib.SMTP_SSL') as constructor:
+            email.send_test('owner@example.test')
+            self.assertEqual(constructor.return_value.__enter__.return_value.send_message.call_args.args[0]['To'],'owner@example.test')

@@ -1,5 +1,7 @@
 """Real HTTP mailbox-verification flow; synthetic accounts and mocked SMTP only."""
 import hashlib
+import contextlib
+import io
 import http.cookiejar
 import json
 import os
@@ -16,8 +18,8 @@ folder=tempfile.TemporaryDirectory()
 os.environ.update(DATABASE_URL='sqlite:///'+folder.name+'/auth.db',REQUIRE_INSTITUTIONAL_EMAIL='true',SMTP_HOST='smtp.test.invalid',SMTP_FROM='navigator@example.test')
 from app.main import app
 from app.db import SessionLocal
-from app.models import User,EmailVerification,LoginSession
-from app.services.auth_service import hash_password
+from app.models import User,EmailVerification,LoginSession,Import,UserImport
+from app.services.auth_service import hash_password,bootstrap_admin
 from app.services.institutional_email import MailUnavailable
 import uvicorn
 
@@ -59,7 +61,93 @@ class InstitutionalEmailTests(unittest.TestCase):
     def verify(self,challenge,code=None,status=200):
         return self.call('/auth/email/verify',{'ticket':challenge['ticket'],'code':code or self.code()},status)
 
+    def operation(self,args,status=0):
+        from app.operations import main
+        output=io.StringIO()
+        with contextlib.redirect_stdout(output),contextlib.redirect_stderr(output):result=main(args)
+        self.assertEqual(result,status,output.getvalue())
+        return output.getvalue()
+
+    def test_private_operator_is_provisioned_explicitly_and_must_prove_mailbox(self):
+        config={'ADMIN_EMAIL':'private-owner@example.test','ADMIN_PASSWORD':'private-owner-password-123'}
+        with patch.dict(os.environ,config):
+            self.register(config['ADMIN_EMAIL'],status=403)
+            output=self.operation(['provision-admin','--email',config['ADMIN_EMAIL']])
+            self.assertNotIn(config['ADMIN_PASSWORD'],output)
+            self.operation(['provision-admin','--email','other@example.test'],status=1)
+            with SessionLocal() as db:
+                owner=db.query(User).filter_by(email=config['ADMIN_EMAIL']).one()
+                self.assertIsNone(owner.email_verified_at)
+                db.add(User(email='unlisted-admin@example.test',name='Unlisted',role='admin',password_hash=hash_password('unlisted-password-123')));db.commit()
+            self.call('/auth/login',{'email':'unlisted-admin@example.test','password':'unlisted-password-123'},status=403)
+            self.assertFalse(self.mail.called)
+            challenge,_=self.call('/auth/login',{'email':config['ADMIN_EMAIL'],'password':config['ADMIN_PASSWORD']})
+            self.call('/programs/wi/catalog',status=401)
+            with SessionLocal() as db:
+                db.query(EmailVerification).filter_by(email=challenge['email']).update({'created_at':time.time()-61});db.commit()
+            newer,_=self.call('/auth/email/resend',{'ticket':challenge['ticket']})
+            user,_=self.verify(newer)
+            self.assertEqual(user['role'],'admin');self.assertTrue(user['email_verified'])
+            self.call('/programs/wi/catalog')
+            self.call('/account/export',status=403)
+        self.call('/auth/me',status=401)  # removing the exact exception revokes access
+
+    def test_staff_role_changes_require_verified_exact_staff_domain_and_invalidate_sessions(self):
+        from app.services.auth_service import verify_password
+        staff='delegated-staff@oth-regensburg.de'
+        challenge=self.register(staff)
+        self.operation(['grant-admin','--email',staff],status=1)
+        self.verify(challenge)
+        with SessionLocal() as db:before=db.query(User).filter_by(email=staff).one().password_hash
+        for invalid in ('student@st.oth-regensburg.de','unconfirmed@oth-regensburg.de','other@example.test','staff@sub.oth-regensburg.de'):
+            self.operation(['grant-admin','--email',invalid],status=1)
+        self.operation(['grant-admin','--email',staff])
+        self.call('/auth/me',status=401)
+        user,_=self.call('/auth/login',{'email':staff,'password':'synthetic-password-123'})
+        self.assertEqual(user['role'],'admin');self.call('/programs/wi/catalog')
+        with SessionLocal() as db:
+            current=db.query(User).filter_by(email=staff).one()
+            self.assertEqual(current.password_hash,before)
+            self.assertTrue(verify_password('synthetic-password-123',current.password_hash))
+        self.operation(['revoke-admin','--email',staff])
+        self.call('/auth/me',status=401)
+        user,_=self.call('/auth/login',{'email':staff,'password':'synthetic-password-123'})
+        self.assertEqual(user['role'],'student');self.call('/programs/wi/catalog',status=403)
+
+    def test_explicit_adoption_preserves_study_data_and_does_not_change_other_accounts(self):
+        owner='adopted-owner@example.test'
+        with SessionLocal() as db:
+            existing=User(email=owner,name='Existing owner',role='student',password_hash=hash_password('old-owner-password-123'))
+            db.add(existing);db.flush();owner_id=existing.id
+            item=Import(source='synthetic',parser_version='test',pdf_sha256='adoption-synthetic-fingerprint')
+            db.add(item);db.flush();import_id=item.id
+            db.add(UserImport(user_id=owner_id,import_id=import_id))
+            student=User(email='preserved-student@st.oth-regensburg.de',name='Student',role='student',password_hash=hash_password('student-password-123'))
+            db.add(student);db.commit();student_id=student.id
+        config={'ADMIN_EMAIL':owner,'ADMIN_PASSWORD':'new-owner-password-123'}
+        with patch.dict(os.environ,config):
+            with self.assertLogs('app.services.auth_service',level='ERROR'):bootstrap_admin()
+            self.call('/auth/login',{'email':owner,'password':'old-owner-password-123'},status=403)
+            self.assertFalse(self.mail.called)
+            self.operation(['provision-admin','--email',owner],status=1)
+            self.operation(['provision-admin','--email',owner,'--adopt-existing'])
+            self.operation(['revoke-admin','--email',owner],status=1)
+            self.call('/auth/login',{'email':owner,'password':'old-owner-password-123'},status=401)
+            challenge,_=self.call('/auth/login',{'email':owner,'password':config['ADMIN_PASSWORD']})
+            self.verify(challenge)
+            self.operation(['provision-admin','--email',owner])  # idempotent: no password/proof reset
+            self.call('/auth/me')
+            self.operation(['provision-admin','--email',owner,'--reset-password'])
+            self.call('/auth/me',status=401)
+            with SessionLocal() as db:
+                self.assertIsNotNone(db.get(UserImport,(owner_id,import_id)))
+                self.assertIsNotNone(db.get(Import,import_id))
+                self.assertEqual(db.get(User,student_id).role,'student')
+                self.assertEqual(db.get(User,owner_id).name,'Existing owner')
+                self.assertIsNone(db.get(User,owner_id).email_verified_at)
+
     def test_exact_domains_and_unverified_access_are_enforced_server_side(self):
+        self.call('/auth/register',{'email':'self-grant@oth-regensburg.de','name':'Self grant','password':'synthetic-password-123','privacy_accepted':True,'role':'admin'},status=422)
         for email in ['outside@example.test','a@st.oth-regensburg.de.attacker.test','a@eviloth-regensburg.de','a@sub.oth-regensburg.de','a@оth-regensburg.de']:
             self.register(email,status=403)
         self.assertFalse(self.mail.called)
