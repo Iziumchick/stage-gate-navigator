@@ -144,9 +144,10 @@ test('shared metadata, handbook pages and course coexist with personal data', as
   await expect(page.getByTestId('official-credits')).toBeVisible();
   await page.getByRole('button', { name: 'Programmieren 2: Offen' }).click();
   const dialog = page.getByRole('dialog');
-  await expect(dialog).not.toContainText('Beschreibung aus dem gemeinsamen Katalog');
+  await expect(dialog.getByText('Beschreibung aus dem gemeinsamen Katalog',{exact:true})).not.toBeVisible();
+  await dialog.locator('summary').filter({hasText:'Kursbeschreibung'}).click();
+  await expect(dialog.getByText('Beschreibung aus dem gemeinsamen Katalog',{exact:true})).toBeVisible();
   await expect(dialog).toContainText('2-fach');
-  await dialog.locator('summary').filter({hasText:'Modulhandbuch'}).click();
   await expect(dialog.getByRole('link', { name: 'Modulhandbuch' })).toHaveAttribute('href', 'https://example.org/handbook.pdf#page=42');
   await dialog.getByRole('button', { name: 'Zum aktuellen Semester hinzufügen' }).click();
   await dialog.getByRole('button', { name: 'Details schließen' }).click();
