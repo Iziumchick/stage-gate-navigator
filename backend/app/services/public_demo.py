@@ -1,11 +1,28 @@
 """Five anonymous examples, isolated from accounts and the operator's semester data."""
 from functools import lru_cache
+import copy
 
 from app.services.handbook_catalog import semester_catalog
 from app.services.student_examples import student_example
 
 SCENARIOS = ('first', 'open', 'practice', 'repeat-first', 'thesis')
 TERM = 'WiSe 2026/27'
+
+
+def example_description(title):
+    return f'''Demobeispiel – keine offizielle Modulbeschreibung.
+
+Modul / Teilmodul: {title}
+Modulverantwortung: Prof. Dr. Max Mustermann (fiktive Person)
+Fakultät: Beispielfakultät (fiktiv)
+
+Inhalte: Hier werden die Themen und Schwerpunkte des Kurses beschrieben.
+Lernziele: Hier steht, welche Kenntnisse und Fähigkeiten vermittelt werden.
+Lehrformen: Hier werden beispielsweise Vorlesungen, Übungen oder Seminare erläutert.
+Arbeitsaufwand: Hier stehen Angaben zur Präsenzzeit und zum Selbststudium.
+Prüfung: Hier werden Prüfungsform und Anforderungen beschrieben.
+
+Dieser Text ist ein Platzhalter für die Demonstration. Für verbindliche Angaben nutze das aktuelle Modulhandbuch der Hochschule.'''
 
 
 @lru_cache(maxsize=5)
@@ -32,8 +49,13 @@ def demo_dashboard(scenario):
     # to uploaded documents; guests explore the same UI with synthetic results.
     for stage in data['stages']:
         for module in stage['modules']:
-            for details in [module.get('details', {}), *(option.get('details', {}) for option in module.get('course_options', []))]:
+            for item in [module, *module.get('course_options', [])]:
+                details=copy.deepcopy(item.get('details') or {})
+                item['details']=details
+                # Do not publish handbook excerpts containing real staff names or
+                # responsibilities through the anonymous demonstration API.
+                details['description']=example_description(item.get('title',module['title']))
                 for key in ('handbook', 'reference_handbook'):
-                    if details.get(key): details[key] = {**details[key], 'url': None}
+                    details.pop(key, None)
                 details.pop('description_pdf', None)
     return {**data, 'demo': True, 'example_term': TERM}

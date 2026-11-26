@@ -174,6 +174,13 @@ class InstitutionalEmailTests(unittest.TestCase):
                 self.assertTrue(value['demo']);self.assertEqual(value['example_scenario'],scenario)
                 self.assertIsNone(value['import_id']);self.assertIsNone(response.headers.get('Set-Cookie'))
                 self.assertNotIn('/api/programs/wi/handbook',json.dumps(value))
+                for stage in value['stages']:
+                    for module in stage['modules']:
+                        for item in [module,*module.get('course_options',[])]:
+                            details=item['details']
+                            from app.services.public_demo import example_description
+                            self.assertEqual(details['description'],example_description(item['title']))
+                            for key in ('handbook','reference_handbook','description_pdf'):self.assertNotIn(key,details)
                 self.assertTrue(any(m.get('course_options') for s in value['stages'] for m in s['modules']))
         self.assertFalse(self.mail.called)
         with SessionLocal() as db:

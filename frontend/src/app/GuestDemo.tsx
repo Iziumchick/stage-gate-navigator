@@ -59,7 +59,7 @@ export function GuestDemo() {
     </header>
     <section className="max-w-[1920px] mx-auto px-8 pt-5" aria-label="Demonstrationshinweis">
       <div className="rounded-xl border border-blue-200 bg-blue-50 px-5 py-4 flex justify-between gap-8 items-center">
-        <div><p className="font-medium text-blue-950">Demodaten · Keine persönlichen Leistungsdaten</p><p className="text-sm text-blue-900 mt-1">Ergebnisse und Stundenplan sind Beispiele. Deine Änderungen bleiben nur in diesem Browser und getrennt von einem persönlichen Konto.</p></div>
+        <div><p className="font-medium text-blue-950">Demodaten · Keine persönlichen Leistungsdaten</p><p className="text-sm text-blue-900 mt-1">Ergebnisse, Stundenplan und Kursbeschreibungen sind fiktive Beispiele. Namen und Zuständigkeiten in den Beschreibungen sind Platzhalter, keine offiziellen Angaben. Deine Änderungen bleiben nur in diesem Browser und getrennt von einem persönlichen Konto.</p></div>
         <a href="/" className="action-button bg-white whitespace-nowrap">Eigene Leistungen ansehen<ArrowRight size={16}/></a>
       </div>
       {profile && <div className="text-sm text-gray-500 mt-4"><InfoPopover label="Studieninformationen" trigger={<>Beispielsemester {profile.referenceTerm} · Start {profile.startTerm}</>}><p>{data?.spo_version}</p><p className="mt-2">Die SPO gehört zum ausgewählten Beispiel. Ein persönliches Studienprofil wird nicht verändert.</p></InfoPopover></div>}
