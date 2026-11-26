@@ -10,7 +10,10 @@ test('handbook ELO and readonly schedule are visible before planning and handboo
  await open(page);const dialog=page.getByRole('dialog');
  await expect(dialog.getByRole('link',{name:/Modulhandbuch öffnen/})).toHaveAttribute('href','https://example.org/handbook.pdf#page=42');
  await expect(dialog.getByRole('link',{name:'ELO-Kurs öffnen',exact:true})).toHaveAttribute('href','https://example.org/elo');
- await expect(dialog.getByRole('region',{name:'Stundenplan vor der Semesterplanung'})).toContainText('Montag 08:15–09:45 · D201');
+ const schedule=dialog.getByRole('region',{name:'Stundenplan vor der Semesterplanung'});
+ await expect(schedule.getByText('Montag 08:15–09:45 · D201',{exact:true})).not.toBeVisible();
+ await schedule.locator('summary').first().click();
+ await expect(schedule.getByText('Montag 08:15–09:45 · D201',{exact:true})).toBeVisible();
  await expect(dialog.getByRole('button',{name:'Eigene Variante hinzufügen'})).toHaveCount(0);
  await expect(dialog.getByText('Anforderungen, Architektur und Softwarequalität.',{exact:true})).not.toBeVisible();
  await dialog.locator('summary').filter({hasText:'Kursbeschreibung'}).click();
@@ -24,6 +27,7 @@ test('handbook ELO and readonly schedule are visible before planning and handboo
 test('each compulsory part exposes its own handbook and schedule without planning it',async({page})=>{
  await open(page,{...module,completion_rule:'all',details:{completion_rule:'all'},course_options:[{id:'a',title:'Teilmodul A',ects:3,details:module.details,course:module.course},{id:'b',title:'Teilmodul B',ects:2,details:{reference_handbook:{url:'https://example.org/current.pdf',label:'Aktuelles Referenz-Modulhandbuch'}},course:{meetings:[{weekday:3,start:'10:00',end:'11:30',room:'K014',group:'IW3'}]}}]});
  const preview=page.getByRole('region',{name:'Stundenplan vor der Semesterplanung'});
+ await preview.locator('summary').first().click();
  await preview.locator('summary').filter({hasText:'Teilmodul A'}).click();await preview.locator('summary').filter({hasText:'Teilmodul B'}).click();
  await expect(preview.getByRole('link',{name:/Modulhandbuch öffnen/})).toBeVisible();
  await expect(preview.getByRole('link',{name:'Aktuelles Referenz-Modulhandbuch',exact:true})).toHaveAttribute('href','https://example.org/current.pdf');
