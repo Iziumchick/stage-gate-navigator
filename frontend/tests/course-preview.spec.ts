@@ -15,9 +15,7 @@ test('handbook ELO and readonly schedule are visible before planning and handboo
  await schedule.locator('summary').first().click();
  await expect(schedule.getByText('Montag 08:15–09:45 · D201',{exact:true})).toBeVisible();
  await expect(dialog.getByRole('button',{name:'Eigene Variante hinzufügen'})).toHaveCount(0);
- await expect(dialog.getByText('Anforderungen, Architektur und Softwarequalität.',{exact:true})).not.toBeVisible();
- await dialog.locator('summary').filter({hasText:'Kursbeschreibung'}).click();
- await expect(dialog.getByText('Anforderungen, Architektur und Softwarequalität.',{exact:true})).toBeVisible();
+ await expect(dialog.locator('summary').filter({hasText:'Kursbeschreibung'})).toHaveCount(0);
  await page.screenshot({path:'test-results/course-before-planning.png',fullPage:true});
  await dialog.getByRole('button',{name:'Zum aktuellen Semester hinzufügen',exact:true}).click();await dialog.getByRole('button',{name:'Details schließen'}).click();
  await page.getByLabel('Module in aktuelles Semester ziehen').getByRole('button',{name:'Software Engineering 5 ECTS',exact:true}).click();
@@ -28,9 +26,10 @@ test('each compulsory part exposes its own handbook and schedule without plannin
  await open(page,{...module,completion_rule:'all',details:{completion_rule:'all'},course_options:[{id:'a',title:'Teilmodul A',ects:3,details:module.details,course:module.course},{id:'b',title:'Teilmodul B',ects:2,details:{reference_handbook:{url:'https://example.org/current.pdf',label:'Aktuelles Referenz-Modulhandbuch'}},course:{meetings:[{weekday:3,start:'10:00',end:'11:30',room:'K014',group:'IW3'}]}}]});
  const preview=page.getByRole('region',{name:'Stundenplan vor der Semesterplanung'});
  await preview.locator('summary').first().click();
- await preview.locator('summary').filter({hasText:'Teilmodul A'}).click();await preview.locator('summary').filter({hasText:'Teilmodul B'}).click();
- await expect(preview.getByRole('link',{name:/Modulhandbuch öffnen/})).toBeVisible();
- await expect(preview.getByRole('link',{name:'Aktuelles Referenz-Modulhandbuch',exact:true})).toHaveAttribute('href','https://example.org/current.pdf');
+ const resources=page.getByRole('region',{name:'Unterlagen der Teilmodule'});
+ await resources.locator('summary').filter({hasText:'Teilmodul A'}).click();await resources.locator('summary').filter({hasText:'Teilmodul B'}).click();
+ await expect(resources.getByRole('link',{name:/Modulhandbuch öffnen/})).toBeVisible();
+ await expect(resources.getByRole('link',{name:'Aktuelles Referenz-Modulhandbuch',exact:true})).toHaveAttribute('href','https://example.org/current.pdf');
  await expect(preview).toContainText('Mittwoch 10:00–11:30 · K014');
  await page.getByRole('button',{name:'Zum aktuellen Semester hinzufügen',exact:true}).click();await page.getByRole('button',{name:'Details schließen'}).click();
  await page.getByLabel('Module in aktuelles Semester ziehen').getByRole('button',{name:'Software Engineering 5 ECTS',exact:true}).click();
@@ -39,7 +38,10 @@ test('each compulsory part exposes its own handbook and schedule without plannin
  await expect(documents.getByRole('link',{name:'Aktuelles Referenz-Modulhandbuch',exact:true})).toBeVisible();
 });
 test('missing demo downloads keep page information without exposing a protected URL',async({page})=>{
- await open(page,{...module,details:{handbook:{url:null,pages:{start:12,end:14}}},course:{}});
- const dialog=page.getByRole('dialog');await expect(dialog).toContainText('Seiten 12–14 · PDF-Link hier nicht verfügbar.');
+ await open(page,{...module,details:{handbook:{url:null,pages:{start:12,end:14}},description:'Beschreibung für die Demo.'},course:{}});
+ const dialog=page.getByRole('dialog');await expect(dialog).not.toContainText('PDF-Link hier nicht verfügbar.');
+ await expect(dialog.getByText('Beschreibung für die Demo.',{exact:true})).not.toBeVisible();
+ await dialog.locator('summary').filter({hasText:'Kursbeschreibung'}).click();
+ await expect(dialog.getByText('Beschreibung für die Demo.',{exact:true})).toBeVisible();
  await expect(dialog.getByRole('link')).toHaveCount(0);await expect(dialog).toContainText('Noch keine bestätigten Termine.');
 });
